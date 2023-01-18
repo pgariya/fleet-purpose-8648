@@ -1,19 +1,14 @@
-import React from 'react'
-import {  Routes } from 'react-router-dom'
-
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import Login from "../Components/Login";
 const AllRoutes = () => {
   return (
-    
-<Routes>
+    <Routes>
+      {/* <Route path='/' element={<anything/>}/> */}
 
-{/* <Route path='/' element={<anything/>}/> */}
+      <Route path="/login" element={<Login />} />
+    </Routes>
+  );
+};
 
-
-
-
-
-</Routes>
-  )
-}
-
-export default AllRoutes
+export default AllRoutes;
