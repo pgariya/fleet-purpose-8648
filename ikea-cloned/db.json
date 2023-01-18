@@ -1,82 +1,1096 @@
 {
-    "better_storage": [
+  "better_storage": [
+    {
+      "better_image": "https://www.ikea.com/images/66/a7/66a7ad4f93664a50fa386f545860a313.jpg?f=s",
+      "better_title": "Hook & wall organisation from Rs.75",
+      "id": 1
+    },
+    {
+      "better_image": "https://www.ikea.com/images/50/e9/50e95854f19088058cc930d33913e285.jpg?f=s",
+      "better_title": "Shoe boxes & organisers from Rs.49",
+      "id": 2
+    },
+    {
+      "better_image": "https://www.ikea.com/images/7d/6b/7d6b63203c8e2ddaa5da559889004299.jpg?f=s",
+      "better_title": "Clothes organisers from Rs.49",
+      "id": 3
+    },
+    {
+      "better_image": "https://www.ikea.com/images/29/e2/29e200bea35809affce65080b33e8632.jpg?f=s",
+      "better_title": "Kitchen organisers from Rs.39",
+      "id": 4
+    },
+    {
+      "better_image": "https://www.ikea.com/images/c7/85/c7853e88497ae33a463af264e2638233.jpg?f=s",
+      "better_title": "Food storage & organise from Rs.19",
+      "id": 5
+    },
+    {
+      "better_image": "https://www.ikea.com/images/12/7b/127b63b070df8db01ae9b26bf9eb2a8f.jpg?f=s",
+      "better_title": "Storage boxes & baskets from Rs.19",
+      "id": 6
+    },
+    {
+      "better_image": "https://www.ikea.com/images/4e/a9/4ea92836239c90b4ca8c40409a639cc8.jpg?f=s",
+      "better_title": "Wall shelves from Rs.299",
+      "id": 7
+    },
+    {
+      "better_image": "https://www.ikea.com/images/8c/13/8c13033770991ef467371a52fbf56c3c.jpg?f=s",
+      "better_title": "Trolleys from Rs.949",
+      "id": 8
+    }
+  ],
+  "big_scroller": [
+    {
+      "image": "https://www.ikea.com/images/b6/15/b615d94ecd3a525330f6daebb27313f8.png?f=s",
+      "heading": "Be ready for a new beginning",
+      "title": "Our inspiration and solutions at IKEA can help you bring your ideas to life.",
+      "id": 9
+    },
+    {
+      "image": "https://www.ikea.com/images/db/e6/dbe6e769533011533a119680da7dfbb8.jpg?f=s",
+      "heading": "Affordable living room sets starting at Rs.35,970",
+      "title": "Make this multifunctional space that meets all your needs without breaking the bank.",
+      "id": 10
+    },
+    {
+      "image": "https://www.ikea.com/images/c9/21/c921575bd1b052970fc0cac5c4136e52.png?f=s",
+      "heading": "Last chance to buy",
+      "title": "These products will be out of the range soon.",
+      "id": 11
+    },
+    {
+      "image": "https://www.ikea.com/images/df/ef/dfef7c3f8054fb611e01cc62f5dbb318.jpg?f=s",
+      "heading": "Affordable bedroom sets starting at Rs.14,999",
+      "title": "Why not match your bed to other furniture in the room for a cohesive look?",
+      "id": 12
+    },
+    {
+      "image": "https://www.ikea.com/images/28/bf/28bfac4d139ef252106d7813294e015b.png?f=s",
+      "heading": "Furniture under Rs.2999",
+      "title": "Affordable furniture to create a space of your own",
+      "id": 13
+    },
+    {
+      "image": "https://www.ikea.com/images/75/38/7538f7a99ed4f85f2dd839b725961d00.png?f=s",
+      "heading": "Our lowest price",
+      "title": "Shop our lowest price products",
+      "id": 14
+    }
+  ],
+  "furniture": [
+    {
+      "image": "https://www.ikea.com/images/sofa-and-armchairs-8c6cd2d72c5b7ffa6c50de384c9a74c8.jpg?f=s",
+      "title": "Sofas & armchairs",
+      "id": 15
+    },
+    {
+      "image": "https://www.ikea.com/images/ec/6d/ec6d3a24e13d4e6bf9af8461ac082044.jpg?f=s",
+      "title": "Storage & organisation",
+      "id": 16
+    },
+    {
+      "image": "https://www.ikea.com/images/beds-c444b5a3ed3563bf37b741a0d8ce6c97.jpg?f=s",
+      "title": "Beds and mattresses",
+      "id": 17
+    },
+    {
+      "image": "https://www.ikea.com/images/75/9f/759fc4bd0f1a2c7af564ccde5755e5fd.jpg?f=s",
+      "title": "Children's storage & furniture",
+      "id": 18
+    },
+    {
+      "image": "https://www.ikea.com/images/fb/98/fb98ddb584696abe4e696bc7993408e6.jpg?f=s",
+      "title": "Home office",
+      "id": 19
+    },
+    {
+      "image": "https://www.ikea.com/images/d7/4e/d74e72bbf58f2fea3c75f8478e943c07.jpg?f=s",
+      "title": "Bathroom storage",
+      "id": 20
+    },
+    {
+      "image": "https://www.ikea.com/images/67/71/67713b64c75fbe5851c2756c2fa95db0.jpg?f=s",
+      "title": "Dining sets",
+      "id": 21
+    },
+    {
+      "image": "https://www.ikea.com/images/2d/6b/2d6b918803728f28cb6263202f51596c.jpg?f=s",
+      "title": "Kitchen storage & furniture",
+      "id": 22
+    },
+    {
+      "image": "https://www.ikea.com/images/59/66/59669cf5cbd26afe97eb35d05022e31a.jpg?f=s",
+      "title": "Balcony & garden",
+      "id": 23
+    }
+  ],
+  "accessories": [
+    {
+      "image": "https://www.ikea.com/images/49/3e/493e241188d879a0eb919f7423a10393.jpg?f=xxs",
+      "title": "Laundry and Cleaning",
+      "id": 24
+    },
+    {
+      "image": "https://www.ikea.com/images/ee/ee/eeee94f35b3e63d365ef79f452f70031.jpg?f=xxs",
+      "title": "Textile",
+      "id": 25
+    },
+    {
+      "image": "https://www.ikea.com/images/55/37/5537e2db6e63f664c33ef2c1cfd3b90b.jpg?f=xxs",
+      "title": "Cookware",
+      "id": 26
+    },
+    {
+      "image": "https://www.ikea.com/images/25/7c/257cfd1795f5561023688571473f4678.jpg?f=xxs",
+      "title": "Decoration",
+      "id": 27
+    },
+    {
+      "image": "https://www.ikea.com/images/f1/7d/f17d9897443bb614e2489e83a07cad69.jpg?f=xxs",
+      "title": "Shoe rack and clothes stand",
+      "id": 28
+    },
+    {
+      "image": "https://www.ikea.com/images/71/74/7174cb3dea2042f227b5382aaf8d5d17.jpg?f=xxs",
+      "title": "Home electronics",
+      "id": 29
+    },
+    {
+      "image": "https://www.ikea.com/images/23/2a/232af11a91aedfd8a1671763cf573fe1.jpg?f=xxs",
+      "title": "Lighting",
+      "id": 30
+    }
+  ],
+  "real_example": [
+    {
+      "image": "https://www.ikea.com/ext/ingkadam/m/689b877f3b173860/original/UGC100015561.jpg?f=xl",
+      "id": 31
+    },
+    {
+      "image": "https://www.ikea.com/ext/ingkadam/m/564745d4726a73a2/original/UGC100015762.jpg?f=xl",
+      "id": 32
+    },
+    {
+      "image": "https://www.ikea.com/ext/ingkadam/m/42924e80d3b5e393/original/UGC100014406.jpg?f=xl",
+      "id": 33
+    },
+    {
+      "image": "https://www.ikea.com/ext/ingkadam/m/22cb12f76d4d6800/original/UGC100001460.jpg?f=xl",
+      "id": 34
+    },
+    {
+      "image": "https://www.ikea.com/ext/ingkadam/m/5abcad38d253f2de/original/UGC100015564.jpg?f=xl",
+      "id": 35
+    },
+    {
+      "image": "https://www.ikea.com/ext/ingkadam/m/31c4be989b302cd6/original/UGC100002188.jpg?f=xl",
+      "id": 36
+    },
+    {
+      "image": "https://www.ikea.com/ext/ingkadam/m/1b91836834c039a0/original/UGC100001439.jpg?f=xl",
+      "id": 37
+    },
+    {
+      "image": "https://www.ikea.com/ext/ingkadam/m/49fca46a6eb822c4/original/UGC100015332.jpg?f=xl",
+      "id": 38
+    },
+    {
+      "image": "https://www.ikea.com/ext/ingkadam/m/71d5527a7f02d8b0/original/UGC100001389.jpg?f=xl",
+      "id": 39
+    },
+    {
+      "image": "https://www.ikea.com/ext/ingkadam/m/3b33fdd72a47984b/original/UGC100001659.jpg?f=xl",
+      "id": 40
+    }
+  ],
+
+  "real_products": [
+    {
+      "id": 31,
+      "img": "https://www.ikea.com/ext/ingkadam/m/2e1175bbecc6c2d7/original/PH164609-crop001.jpg?f=xxl",
+      "item":"children_room",
+      "main_title": "A soft cushion cover that pops up in every room",
+      "main_description": "Whether you’re in need of a soft layer for your armchair, comfy support for your head when in bed or a dash of colour to your sofa, the SANELA cushion cover envelops you in equal style. Made from cotton velvet, the SANELA cushion cover can add a sense of dimension and depth to your bed or sofa arrangement, not to mention, the material is soft to the touch. Mix and match this trendy cushion cover with patterned cushions for a varied look, or keep the solid-colour theme at the forefront, since this product comes in a wide range of colours that you can chose from.",
+      "different_item": [
         {
-          "better_image": "https://www.ikea.com/images/66/a7/66a7ad4f93664a50fa386f545860a313.jpg?f=s",
-          "better_title": "Hook & wall organisation from Rs.75",
-          "id":1
+          "image1": "https://www.ikea.com/in/en/images/products/sanela-cushion-cover-dark-blue__0600213_pe678602_s5.jpg?f=xxs",
+          "image2": "https://www.ikea.com/in/en/images/products/sanela-cushion-cover-dark-blue__0888821_pe623735_s5.jpg?f=xxs",
+          "title": "SANELA",
+          "description": "Cushion cover,",
+          "description-measurement": "50x50 cm (20x20 \")",
+          "price": 499
         },
         {
-          "better_image": "https://www.ikea.com/images/50/e9/50e95854f19088058cc930d33913e285.jpg?f=s",
-          "better_title": "Shoe boxes & organisers from Rs.49",
-          "id":2
+          "image1": "https://www.ikea.com/in/en/images/products/slaekt-bed-frame-w-storage-slatted-bedbase-white__0648346_pe704865_s5.jpg?f=xxs",
+          "image2": "https://www.ikea.com/in/en/images/products/slaekt-bed-frame-w-storage-slatted-bedbase-white__0737507_pe726512_s5.jpg?f=xxs",
+          "title": "SLÄKT",
+          "description": "Bed frame w storage+slatted bedbase,",
+          "description-measurement": "90x200 cm (35 3/8x78 3/4 \")",
+          "price": "26,490"
         },
         {
-          "better_image": "https://www.ikea.com/images/7d/6b/7d6b63203c8e2ddaa5da559889004299.jpg?f=s",
-          "better_title": "Clothes organisers from Rs.49",
-          "id":3
+          "image1": "https://www.ikea.com/in/en/images/products/vareld-bedspread-dark-grey__0605682_pe681798_s5.jpg?f=xxs",
+          "image2": "https://www.ikea.com/in/en/images/products/vareld-bedspread-dark-grey__0887982_pe632111_s5.jpg?f=xxs",
+          "title": "VÅRELD",
+          "description": "Bedspread,",
+          "description-measurement": "150x250 cm (59x98 \")",
+          "price": "1,990"
         },
         {
-          "better_image": "https://www.ikea.com/images/29/e2/29e200bea35809affce65080b33e8632.jpg?f=s",
-          "better_title": "Kitchen organisers from Rs.39",
-          "id":4
-        },
-        {
-          "better_image": "https://www.ikea.com/images/c7/85/c7853e88497ae33a463af264e2638233.jpg?f=s",
-          "better_title": "Food storage & organise from Rs.19",
-          "id":5
-        },
-        {
-          "better_image": "https://www.ikea.com/images/12/7b/127b63b070df8db01ae9b26bf9eb2a8f.jpg?f=s",
-          "better_title": "Storage boxes & baskets from Rs.19",
-          "id":6
-        },
-        {
-          "better_image": "https://www.ikea.com/images/4e/a9/4ea92836239c90b4ca8c40409a639cc8.jpg?f=s",
-          "better_title": "Wall shelves from Rs.299",
-          "id":7
-        },
-        {
-          "better_image": "https://www.ikea.com/images/8c/13/8c13033770991ef467371a52fbf56c3c.jpg?f=s",
-          "better_title": "Trolleys from Rs.949",
-          "id":8
-        }
-      ],
-      "big_scroller":[
-        {
-          "image": "https://www.ikea.com/images/b6/15/b615d94ecd3a525330f6daebb27313f8.png?f=s",
-          "heading": "Be ready for a new beginning",
-          "title": "Our inspiration and solutions at IKEA can help you bring your ideas to life.",
-           "id":9
-        },
-        {
-          "image": "https://www.ikea.com/images/db/e6/dbe6e769533011533a119680da7dfbb8.jpg?f=s",
-          "heading": "Affordable living room sets starting at Rs.35,970",
-          "title": "Make this multifunctional space that meets all your needs without breaking the bank.",
-          "id":10
-        },
-        {
-          "image": "https://www.ikea.com/images/c9/21/c921575bd1b052970fc0cac5c4136e52.png?f=s",
-          "heading": "Last chance to buy",
-          "title": "These products will be out of the range soon.",
-          "id":11
-        },
-        {
-          "image": "https://www.ikea.com/images/df/ef/dfef7c3f8054fb611e01cc62f5dbb318.jpg?f=s",
-          "heading": "Affordable bedroom sets starting at Rs.14,999",
-          "title": "Why not match your bed to other furniture in the room for a cohesive look?",
-          "id":12
-        },
-        {
-          "image": "https://www.ikea.com/images/28/bf/28bfac4d139ef252106d7813294e015b.png?f=s",
-          "heading": "Furniture under Rs.2999",
-          "title": "Affordable furniture to create a space of your own",
-          "id":13
-        },
-        {
-          "image": "https://www.ikea.com/images/75/38/7538f7a99ed4f85f2dd839b725961d00.png?f=s",
-          "heading": "Our lowest price",
-          "title": "Shop our lowest price products",
-          "id":14
+          "image1": "https://www.ikea.com/in/en/images/products/tjena-storage-box-with-lid-white__0812710_pe772101_s5.jpg?f=xxs",
+          "image2": "https://www.ikea.com/in/en/images/products/tjena-storage-box-with-lid-white__0815553_pe772970_s5.jpg?f=xxs",
+          "title": "TJENA",
+          "description": "Storage box with lid,",
+          "description-measurement": "32x35x32 cm (12 ½x13 ¾x12 ½ \")",
+          "price": 549
         }
       ]
+    },
+    {
+      "id": 32,
+      "img": "https://www.ikea.com/ext/ingkadam/m/14901784fe669fec/original/PH179197-crop001.jpg?f=xxl",
+      "item":"living_room",
+      "main_title": "Hide your TV screen in an art gallery",
+      "main_description": "A big TV is all good, but that doesn’t mean it has to become the centrepiece of the room. Or even the wall. Letting a wall-mounted monitor blend in by with framed art makes it all but go away – until it’s time for it to shine bright.",
+      "different_item": [
+        {
+          "image1": "https://www.ikea.com/in/en/images/products/havsta-tv-bench-with-plinth-white__0914257_pe783894_s5.jpg?f=xxs",
+          "image2": "https://www.ikea.com/in/en/images/products/havsta-tv-bench-with-plinth-white__0914747_pe784278_s5.jpg?f=xxs",
+          "title": "HAVSTA",
+          "description": "TV bench with plinth,",
+          "description-measurement": "160x47x62 cm (63x18 1/2x24 3/8 \")",
+          "price": "24,950"
+        },
+        {
+          "image1": "https://www.ikea.com/in/en/images/products/friheten-corner-sofa-bed-with-storage-hyllie-beige__0690253_pe723174_s5.jpg?f=xxs",
+          "image2": "https://www.ikea.com/in/en/images/products/friheten-corner-sofa-bed-with-storage-hyllie-beige__0690251_pe723175_s5.jpg?f=xxs",
+          "title": "FRIHETEN",
+          "description": "Corner sofa-bed with storage",
+          "description-measurement": "",
+          "price": "59,990"
+        },
+        {
+          "image1": "https://www.ikea.com/in/en/images/products/ribba-frame-white__0638331_pe698855_s5.jpg?f=xxs",
+          "image2": "https://www.ikea.com/in/en/images/products/ribba-frame-white__0249412_pe387929_s5.jpg?f=xxs",
+          "title": "RIBBA",
+          "description": "Frame,",
+          "description-measurement": "40x50 cm (15 ¾x19 ¾ \")",
+          "price": 799
+        },
+        {
+          "image1": "https://www.ikea.com/in/en/images/products/ribba-frame-black__0638340_pe698864_s5.jpg?f=xxs",
+          "image2": "https://www.ikea.com/in/en/images/products/ribba-frame-black__0902388_pe597457_s5.jpg?f=xxs",
+          "title": "RIBBA",
+          "description": "Frame,",
+          "description-measurement": "40x50 cm (15 ¾x19 ¾ \")",
+          "price": 799
+        },
+        {
+          "image1": "https://www.ikea.com/in/en/images/products/dejsa-table-lamp-beige-opal-white-glass__0967540_pe810183_s5.jpg?f=xxs",
+          "image2": "https://www.ikea.com/in/en/images/products/dejsa-table-lamp-beige-opal-white-glass__0967541_pe810185_s5.jpg?f=xxs",
+          "title": "DEJSA",
+          "description": "Table lamp,",
+          "description-measurement": "28 cm (11 \")",
+          "price": "3,490"
+        },
+        {
+          "image1": "https://www.ikea.com/in/en/images/products/arstid-table-lamp-nickel-plated-white__0609332_pe684455_s5.jpg?f=xxs",
+          "image2": "https://www.ikea.com/in/en/images/products/arstid-table-lamp-nickel-plated-white__0880604_pe617345_s5.jpg?f=xxs",
+          "title": "ÅRSTID",
+          "description": "Table lamp",
+          "description-measurement": "",
+          "price": "1,790"
+        }
+      ]
+    },
+    {
+      "id": 33,
+      "img": "https://www.ikea.com/ext/ingkadam/m/1852a0e0ad76152f/original/PH179305-crop001.jpg?f=xxl",
+      "item":"kitchen",
+      "main_title": "Spices in neat rows",
+      "main_description": "Easily finding what you need makes cooking much more enjoyable. Like with this solid aspen spice rack keeping everything you need for seasoning perfectly organised and always at hand. Any leftover space can be used for your latest cookbook purchase.",
+      "different_item": [
+        {
+          "image1": "https://www.ikea.com/in/en/images/products/bekvaem-spice-rack-aspen__0993240_pe814904_s5.jpg?f=xxs",
+          "image2": "https://www.ikea.com/in/en/images/products/bekvaem-spice-rack-aspen__0980362_pe814907_s5.jpg?f=xxs",
+          "title": "BEKVÄM",
+          "description": "Spice rack",
+          "price": 299,
+          "description-measurement": ""
+        },
+        {
+          "image1": "https://www.ikea.com/in/en/images/products/ikea-365-ihaerdig-spice-jar-glass-black__0978453_pe824466_s5.jpg?f=xxs",
+          "image2": "https://www.ikea.com/in/en/images/products/ikea-365-ihaerdig-spice-jar-glass-black__0978454_pe824469_s5.jpg?f=xxs",
+          "title": "IKEA 365+ IHÄRDIG",
+          "description": "Spice jar,",
+          "price": 209,
+          "description-measurement": "15 cl (5 oz)"
+        },
+        {
+          "image1": "https://www.ikea.com/in/en/images/products/korken-jar-with-lid-clear-glass__0712810_pe729071_s5.jpg?f=xxs",
+          "image2": "https://www.ikea.com/in/en/images/products/korken-jar-with-lid-clear-glass__0897362_pe608832_s5.jpg?f=xxs",
+          "title": "KORKEN",
+          "description": "Jar with lid,",
+          "price": 379,
+          "description-measurement": "13 cl (4 oz)"
+        },
+        {
+          "image1": "https://www.ikea.com/in/en/images/products/ikea-365-jar-with-lid-glass-bamboo__0610739_pe685087_s5.jpg?f=xxs",
+          "image2": "https://www.ikea.com/in/en/images/products/ikea-365-jar-with-lid-glass-bamboo__0669134_ph153794_s5.jpg?f=xxs",
+          "title": "IKEA 365+",
+          "description": "Jar with lid,",
+          "price": 699,
+          "description-measurement": "1.7 l (57 oz)"
+        }
+      ]
+    },
+    {
+      "id": 34,
+      "img": "https://www.ikea.com/ext/ingkadam/m/32c8a60d877fe701/original/PH183090.jpg?f=xxl",
+      "item":"children_room",
+      "main_title": "Step out in style",
+      "main_description": "This spacious shoe cabinet has got enough drawers for everyone to keep a few pairs of shoes by the door, so you’ll always be ready for any last minute outfit changes. Combine it with a pegboard to keep keys and small items handy by the door.",
+      "different_item": [
+        {
+          "image1": "https://www.ikea.com/in/en/images/products/bissa-shoe-cabinet-with-2-compartments-white__0710740_pe727758_s5.jpg?f=xxs",
+          "image2": "https://www.ikea.com/in/en/images/products/bissa-shoe-cabinet-with-2-compartments-white__0909585_pe671326_s5.jpg?f=xxs",
+          "title": "BISSA",
+          "description": "Shoe cabinet with 2 compartments,",
+          "description-measurement": "49x28x93 cm (19 1/4x11x36 5/8 \")",
+          "price": "3,990"
+        },
+        {
+          "image1": "https://www.ikea.com/in/en/images/products/skadis-pegboard-combination-white__0711788_pe728475_s5.jpg?f=xxs",
+          "image2": "https://www.ikea.com/in/en/images/products/skadis-pegboard-combination-white__0911164_pe709251_s5.jpg?f=xxs",
+          "title": "SKÅDIS",
+          "description": "Pegboard combination,",
+          "description-measurement": "76x56 cm (30x22 \")",
+          "price": "2,300"
+        },
+        {
+          "image1": "https://www.ikea.com/in/en/images/products/askmuller-table-lamp-white__1074321_pe856155_s5.jpg?f=xxs",
+          "image2": "https://www.ikea.com/in/en/images/products/askmuller-table-lamp-white__1043940_pe841836_s5.jpg?f=xxs",
+          "title": "ÅSKMULLER",
+          "description": "Table lamp,",
+          "description-measurement": "24 cm (9 \")",
+          "price": "1,790"
+        },
+        {
+          "image1": "https://www.ikea.com/in/en/images/products/ekrar-hat-and-coat-stand-white__0710637_pe727670_s5.jpg?f=xxs",
+          "image2": "https://www.ikea.com/in/en/images/products/ekrar-hat-and-coat-stand-white__0598722_pe677789_s5.jpg?f=xxs",
+          "title": "EKRAR",
+          "description": "Hat and coat stand,",
+          "description-measurement": "169 cm (66 1/2 \")",
+          "price": "1,790"
+        }
+      ]
+    },
+    {
+      "id": 35,
+      "img": "https://www.ikea.com/ext/ingkadam/m/26915b2696fde58/original/PH179505-crop001.jpg?f=s",
+      "item":"bedroom",
+      "main_title": "A soft cushion cover that pops up in every room",
+      "main_description": "Whether you’re in need of a soft layer for your armchair, comfy support for your head when in bed or a dash of colour to your sofa, the SANELA cushion cover envelops you in equal style. Made from cotton velvet, the SANELA cushion cover can add a sense of dimension and depth to your bed or sofa arrangement, not to mention, the material is soft to the touch. Mix and match this trendy cushion cover with patterned cushions for a varied look, or keep the solid-colour theme at the forefront, since this product comes in a wide range of colours that you can chose from.",
+      "different_item": [
+        {
+          "image1": "https://www.ikea.com/in/en/images/products/sanela-cushion-cover-dark-blue__0600213_pe678602_s5.jpg?f=xxs",
+          "image2": "https://www.ikea.com/in/en/images/products/sanela-cushion-cover-dark-blue__0888821_pe623735_s5.jpg?f=xxs",
+          "title": "SANELA",
+          "description": "Cushion cover,",
+          "description-measurement": "50x50 cm (20x20 \")",
+          "price": 499
+        },
+        {
+          "image1": "https://www.ikea.com/in/en/images/products/slaekt-bed-frame-w-storage-slatted-bedbase-white__0648346_pe704865_s5.jpg?f=xxs",
+          "image2": "https://www.ikea.com/in/en/images/products/slaekt-bed-frame-w-storage-slatted-bedbase-white__0737507_pe726512_s5.jpg?f=xxs",
+          "title": "SLÄKT",
+          "description": "Bed frame w storage+slatted bedbase,",
+          "description-measurement": "90x200 cm (35 3/8x78 3/4 \")",
+          "price": "26,490"
+        },
+        {
+          "image1": "https://www.ikea.com/in/en/images/products/vareld-bedspread-dark-grey__0605682_pe681798_s5.jpg?f=xxs",
+          "image2": "https://www.ikea.com/in/en/images/products/vareld-bedspread-dark-grey__0887982_pe632111_s5.jpg?f=xxs",
+          "title": "VÅRELD",
+          "description": "Bedspread,",
+          "description-measurement": "150x250 cm (59x98 \")",
+          "price": "1,990"
+        },
+        {
+          "image1": "https://www.ikea.com/in/en/images/products/tjena-storage-box-with-lid-white__0812710_pe772101_s5.jpg?f=xxs",
+          "image2": "https://www.ikea.com/in/en/images/products/tjena-storage-box-with-lid-white__0815553_pe772970_s5.jpg?f=xxs",
+          "title": "TJENA",
+          "description": "Storage box with lid,",
+          "description-measurement": "32x35x32 cm (12 ½x13 ¾x12 ½ \")",
+          "price": 549
+        }
+      ]
+    },
+    {
+      "id": 36,
+      "img": "https://www.ikea.com/ext/ingkadam/m/51078b810845b7ed/original/PH181367-crop001.jpg?f=s",
+      "item":"living_room",
+      "main_title": "Hide your TV screen in an art gallery",
+      "main_description": "A big TV is all good, but that doesn’t mean it has to become the centrepiece of the room. Or even the wall. Letting a wall-mounted monitor blend in by with framed art makes it all but go away – until it’s time for it to shine bright.",
+      "different_item": [
+        {
+          "image1": "https://www.ikea.com/in/en/images/products/havsta-tv-bench-with-plinth-white__0914257_pe783894_s5.jpg?f=xxs",
+          "image2": "https://www.ikea.com/in/en/images/products/havsta-tv-bench-with-plinth-white__0914747_pe784278_s5.jpg?f=xxs",
+          "title": "HAVSTA",
+          "description": "TV bench with plinth,",
+          "description-measurement": "160x47x62 cm (63x18 1/2x24 3/8 \")",
+          "price": "24,950"
+        },
+        {
+          "image1": "https://www.ikea.com/in/en/images/products/friheten-corner-sofa-bed-with-storage-hyllie-beige__0690253_pe723174_s5.jpg?f=xxs",
+          "image2": "https://www.ikea.com/in/en/images/products/friheten-corner-sofa-bed-with-storage-hyllie-beige__0690251_pe723175_s5.jpg?f=xxs",
+          "title": "FRIHETEN",
+          "description": "Corner sofa-bed with storage",
+          "description-measurement": "",
+          "price": "59,990"
+        },
+        {
+          "image1": "https://www.ikea.com/in/en/images/products/ribba-frame-white__0638331_pe698855_s5.jpg?f=xxs",
+          "image2": "https://www.ikea.com/in/en/images/products/ribba-frame-white__0249412_pe387929_s5.jpg?f=xxs",
+          "title": "RIBBA",
+          "description": "Frame,",
+          "description-measurement": "40x50 cm (15 ¾x19 ¾ \")",
+          "price": 799
+        },
+        {
+          "image1": "https://www.ikea.com/in/en/images/products/ribba-frame-black__0638340_pe698864_s5.jpg?f=xxs",
+          "image2": "https://www.ikea.com/in/en/images/products/ribba-frame-black__0902388_pe597457_s5.jpg?f=xxs",
+          "title": "RIBBA",
+          "description": "Frame,",
+          "description-measurement": "40x50 cm (15 ¾x19 ¾ \")",
+          "price": 799
+        },
+        {
+          "image1": "https://www.ikea.com/in/en/images/products/dejsa-table-lamp-beige-opal-white-glass__0967540_pe810183_s5.jpg?f=xxs",
+          "image2": "https://www.ikea.com/in/en/images/products/dejsa-table-lamp-beige-opal-white-glass__0967541_pe810185_s5.jpg?f=xxs",
+          "title": "DEJSA",
+          "description": "Table lamp,",
+          "description-measurement": "28 cm (11 \")",
+          "price": "3,490"
+        },
+        {
+          "image1": "https://www.ikea.com/in/en/images/products/arstid-table-lamp-nickel-plated-white__0609332_pe684455_s5.jpg?f=xxs",
+          "image2": "https://www.ikea.com/in/en/images/products/arstid-table-lamp-nickel-plated-white__0880604_pe617345_s5.jpg?f=xxs",
+          "title": "ÅRSTID",
+          "description": "Table lamp",
+          "description-measurement": "",
+          "price": "1,790"
+        }
+      ]
+    },
+    {
+      "id": 37,
+      "img": "https://www.ikea.com/ext/ingkadam/m/2dd64c4071f8ff70/original/PH178445-crop001.jpg?f=s",
+      "item":"living_room",
+      "main_title": "Spices in neat rows",
+      "main_description": "Easily finding what you need makes cooking much more enjoyable. Like with this solid aspen spice rack keeping everything you need for seasoning perfectly organised and always at hand. Any leftover space can be used for your latest cookbook purchase.",
+      "different_item": [
+        {
+          "image1": "https://www.ikea.com/in/en/images/products/bekvaem-spice-rack-aspen__0993240_pe814904_s5.jpg?f=xxs",
+          "image2": "https://www.ikea.com/in/en/images/products/bekvaem-spice-rack-aspen__0980362_pe814907_s5.jpg?f=xxs",
+          "title": "BEKVÄM",
+          "description": "Spice rack",
+          "price": 299,
+          "description-measurement": ""
+        },
+        {
+          "image1": "https://www.ikea.com/in/en/images/products/ikea-365-ihaerdig-spice-jar-glass-black__0978453_pe824466_s5.jpg?f=xxs",
+          "image2": "https://www.ikea.com/in/en/images/products/ikea-365-ihaerdig-spice-jar-glass-black__0978454_pe824469_s5.jpg?f=xxs",
+          "title": "IKEA 365+ IHÄRDIG",
+          "description": "Spice jar,",
+          "price": 209,
+          "description-measurement": "15 cl (5 oz)"
+        },
+        {
+          "image1": "https://www.ikea.com/in/en/images/products/korken-jar-with-lid-clear-glass__0712810_pe729071_s5.jpg?f=xxs",
+          "image2": "https://www.ikea.com/in/en/images/products/korken-jar-with-lid-clear-glass__0897362_pe608832_s5.jpg?f=xxs",
+          "title": "KORKEN",
+          "description": "Jar with lid,",
+          "price": 379,
+          "description-measurement": "13 cl (4 oz)"
+        },
+        {
+          "image1": "https://www.ikea.com/in/en/images/products/ikea-365-jar-with-lid-glass-bamboo__0610739_pe685087_s5.jpg?f=xxs",
+          "image2": "https://www.ikea.com/in/en/images/products/ikea-365-jar-with-lid-glass-bamboo__0669134_ph153794_s5.jpg?f=xxs",
+          "title": "IKEA 365+",
+          "description": "Jar with lid,",
+          "price": 699,
+          "description-measurement": "1.7 l (57 oz)"
+        }
+      ]
+    },
+    {
+      "id": 38,
+      "img": "https://www.ikea.com/ext/ingkadam/m/5895a9c8d2d6c135/original/PH164897-crop001.jpg?f=s",
+      "item":"kitchen",
+      "main_title": "Step out in style",
+      "main_description": "This spacious shoe cabinet has got enough drawers for everyone to keep a few pairs of shoes by the door, so you’ll always be ready for any last minute outfit changes. Combine it with a pegboard to keep keys and small items handy by the door.",
+      "different_item": [
+        {
+          "image1": "https://www.ikea.com/in/en/images/products/bissa-shoe-cabinet-with-2-compartments-white__0710740_pe727758_s5.jpg?f=xxs",
+          "image2": "https://www.ikea.com/in/en/images/products/bissa-shoe-cabinet-with-2-compartments-white__0909585_pe671326_s5.jpg?f=xxs",
+          "title": "BISSA",
+          "description": "Shoe cabinet with 2 compartments,",
+          "description-measurement": "49x28x93 cm (19 1/4x11x36 5/8 \")",
+          "price": "3,990"
+        },
+        {
+          "image1": "https://www.ikea.com/in/en/images/products/skadis-pegboard-combination-white__0711788_pe728475_s5.jpg?f=xxs",
+          "image2": "https://www.ikea.com/in/en/images/products/skadis-pegboard-combination-white__0911164_pe709251_s5.jpg?f=xxs",
+          "title": "SKÅDIS",
+          "description": "Pegboard combination,",
+          "description-measurement": "76x56 cm (30x22 \")",
+          "price": "2,300"
+        },
+        {
+          "image1": "https://www.ikea.com/in/en/images/products/askmuller-table-lamp-white__1074321_pe856155_s5.jpg?f=xxs",
+          "image2": "https://www.ikea.com/in/en/images/products/askmuller-table-lamp-white__1043940_pe841836_s5.jpg?f=xxs",
+          "title": "ÅSKMULLER",
+          "description": "Table lamp,",
+          "description-measurement": "24 cm (9 \")",
+          "price": "1,790"
+        },
+        {
+          "image1": "https://www.ikea.com/in/en/images/products/ekrar-hat-and-coat-stand-white__0710637_pe727670_s5.jpg?f=xxs",
+          "image2": "https://www.ikea.com/in/en/images/products/ekrar-hat-and-coat-stand-white__0598722_pe677789_s5.jpg?f=xxs",
+          "title": "EKRAR",
+          "description": "Hat and coat stand,",
+          "description-measurement": "169 cm (66 1/2 \")",
+          "price": "1,790"
+        }
+      ]
+    },
+    {
+      "id": 39,
+      "img": "https://www.ikea.com/ext/ingkadam/m/59defeed4fae3295/original/PH173302-crop002.jpg?f=s",
+      "item":"workspace",
+      "main_title": "Step out in style",
+      "main_description": "This spacious shoe cabinet has got enough drawers for everyone to keep a few pairs of shoes by the door, so you’ll always be ready for any last minute outfit changes. Combine it with a pegboard to keep keys and small items handy by the door.",
+      "different_item": [
+        {
+          "image1": "https://www.ikea.com/in/en/images/products/bissa-shoe-cabinet-with-2-compartments-white__0710740_pe727758_s5.jpg?f=xxs",
+          "image2": "https://www.ikea.com/in/en/images/products/bissa-shoe-cabinet-with-2-compartments-white__0909585_pe671326_s5.jpg?f=xxs",
+          "title": "BISSA",
+          "description": "Shoe cabinet with 2 compartments,",
+          "description-measurement": "49x28x93 cm (19 1/4x11x36 5/8 \")",
+          "price": "3,990"
+        },
+        {
+          "image1": "https://www.ikea.com/in/en/images/products/skadis-pegboard-combination-white__0711788_pe728475_s5.jpg?f=xxs",
+          "image2": "https://www.ikea.com/in/en/images/products/skadis-pegboard-combination-white__0911164_pe709251_s5.jpg?f=xxs",
+          "title": "SKÅDIS",
+          "description": "Pegboard combination,",
+          "description-measurement": "76x56 cm (30x22 \")",
+          "price": "2,300"
+        },
+        {
+          "image1": "https://www.ikea.com/in/en/images/products/askmuller-table-lamp-white__1074321_pe856155_s5.jpg?f=xxs",
+          "image2": "https://www.ikea.com/in/en/images/products/askmuller-table-lamp-white__1043940_pe841836_s5.jpg?f=xxs",
+          "title": "ÅSKMULLER",
+          "description": "Table lamp,",
+          "description-measurement": "24 cm (9 \")",
+          "price": "1,790"
+        },
+        {
+          "image1": "https://www.ikea.com/in/en/images/products/ekrar-hat-and-coat-stand-white__0710637_pe727670_s5.jpg?f=xxs",
+          "image2": "https://www.ikea.com/in/en/images/products/ekrar-hat-and-coat-stand-white__0598722_pe677789_s5.jpg?f=xxs",
+          "title": "EKRAR",
+          "description": "Hat and coat stand,",
+          "description-measurement": "169 cm (66 1/2 \")",
+          "price": "1,790"
+        }
+      ]
+    },
+    {
+      "id": 40,
+      "img": "https://www.ikea.com/ext/ingkadam/m/5c5cbac57f37ac0a/original/PH177187-crop001.jpg?f=s",
+      "item":"workspace",
+      "main_title": "Step out in style",
+      "main_description": "This spacious shoe cabinet has got enough drawers for everyone to keep a few pairs of shoes by the door, so you’ll always be ready for any last minute outfit changes. Combine it with a pegboard to keep keys and small items handy by the door.",
+      "different_item": [
+        {
+          "image1": "https://www.ikea.com/in/en/images/products/bissa-shoe-cabinet-with-2-compartments-white__0710740_pe727758_s5.jpg?f=xxs",
+          "image2": "https://www.ikea.com/in/en/images/products/bissa-shoe-cabinet-with-2-compartments-white__0909585_pe671326_s5.jpg?f=xxs",
+          "title": "BISSA",
+          "description": "Shoe cabinet with 2 compartments,",
+          "description-measurement": "49x28x93 cm (19 1/4x11x36 5/8 \")",
+          "price": "3,990"
+        },
+        {
+          "image1": "https://www.ikea.com/in/en/images/products/skadis-pegboard-combination-white__0711788_pe728475_s5.jpg?f=xxs",
+          "image2": "https://www.ikea.com/in/en/images/products/skadis-pegboard-combination-white__0911164_pe709251_s5.jpg?f=xxs",
+          "title": "SKÅDIS",
+          "description": "Pegboard combination,",
+          "description-measurement": "76x56 cm (30x22 \")",
+          "price": "2,300"
+        },
+        {
+          "image1": "https://www.ikea.com/in/en/images/products/askmuller-table-lamp-white__1074321_pe856155_s5.jpg?f=xxs",
+          "image2": "https://www.ikea.com/in/en/images/products/askmuller-table-lamp-white__1043940_pe841836_s5.jpg?f=xxs",
+          "title": "ÅSKMULLER",
+          "description": "Table lamp,",
+          "description-measurement": "24 cm (9 \")",
+          "price": "1,790"
+        },
+        {
+          "image1": "https://www.ikea.com/in/en/images/products/ekrar-hat-and-coat-stand-white__0710637_pe727670_s5.jpg?f=xxs",
+          "image2": "https://www.ikea.com/in/en/images/products/ekrar-hat-and-coat-stand-white__0598722_pe677789_s5.jpg?f=xxs",
+          "title": "EKRAR",
+          "description": "Hat and coat stand,",
+          "description-measurement": "169 cm (66 1/2 \")",
+          "price": "1,790"
+        }
+      ]
+    },
+    {
+      "id": 41,
+      "img": "https://www.ikea.com/ext/ingkadam/m/4aee4f8b1e805cf7/original/PH166848-crop006.jpg?f=s",
+      "item":"outdoor",
+      "main_title": "A soft cushion cover that pops up in every room",
+      "main_description": "Whether you’re in need of a soft layer for your armchair, comfy support for your head when in bed or a dash of colour to your sofa, the SANELA cushion cover envelops you in equal style. Made from cotton velvet, the SANELA cushion cover can add a sense of dimension and depth to your bed or sofa arrangement, not to mention, the material is soft to the touch. Mix and match this trendy cushion cover with patterned cushions for a varied look, or keep the solid-colour theme at the forefront, since this product comes in a wide range of colours that you can chose from.",
+      "different_item": [
+        {
+          "image1": "https://www.ikea.com/in/en/images/products/sanela-cushion-cover-dark-blue__0600213_pe678602_s5.jpg?f=xxs",
+          "image2": "https://www.ikea.com/in/en/images/products/sanela-cushion-cover-dark-blue__0888821_pe623735_s5.jpg?f=xxs",
+          "title": "SANELA",
+          "description": "Cushion cover,",
+          "description-measurement": "50x50 cm (20x20 \")",
+          "price": 499
+        },
+        {
+          "image1": "https://www.ikea.com/in/en/images/products/slaekt-bed-frame-w-storage-slatted-bedbase-white__0648346_pe704865_s5.jpg?f=xxs",
+          "image2": "https://www.ikea.com/in/en/images/products/slaekt-bed-frame-w-storage-slatted-bedbase-white__0737507_pe726512_s5.jpg?f=xxs",
+          "title": "SLÄKT",
+          "description": "Bed frame w storage+slatted bedbase,",
+          "description-measurement": "90x200 cm (35 3/8x78 3/4 \")",
+          "price": "26,490"
+        },
+        {
+          "image1": "https://www.ikea.com/in/en/images/products/vareld-bedspread-dark-grey__0605682_pe681798_s5.jpg?f=xxs",
+          "image2": "https://www.ikea.com/in/en/images/products/vareld-bedspread-dark-grey__0887982_pe632111_s5.jpg?f=xxs",
+          "title": "VÅRELD",
+          "description": "Bedspread,",
+          "description-measurement": "150x250 cm (59x98 \")",
+          "price": "1,990"
+        },
+        {
+          "image1": "https://www.ikea.com/in/en/images/products/tjena-storage-box-with-lid-white__0812710_pe772101_s5.jpg?f=xxs",
+          "image2": "https://www.ikea.com/in/en/images/products/tjena-storage-box-with-lid-white__0815553_pe772970_s5.jpg?f=xxs",
+          "title": "TJENA",
+          "description": "Storage box with lid,",
+          "description-measurement": "32x35x32 cm (12 ½x13 ¾x12 ½ \")",
+          "price": 549
+        }
+      ]
+    },
+    {
+      "id": 42,
+      "img": "https://www.ikea.com/ext/ingkadam/m/503e502cdcfa36c/original/PH165408-crop001.jpg?f=s",
+      "item":"bathroom",
+      "main_title": "Hide your TV screen in an art gallery",
+      "main_description": "A big TV is all good, but that doesn’t mean it has to become the centrepiece of the room. Or even the wall. Letting a wall-mounted monitor blend in by with framed art makes it all but go away – until it’s time for it to shine bright.",
+      "different_item": [
+        {
+          "image1": "https://www.ikea.com/in/en/images/products/havsta-tv-bench-with-plinth-white__0914257_pe783894_s5.jpg?f=xxs",
+          "image2": "https://www.ikea.com/in/en/images/products/havsta-tv-bench-with-plinth-white__0914747_pe784278_s5.jpg?f=xxs",
+          "title": "HAVSTA",
+          "description": "TV bench with plinth,",
+          "description-measurement": "160x47x62 cm (63x18 1/2x24 3/8 \")",
+          "price": "24,950"
+        },
+        {
+          "image1": "https://www.ikea.com/in/en/images/products/friheten-corner-sofa-bed-with-storage-hyllie-beige__0690253_pe723174_s5.jpg?f=xxs",
+          "image2": "https://www.ikea.com/in/en/images/products/friheten-corner-sofa-bed-with-storage-hyllie-beige__0690251_pe723175_s5.jpg?f=xxs",
+          "title": "FRIHETEN",
+          "description": "Corner sofa-bed with storage",
+          "description-measurement": "",
+          "price": "59,990"
+        },
+        {
+          "image1": "https://www.ikea.com/in/en/images/products/ribba-frame-white__0638331_pe698855_s5.jpg?f=xxs",
+          "image2": "https://www.ikea.com/in/en/images/products/ribba-frame-white__0249412_pe387929_s5.jpg?f=xxs",
+          "title": "RIBBA",
+          "description": "Frame,",
+          "description-measurement": "40x50 cm (15 ¾x19 ¾ \")",
+          "price": 799
+        },
+        {
+          "image1": "https://www.ikea.com/in/en/images/products/ribba-frame-black__0638340_pe698864_s5.jpg?f=xxs",
+          "image2": "https://www.ikea.com/in/en/images/products/ribba-frame-black__0902388_pe597457_s5.jpg?f=xxs",
+          "title": "RIBBA",
+          "description": "Frame,",
+          "description-measurement": "40x50 cm (15 ¾x19 ¾ \")",
+          "price": 799
+        },
+        {
+          "image1": "https://www.ikea.com/in/en/images/products/dejsa-table-lamp-beige-opal-white-glass__0967540_pe810183_s5.jpg?f=xxs",
+          "image2": "https://www.ikea.com/in/en/images/products/dejsa-table-lamp-beige-opal-white-glass__0967541_pe810185_s5.jpg?f=xxs",
+          "title": "DEJSA",
+          "description": "Table lamp,",
+          "description-measurement": "28 cm (11 \")",
+          "price": "3,490"
+        },
+        {
+          "image1": "https://www.ikea.com/in/en/images/products/arstid-table-lamp-nickel-plated-white__0609332_pe684455_s5.jpg?f=xxs",
+          "image2": "https://www.ikea.com/in/en/images/products/arstid-table-lamp-nickel-plated-white__0880604_pe617345_s5.jpg?f=xxs",
+          "title": "ÅRSTID",
+          "description": "Table lamp",
+          "description-measurement": "",
+          "price": "1,790"
+        }
+      ]
+    },
+    {
+      "id": 43,
+      "img": "https://www.ikea.com/ext/ingkadam/m/35590d726e0648f7/original/PH165548-crop001.jpg?f=s",
+      "item":"children_room",
+      "main_title": "Spices in neat rows",
+      "main_description": "Easily finding what you need makes cooking much more enjoyable. Like with this solid aspen spice rack keeping everything you need for seasoning perfectly organised and always at hand. Any leftover space can be used for your latest cookbook purchase.",
+      "different_item": [
+        {
+          "image1": "https://www.ikea.com/in/en/images/products/bekvaem-spice-rack-aspen__0993240_pe814904_s5.jpg?f=xxs",
+          "image2": "https://www.ikea.com/in/en/images/products/bekvaem-spice-rack-aspen__0980362_pe814907_s5.jpg?f=xxs",
+          "title": "BEKVÄM",
+          "description": "Spice rack",
+          "price": 299,
+          "description-measurement": ""
+        },
+        {
+          "image1": "https://www.ikea.com/in/en/images/products/ikea-365-ihaerdig-spice-jar-glass-black__0978453_pe824466_s5.jpg?f=xxs",
+          "image2": "https://www.ikea.com/in/en/images/products/ikea-365-ihaerdig-spice-jar-glass-black__0978454_pe824469_s5.jpg?f=xxs",
+          "title": "IKEA 365+ IHÄRDIG",
+          "description": "Spice jar,",
+          "price": 209,
+          "description-measurement": "15 cl (5 oz)"
+        },
+        {
+          "image1": "https://www.ikea.com/in/en/images/products/korken-jar-with-lid-clear-glass__0712810_pe729071_s5.jpg?f=xxs",
+          "image2": "https://www.ikea.com/in/en/images/products/korken-jar-with-lid-clear-glass__0897362_pe608832_s5.jpg?f=xxs",
+          "title": "KORKEN",
+          "description": "Jar with lid,",
+          "price": 379,
+          "description-measurement": "13 cl (4 oz)"
+        },
+        {
+          "image1": "https://www.ikea.com/in/en/images/products/ikea-365-jar-with-lid-glass-bamboo__0610739_pe685087_s5.jpg?f=xxs",
+          "image2": "https://www.ikea.com/in/en/images/products/ikea-365-jar-with-lid-glass-bamboo__0669134_ph153794_s5.jpg?f=xxs",
+          "title": "IKEA 365+",
+          "description": "Jar with lid,",
+          "price": 699,
+          "description-measurement": "1.7 l (57 oz)"
+        }
+      ]
+    },
+    {
+      "id": 44,
+      "img": "https://www.ikea.com/ext/ingkadam/m/4e48a3270126506d/original/PH182890.jpg?f=s",
+      "item":"bedroom",
+      "main_title": "Step out in style",
+      "main_description": "This spacious shoe cabinet has got enough drawers for everyone to keep a few pairs of shoes by the door, so you’ll always be ready for any last minute outfit changes. Combine it with a pegboard to keep keys and small items handy by the door.",
+      "different_item": [
+        {
+          "image1": "https://www.ikea.com/in/en/images/products/bissa-shoe-cabinet-with-2-compartments-white__0710740_pe727758_s5.jpg?f=xxs",
+          "image2": "https://www.ikea.com/in/en/images/products/bissa-shoe-cabinet-with-2-compartments-white__0909585_pe671326_s5.jpg?f=xxs",
+          "title": "BISSA",
+          "description": "Shoe cabinet with 2 compartments,",
+          "description-measurement": "49x28x93 cm (19 1/4x11x36 5/8 \")",
+          "price": "3,990"
+        },
+        {
+          "image1": "https://www.ikea.com/in/en/images/products/skadis-pegboard-combination-white__0711788_pe728475_s5.jpg?f=xxs",
+          "image2": "https://www.ikea.com/in/en/images/products/skadis-pegboard-combination-white__0911164_pe709251_s5.jpg?f=xxs",
+          "title": "SKÅDIS",
+          "description": "Pegboard combination,",
+          "description-measurement": "76x56 cm (30x22 \")",
+          "price": "2,300"
+        },
+        {
+          "image1": "https://www.ikea.com/in/en/images/products/askmuller-table-lamp-white__1074321_pe856155_s5.jpg?f=xxs",
+          "image2": "https://www.ikea.com/in/en/images/products/askmuller-table-lamp-white__1043940_pe841836_s5.jpg?f=xxs",
+          "title": "ÅSKMULLER",
+          "description": "Table lamp,",
+          "description-measurement": "24 cm (9 \")",
+          "price": "1,790"
+        },
+        {
+          "image1": "https://www.ikea.com/in/en/images/products/ekrar-hat-and-coat-stand-white__0710637_pe727670_s5.jpg?f=xxs",
+          "image2": "https://www.ikea.com/in/en/images/products/ekrar-hat-and-coat-stand-white__0598722_pe677789_s5.jpg?f=xxs",
+          "title": "EKRAR",
+          "description": "Hat and coat stand,",
+          "description-measurement": "169 cm (66 1/2 \")",
+          "price": "1,790"
+        }
+      ]
+    },
+    {
+      "id": 45,
+      "img": "https://www.ikea.com/ext/ingkadam/m/2f0d4d05d0de4324/original/PH166966-crop002.jpg?f=s",
+      "item":"kitchen",
+      "main_title": "A soft cushion cover that pops up in every room",
+      "main_description": "Whether you’re in need of a soft layer for your armchair, comfy support for your head when in bed or a dash of colour to your sofa, the SANELA cushion cover envelops you in equal style. Made from cotton velvet, the SANELA cushion cover can add a sense of dimension and depth to your bed or sofa arrangement, not to mention, the material is soft to the touch. Mix and match this trendy cushion cover with patterned cushions for a varied look, or keep the solid-colour theme at the forefront, since this product comes in a wide range of colours that you can chose from.",
+      "different_item": [
+        {
+          "image1": "https://www.ikea.com/in/en/images/products/sanela-cushion-cover-dark-blue__0600213_pe678602_s5.jpg?f=xxs",
+          "image2": "https://www.ikea.com/in/en/images/products/sanela-cushion-cover-dark-blue__0888821_pe623735_s5.jpg?f=xxs",
+          "title": "SANELA",
+          "description": "Cushion cover,",
+          "description-measurement": "50x50 cm (20x20 \")",
+          "price": 499
+        },
+        {
+          "image1": "https://www.ikea.com/in/en/images/products/slaekt-bed-frame-w-storage-slatted-bedbase-white__0648346_pe704865_s5.jpg?f=xxs",
+          "image2": "https://www.ikea.com/in/en/images/products/slaekt-bed-frame-w-storage-slatted-bedbase-white__0737507_pe726512_s5.jpg?f=xxs",
+          "title": "SLÄKT",
+          "description": "Bed frame w storage+slatted bedbase,",
+          "description-measurement": "90x200 cm (35 3/8x78 3/4 \")",
+          "price": "26,490"
+        },
+        {
+          "image1": "https://www.ikea.com/in/en/images/products/vareld-bedspread-dark-grey__0605682_pe681798_s5.jpg?f=xxs",
+          "image2": "https://www.ikea.com/in/en/images/products/vareld-bedspread-dark-grey__0887982_pe632111_s5.jpg?f=xxs",
+          "title": "VÅRELD",
+          "description": "Bedspread,",
+          "description-measurement": "150x250 cm (59x98 \")",
+          "price": "1,990"
+        },
+        {
+          "image1": "https://www.ikea.com/in/en/images/products/tjena-storage-box-with-lid-white__0812710_pe772101_s5.jpg?f=xxs",
+          "image2": "https://www.ikea.com/in/en/images/products/tjena-storage-box-with-lid-white__0815553_pe772970_s5.jpg?f=xxs",
+          "title": "TJENA",
+          "description": "Storage box with lid,",
+          "description-measurement": "32x35x32 cm (12 ½x13 ¾x12 ½ \")",
+          "price": 549
+        }
+      ]
+    },
+    {
+      "id": 46,
+      "img": "https://www.ikea.com/ext/ingkadam/m/28c98dbee97e6c54/original/PH183202.jpg?f=s",
+      "item":"workspace",
+      "main_title": "Hide your TV screen in an art gallery",
+      "main_description": "A big TV is all good, but that doesn’t mean it has to become the centrepiece of the room. Or even the wall. Letting a wall-mounted monitor blend in by with framed art makes it all but go away – until it’s time for it to shine bright.",
+      "different_item": [
+        {
+          "image1": "https://www.ikea.com/in/en/images/products/havsta-tv-bench-with-plinth-white__0914257_pe783894_s5.jpg?f=xxs",
+          "image2": "https://www.ikea.com/in/en/images/products/havsta-tv-bench-with-plinth-white__0914747_pe784278_s5.jpg?f=xxs",
+          "title": "HAVSTA",
+          "description": "TV bench with plinth,",
+          "description-measurement": "160x47x62 cm (63x18 1/2x24 3/8 \")",
+          "price": "24,950"
+        },
+        {
+          "image1": "https://www.ikea.com/in/en/images/products/friheten-corner-sofa-bed-with-storage-hyllie-beige__0690253_pe723174_s5.jpg?f=xxs",
+          "image2": "https://www.ikea.com/in/en/images/products/friheten-corner-sofa-bed-with-storage-hyllie-beige__0690251_pe723175_s5.jpg?f=xxs",
+          "title": "FRIHETEN",
+          "description": "Corner sofa-bed with storage",
+          "description-measurement": "",
+          "price": "59,990"
+        },
+        {
+          "image1": "https://www.ikea.com/in/en/images/products/ribba-frame-white__0638331_pe698855_s5.jpg?f=xxs",
+          "image2": "https://www.ikea.com/in/en/images/products/ribba-frame-white__0249412_pe387929_s5.jpg?f=xxs",
+          "title": "RIBBA",
+          "description": "Frame,",
+          "description-measurement": "40x50 cm (15 ¾x19 ¾ \")",
+          "price": 799
+        },
+        {
+          "image1": "https://www.ikea.com/in/en/images/products/ribba-frame-black__0638340_pe698864_s5.jpg?f=xxs",
+          "image2": "https://www.ikea.com/in/en/images/products/ribba-frame-black__0902388_pe597457_s5.jpg?f=xxs",
+          "title": "RIBBA",
+          "description": "Frame,",
+          "description-measurement": "40x50 cm (15 ¾x19 ¾ \")",
+          "price": 799
+        },
+        {
+          "image1": "https://www.ikea.com/in/en/images/products/dejsa-table-lamp-beige-opal-white-glass__0967540_pe810183_s5.jpg?f=xxs",
+          "image2": "https://www.ikea.com/in/en/images/products/dejsa-table-lamp-beige-opal-white-glass__0967541_pe810185_s5.jpg?f=xxs",
+          "title": "DEJSA",
+          "description": "Table lamp,",
+          "description-measurement": "28 cm (11 \")",
+          "price": "3,490"
+        },
+        {
+          "image1": "https://www.ikea.com/in/en/images/products/arstid-table-lamp-nickel-plated-white__0609332_pe684455_s5.jpg?f=xxs",
+          "image2": "https://www.ikea.com/in/en/images/products/arstid-table-lamp-nickel-plated-white__0880604_pe617345_s5.jpg?f=xxs",
+          "title": "ÅRSTID",
+          "description": "Table lamp",
+          "description-measurement": "",
+          "price": "1,790"
+        }
+      ]
+    },
+    {
+      "id": 47,
+      "img": "https://www.ikea.com/ext/ingkadam/m/1a320809df070607/original/PE717147-crop001.jpg?f=s",
+      "item":"outdoor",
+      "main_title": "Spices in neat rows",
+      "main_description": "Easily finding what you need makes cooking much more enjoyable. Like with this solid aspen spice rack keeping everything you need for seasoning perfectly organised and always at hand. Any leftover space can be used for your latest cookbook purchase.",
+      "different_item": [
+        {
+          "image1": "https://www.ikea.com/in/en/images/products/bekvaem-spice-rack-aspen__0993240_pe814904_s5.jpg?f=xxs",
+          "image2": "https://www.ikea.com/in/en/images/products/bekvaem-spice-rack-aspen__0980362_pe814907_s5.jpg?f=xxs",
+          "title": "BEKVÄM",
+          "description": "Spice rack",
+          "price": 299,
+          "description-measurement": ""
+        },
+        {
+          "image1": "https://www.ikea.com/in/en/images/products/ikea-365-ihaerdig-spice-jar-glass-black__0978453_pe824466_s5.jpg?f=xxs",
+          "image2": "https://www.ikea.com/in/en/images/products/ikea-365-ihaerdig-spice-jar-glass-black__0978454_pe824469_s5.jpg?f=xxs",
+          "title": "IKEA 365+ IHÄRDIG",
+          "description": "Spice jar,",
+          "price": 209,
+          "description-measurement": "15 cl (5 oz)"
+        },
+        {
+          "image1": "https://www.ikea.com/in/en/images/products/korken-jar-with-lid-clear-glass__0712810_pe729071_s5.jpg?f=xxs",
+          "image2": "https://www.ikea.com/in/en/images/products/korken-jar-with-lid-clear-glass__0897362_pe608832_s5.jpg?f=xxs",
+          "title": "KORKEN",
+          "description": "Jar with lid,",
+          "price": 379,
+          "description-measurement": "13 cl (4 oz)"
+        },
+        {
+          "image1": "https://www.ikea.com/in/en/images/products/ikea-365-jar-with-lid-glass-bamboo__0610739_pe685087_s5.jpg?f=xxs",
+          "image2": "https://www.ikea.com/in/en/images/products/ikea-365-jar-with-lid-glass-bamboo__0669134_ph153794_s5.jpg?f=xxs",
+          "title": "IKEA 365+",
+          "description": "Jar with lid,",
+          "price": 699,
+          "description-measurement": "1.7 l (57 oz)"
+        }
+      ]
+    },
+    {
+      "id": 48,
+      "img": "https://www.ikea.com/ext/ingkadam/m/7cb9621f059591b2/original/PH161307-crop001.jpg?f=s",
+      "item":"bathroom",
+      "main_title": "Step out in style",
+      "main_description": "This spacious shoe cabinet has got enough drawers for everyone to keep a few pairs of shoes by the door, so you’ll always be ready for any last minute outfit changes. Combine it with a pegboard to keep keys and small items handy by the door.",
+      "different_item": [
+        {
+          "image1": "https://www.ikea.com/in/en/images/products/bissa-shoe-cabinet-with-2-compartments-white__0710740_pe727758_s5.jpg?f=xxs",
+          "image2": "https://www.ikea.com/in/en/images/products/bissa-shoe-cabinet-with-2-compartments-white__0909585_pe671326_s5.jpg?f=xxs",
+          "title": "BISSA",
+          "description": "Shoe cabinet with 2 compartments,",
+          "description-measurement": "49x28x93 cm (19 1/4x11x36 5/8 \")",
+          "price": "3,990"
+        },
+        {
+          "image1": "https://www.ikea.com/in/en/images/products/skadis-pegboard-combination-white__0711788_pe728475_s5.jpg?f=xxs",
+          "image2": "https://www.ikea.com/in/en/images/products/skadis-pegboard-combination-white__0911164_pe709251_s5.jpg?f=xxs",
+          "title": "SKÅDIS",
+          "description": "Pegboard combination,",
+          "description-measurement": "76x56 cm (30x22 \")",
+          "price": "2,300"
+        },
+        {
+          "image1": "https://www.ikea.com/in/en/images/products/askmuller-table-lamp-white__1074321_pe856155_s5.jpg?f=xxs",
+          "image2": "https://www.ikea.com/in/en/images/products/askmuller-table-lamp-white__1043940_pe841836_s5.jpg?f=xxs",
+          "title": "ÅSKMULLER",
+          "description": "Table lamp,",
+          "description-measurement": "24 cm (9 \")",
+          "price": "1,790"
+        },
+        {
+          "image1": "https://www.ikea.com/in/en/images/products/ekrar-hat-and-coat-stand-white__0710637_pe727670_s5.jpg?f=xxs",
+          "image2": "https://www.ikea.com/in/en/images/products/ekrar-hat-and-coat-stand-white__0598722_pe677789_s5.jpg?f=xxs",
+          "title": "EKRAR",
+          "description": "Hat and coat stand,",
+          "description-measurement": "169 cm (66 1/2 \")",
+          "price": "1,790"
+        }
+      ]
+    },
+    {
+      "id": 49,
+      "img": "https://www.ikea.com/ext/ingkadam/m/38fc5b807cffa0b2/original/PH177294-crop003.jpg?f=s",
+      "item":"children_room",
+      "main_title": "Step out in style",
+      "main_description": "This spacious shoe cabinet has got enough drawers for everyone to keep a few pairs of shoes by the door, so you’ll always be ready for any last minute outfit changes. Combine it with a pegboard to keep keys and small items handy by the door.",
+      "different_item": [
+        {
+          "image1": "https://www.ikea.com/in/en/images/products/bissa-shoe-cabinet-with-2-compartments-white__0710740_pe727758_s5.jpg?f=xxs",
+          "image2": "https://www.ikea.com/in/en/images/products/bissa-shoe-cabinet-with-2-compartments-white__0909585_pe671326_s5.jpg?f=xxs",
+          "title": "BISSA",
+          "description": "Shoe cabinet with 2 compartments,",
+          "description-measurement": "49x28x93 cm (19 1/4x11x36 5/8 \")",
+          "price": "3,990"
+        },
+        {
+          "image1": "https://www.ikea.com/in/en/images/products/skadis-pegboard-combination-white__0711788_pe728475_s5.jpg?f=xxs",
+          "image2": "https://www.ikea.com/in/en/images/products/skadis-pegboard-combination-white__0911164_pe709251_s5.jpg?f=xxs",
+          "title": "SKÅDIS",
+          "description": "Pegboard combination,",
+          "description-measurement": "76x56 cm (30x22 \")",
+          "price": "2,300"
+        },
+        {
+          "image1": "https://www.ikea.com/in/en/images/products/askmuller-table-lamp-white__1074321_pe856155_s5.jpg?f=xxs",
+          "image2": "https://www.ikea.com/in/en/images/products/askmuller-table-lamp-white__1043940_pe841836_s5.jpg?f=xxs",
+          "title": "ÅSKMULLER",
+          "description": "Table lamp,",
+          "description-measurement": "24 cm (9 \")",
+          "price": "1,790"
+        },
+        {
+          "image1": "https://www.ikea.com/in/en/images/products/ekrar-hat-and-coat-stand-white__0710637_pe727670_s5.jpg?f=xxs",
+          "image2": "https://www.ikea.com/in/en/images/products/ekrar-hat-and-coat-stand-white__0598722_pe677789_s5.jpg?f=xxs",
+          "title": "EKRAR",
+          "description": "Hat and coat stand,",
+          "description-measurement": "169 cm (66 1/2 \")",
+          "price": "1,790"
+        }
+      ]
+    },
+    {
+      "id": 50,
+      "img": "https://www.ikea.com/ext/ingkadam/m/7ee41ebd0d8683be/original/PH166339-crop001.jpg?f=s",
+      "item":"kitchen",
+      "main_title": "Step out in style",
+      "main_description": "This spacious shoe cabinet has got enough drawers for everyone to keep a few pairs of shoes by the door, so you’ll always be ready for any last minute outfit changes. Combine it with a pegboard to keep keys and small items handy by the door.",
+      "different_item": [
+        {
+          "image1": "https://www.ikea.com/in/en/images/products/bissa-shoe-cabinet-with-2-compartments-white__0710740_pe727758_s5.jpg?f=xxs",
+          "image2": "https://www.ikea.com/in/en/images/products/bissa-shoe-cabinet-with-2-compartments-white__0909585_pe671326_s5.jpg?f=xxs",
+          "title": "BISSA",
+          "description": "Shoe cabinet with 2 compartments,",
+          "description-measurement": "49x28x93 cm (19 1/4x11x36 5/8 \")",
+          "price": "3,990"
+        },
+        {
+          "image1": "https://www.ikea.com/in/en/images/products/skadis-pegboard-combination-white__0711788_pe728475_s5.jpg?f=xxs",
+          "image2": "https://www.ikea.com/in/en/images/products/skadis-pegboard-combination-white__0911164_pe709251_s5.jpg?f=xxs",
+          "title": "SKÅDIS",
+          "description": "Pegboard combination,",
+          "description-measurement": "76x56 cm (30x22 \")",
+          "price": "2,300"
+        },
+        {
+          "image1": "https://www.ikea.com/in/en/images/products/askmuller-table-lamp-white__1074321_pe856155_s5.jpg?f=xxs",
+          "image2": "https://www.ikea.com/in/en/images/products/askmuller-table-lamp-white__1043940_pe841836_s5.jpg?f=xxs",
+          "title": "ÅSKMULLER",
+          "description": "Table lamp,",
+          "description-measurement": "24 cm (9 \")",
+          "price": "1,790"
+        },
+        {
+          "image1": "https://www.ikea.com/in/en/images/products/ekrar-hat-and-coat-stand-white__0710637_pe727670_s5.jpg?f=xxs",
+          "image2": "https://www.ikea.com/in/en/images/products/ekrar-hat-and-coat-stand-white__0598722_pe677789_s5.jpg?f=xxs",
+          "title": "EKRAR",
+          "description": "Hat and coat stand,",
+          "description-measurement": "169 cm (66 1/2 \")",
+          "price": "1,790"
+        }
+      ]
+    }
+
+  ]
 }
