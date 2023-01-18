@@ -1,0 +1,82 @@
+{
+    "better_storage": [
+        {
+          "better_image": "https://www.ikea.com/images/66/a7/66a7ad4f93664a50fa386f545860a313.jpg?f=s",
+          "better_title": "Hook & wall organisation from Rs.75",
+          "id":1
+        },
+        {
+          "better_image": "https://www.ikea.com/images/50/e9/50e95854f19088058cc930d33913e285.jpg?f=s",
+          "better_title": "Shoe boxes & organisers from Rs.49",
+          "id":2
+        },
+        {
+          "better_image": "https://www.ikea.com/images/7d/6b/7d6b63203c8e2ddaa5da559889004299.jpg?f=s",
+          "better_title": "Clothes organisers from Rs.49",
+          "id":3
+        },
+        {
+          "better_image": "https://www.ikea.com/images/29/e2/29e200bea35809affce65080b33e8632.jpg?f=s",
+          "better_title": "Kitchen organisers from Rs.39",
+          "id":4
+        },
+        {
+          "better_image": "https://www.ikea.com/images/c7/85/c7853e88497ae33a463af264e2638233.jpg?f=s",
+          "better_title": "Food storage & organise from Rs.19",
+          "id":5
+        },
+        {
+          "better_image": "https://www.ikea.com/images/12/7b/127b63b070df8db01ae9b26bf9eb2a8f.jpg?f=s",
+          "better_title": "Storage boxes & baskets from Rs.19",
+          "id":6
+        },
+        {
+          "better_image": "https://www.ikea.com/images/4e/a9/4ea92836239c90b4ca8c40409a639cc8.jpg?f=s",
+          "better_title": "Wall shelves from Rs.299",
+          "id":7
+        },
+        {
+          "better_image": "https://www.ikea.com/images/8c/13/8c13033770991ef467371a52fbf56c3c.jpg?f=s",
+          "better_title": "Trolleys from Rs.949",
+          "id":8
+        }
+      ],
+      "big_scroller":[
+        {
+          "image": "https://www.ikea.com/images/b6/15/b615d94ecd3a525330f6daebb27313f8.png?f=s",
+          "heading": "Be ready for a new beginning",
+          "title": "Our inspiration and solutions at IKEA can help you bring your ideas to life.",
+           "id":9
+        },
+        {
+          "image": "https://www.ikea.com/images/db/e6/dbe6e769533011533a119680da7dfbb8.jpg?f=s",
+          "heading": "Affordable living room sets starting at Rs.35,970",
+          "title": "Make this multifunctional space that meets all your needs without breaking the bank.",
+          "id":10
+        },
+        {
+          "image": "https://www.ikea.com/images/c9/21/c921575bd1b052970fc0cac5c4136e52.png?f=s",
+          "heading": "Last chance to buy",
+          "title": "These products will be out of the range soon.",
+          "id":11
+        },
+        {
+          "image": "https://www.ikea.com/images/df/ef/dfef7c3f8054fb611e01cc62f5dbb318.jpg?f=s",
+          "heading": "Affordable bedroom sets starting at Rs.14,999",
+          "title": "Why not match your bed to other furniture in the room for a cohesive look?",
+          "id":12
+        },
+        {
+          "image": "https://www.ikea.com/images/28/bf/28bfac4d139ef252106d7813294e015b.png?f=s",
+          "heading": "Furniture under Rs.2999",
+          "title": "Affordable furniture to create a space of your own",
+          "id":13
+        },
+        {
+          "image": "https://www.ikea.com/images/75/38/7538f7a99ed4f85f2dd839b725961d00.png?f=s",
+          "heading": "Our lowest price",
+          "title": "Shop our lowest price products",
+          "id":14
+        }
+      ]
+}
