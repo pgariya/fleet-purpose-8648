@@ -38,7 +38,10 @@ const SingleFeaturesPage = () => {
 
   useEffect(() => {
     getmydata(params.id);
+
   }, [params.id,liked]);
+ 
+
 
   console.log(mydata);
 
@@ -50,6 +53,7 @@ const SingleFeaturesPage = () => {
     );
   }
 
+
 let handleCart=(id) =>{
  
   if(diffproduct.title==id){
@@ -59,6 +63,7 @@ let handleCart=(id) =>{
  console.log(mydata.title,"title")
 
 }
+
 
 
 
@@ -78,6 +83,7 @@ let handleCart=(id) =>{
           <Image src={mydata.img} />
         </Box>
 
+
         <Box w={"60%"} textAlign="left">
           <Heading >{mydata.main_title}</Heading>
           <Text my={10} >{mydata.main_description}</Text>
@@ -93,6 +99,23 @@ let handleCart=(id) =>{
                   <Text> ₹ {el.price}</Text>
                 </Stack>
 
+        <Box w={"60%"}>
+          <Heading>{mydata.main_title}</Heading>
+          <Text>{mydata.main_description}</Text>
+
+          <Stack>
+            {diffproduct.map((el) => (
+              <HStack key={el.title}  gap={20}>
+
+
+<Box><Image src={el.image1} alt="image 1 starting"  w={"100%"} h={"200px"}/></Box>
+                <Box>
+                  <Heading>{el.title}</Heading>
+                  <Text>{el.description} </Text>
+                  <Text> ₹ {el.price}</Text>
+                </Box>
+
+
                 <Box>
                   
                   <Flex
@@ -102,7 +125,11 @@ let handleCart=(id) =>{
                     roundedBottom={"sm"}
                     borderLeft={"1px"}
                     cursor="pointer"
+
                     onClick={() => handleCart(el.title) }
+
+                    onClick={() => setLiked(!liked)}
+
                   >
                     {liked ? (
                       <BsHeartFill fill="red" fontSize={"24px"} />
@@ -124,4 +151,7 @@ let handleCart=(id) =>{
   );
 };
 
+
 export default SingleFeaturesPage;
+
+
