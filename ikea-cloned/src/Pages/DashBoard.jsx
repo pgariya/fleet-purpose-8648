@@ -66,7 +66,7 @@ const DashBoard = () => {
 <Stack direction={{base:"column" , lg: "row"}} gap={4} >
 
   <Box >
-    <Image src='https://www.ikea.com/images/74/d5/74d5217edf92fc4690c23b44fbd151bc.png?f=xl' alt='stress images' />
+    <Image src='https://www.ikea.com/images/df/db/dfdb3e950fba6e0cc267542dafc81163.png?f=xl' alt='stress images' />
   </Box>
 
   <Box  display="flex" gap={5}>
