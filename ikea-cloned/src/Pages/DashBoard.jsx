@@ -65,22 +65,22 @@ const DashBoard = () => {
 {/* 1st section  */}
 <Stack direction={{base:"column" , lg: "row"}} gap={4} >
 
-  <Box >
-    <Image src='https://www.ikea.com/images/df/db/dfdb3e950fba6e0cc267542dafc81163.png?f=xl' alt='stress images' />
+  <Box overflow={"hidden"}>
+    <Image transition={"transform 2s"} _hover={{transform: "scale(1.1)"}} src='https://www.ikea.com/images/df/db/dfdb3e950fba6e0cc267542dafc81163.png?f=xl' alt='stress images' />
   </Box>
 
   <Box  display="flex" gap={5}>
 
-<Stack  >
-  <Image src='https://www.ikea.com/ext/ingkadam/m/7cdbfd13536f1864/original/PH183006.jpg?f=xs' alt='clothes'/>
-  <Image src='https://www.ikea.com/ext/ingkadam/m/6e59dcdff4cb6ebe/original/PH185829-crop001.jpg?f=xs' alt='clothes'/>
+<Stack overflow={"hidden"} >
+  <Image src='https://www.ikea.com/ext/ingkadam/m/7cdbfd13536f1864/original/PH183006.jpg?f=xs' alt='clothes'transition={"transform 2s"} _hover={{transform: "scale(1.1)"}}/>
+  <Image src='https://www.ikea.com/ext/ingkadam/m/6e59dcdff4cb6ebe/original/PH185829-crop001.jpg?f=xs' alt='clothes' transition={"transform 2s"} _hover={{transform: "scale(1.1)"}}/>
 
 </Stack>
 
 
-<Stack  >
-  <Image src='https://www.ikea.com/ext/ingkadam/m/6f5c999e57b0899c/original/PH188348-crop001.jpg?f=xs' alt='clothes'/>
-  <Image src='https://www.ikea.com/ext/ingkadam/m/2cdb8876440d3bfe/original/PH185831-crop001.jpg?f=xs' alt='clothes'/>
+<Stack overflow={"hidden"} >
+  <Image src='https://www.ikea.com/ext/ingkadam/m/6f5c999e57b0899c/original/PH188348-crop001.jpg?f=xs' alt='clothes'transition={"transform 2s"} _hover={{transform: "scale(1.1)"}}/>
+  <Image src='https://www.ikea.com/ext/ingkadam/m/2cdb8876440d3bfe/original/PH185831-crop001.jpg?f=xs' alt='clothes'transition={"transform 2s"} _hover={{transform: "scale(1.1)"}}/>
 
 </Stack>
 
@@ -112,22 +112,22 @@ const DashBoard = () => {
 
 <Stack direction={{base:"column" , lg: "row"}} gap={4} >
 
-  <Box >
-    <Image src='https://www.ikea.com/ext/ingkadam/m/799f68cc5de0ac6b/original/PH189240.jpg?f=xl' alt='stress images' />
+  <Box overflow={"hidden"}>
+    <Image src='https://www.ikea.com/ext/ingkadam/m/799f68cc5de0ac6b/original/PH189240.jpg?f=xl' alt='stress images' transition={"transform 2s"} _hover={{transform: "scale(1.1)"}} />
   </Box>
 
   <Box  display="flex" gap={5}>
 
-<Stack  >
+<Stack overflow={"hidden"} >
   <Image src='https://www.ikea.com/images/d8/93/d893954e5ca7add8e2eacd65a2b9ccba.jpg?f=xs' alt='clothes'/>
-  <Image src='https://www.ikea.com/ext/ingkadam/m/329772020dd61646/original/PH189251.jpg?f=xs' alt='clothes'/>
+  <Image src='https://www.ikea.com/ext/ingkadam/m/329772020dd61646/original/PH189251.jpg?f=xs' alt='clothes' transition={"transform 2s"} _hover={{transform: "scale(1.1)"}}/>
 
 </Stack>
 
 
-<Stack  >
-  <Image src='https://www.ikea.com/ext/ingkadam/m/6efbc36541036f65/original/PH189222.jpg?f=xs' alt='clothes'/>
-  <Image src='https://www.ikea.com/ext/ingkadam/m/943c2a55da77e47/original/PH189365.jpg?f=xs' alt='clothes'/>
+<Stack overflow={"hidden"} >
+  <Image src='https://www.ikea.com/ext/ingkadam/m/6efbc36541036f65/original/PH189222.jpg?f=xs' transition={"transform 2s"} _hover={{transform: "scale(1.1)"}} alt='clothes'/>
+  <Image src='https://www.ikea.com/ext/ingkadam/m/943c2a55da77e47/original/PH189365.jpg?f=xs' transition={"transform 2s"} _hover={{transform: "scale(1.1)"}} alt='clothes'/>
 
 </Stack>
 

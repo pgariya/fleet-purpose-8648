@@ -98,11 +98,11 @@ const AccessoriesCarousel = () => {
 
     return (
         <Box bg={"white"} px={10} py={8}>
-            {/* <h1>CategoriesCarousel</h1> */}
     
           {
             isError!==""  && <h1>{isError}</h1>
           }  
+          
     
     <Box w="100%" margin={"auto"}   >
             
