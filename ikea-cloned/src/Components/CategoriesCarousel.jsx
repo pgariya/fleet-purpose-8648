@@ -8,7 +8,7 @@ function SampleNextArrow(props) {
   return (
     <div
       className={className}
-      style={{ ...style, display: "block", background: "black" ,color:"white" ,borderRadius:"50%" }}
+      style={{ ...style, display: "block", background: "black" ,color:"white" ,borderRadius:"50%"  }}
       onClick={onClick}
     />
   );
@@ -19,7 +19,7 @@ function SamplePrevArrow(props) {
   return (
     <div
       className={className}
-      style={{ ...style, display: "block",  background: "black" ,color:"white" ,borderRadius:"50%"  }}
+      style={{ ...style, display: "block", background: "black" ,color:"white" ,borderRadius:"50%"  }}
       onClick={onClick}
     />
   );
@@ -89,7 +89,7 @@ const CategoriesCarousel = () => {
       
     },[])
     
-    console.log(crouselProduct,"producctssss")
+    // console.log(crouselProduct,"producctssss")
 
 
   return (
@@ -112,7 +112,7 @@ crouselProduct.map((el) =>(<Box key={el.id} mr={5}>
 
 <Image src={el.better_image} alt={el.better_title} w="95%" h="350px" borderRadius={"10px"}/>
 
-<Box bg={"white"} color="black"   w="80%" m={"auto"} p={2} borderRadius="20px"  position={"relative"} bottom="150px" >
+<Box bg={"white"} color="black"   w="80%" m={"auto"} p={2} px={5} borderRadius="20px"  position={"relative"} bottom="150px" >
 <Text>{el.better_title}</Text>
 </Box>
 

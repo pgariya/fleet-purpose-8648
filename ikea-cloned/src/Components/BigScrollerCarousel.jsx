@@ -2,16 +2,19 @@ import { Box, Heading, Image, Stack, Text } from '@chakra-ui/react';
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import Slider from "react-slick";
-import {BsArrowRightSquareFill} from "react-icons/bs"
+import {BsArrowRightSquareFill } from "react-icons/bs"
+import {IoIosArrowDroprightCircle , IoIosArrowDropleftCircle} from "react-icons/io"
 
 function NextArrow(props) {
+  console.log(props)
   const { className, style, onClick } = props;
   return (
     <div
       className={className}
-      style={{ ...style, display: "block", background: "black" ,color:"white" ,borderRadius:"50%" }}
       onClick={onClick}
-    />
+    >
+      <IoIosArrowDroprightCircle style={{ ...style,fontSize:"50px", display: "block", color:"black",borderRadius:"50%" , }} />
+    </div>
   );
 }
 
@@ -20,9 +23,10 @@ function PrevArrow(props) {
   return (
     <div
       className={className}
-      style={{ ...style, display: "block",  background: "black" ,color:"white" ,borderRadius:"50%"  }}
       onClick={onClick}
-    />
+    >
+      <IoIosArrowDropleftCircle style={{ ...style,fontSize:"50px", display: "block",color:"black",borderRadius:"50%" , position:"relative", right:"15px" , zIndex:"5" }}/>
+    </div>
   );
 }
 
@@ -83,11 +87,11 @@ const BigScrollerCarousel = () => {
       
     },[])
     
-    console.log(scroller,"producctssss")
+    // console.log(scroller,"producctssss")
 
 
   return (
-    <Box bg={"white"} px={10} py={8}>
+    <Box bg={"white"} px={5} py={3}  >
         {/* <h1>CategoriesCarousel</h1> */}
 
       {
@@ -98,7 +102,7 @@ const BigScrollerCarousel = () => {
         
 
 
-        <Slider {...settings} >
+        <Slider {...settings}  >
 {
 
 scroller.map((el) =>(<Box key={el.id}  >
@@ -106,9 +110,9 @@ scroller.map((el) =>(<Box key={el.id}  >
 
 <Image src={el.image} alt={el.title} w="95%" h="500px"  m="auto"/>
 
-<Stack  w="95%" m={"auto"}    bg={array_color[el.id-9]} color="white" p={5} h="400px">
+<Stack  w="95%" m={"auto"}    bg={array_color[el.id-9]} color="white" p={2} h="350px">
 
-  <Stack w={"85%"} margin="auto" gap={8} textAlign="left">
+  <Stack w={"85%"} margin="auto" gap={5} textAlign="left">
 
 <Heading fontSize={"30px"}>{el.heading}</Heading>
 <Text>{el.title}</Text>
