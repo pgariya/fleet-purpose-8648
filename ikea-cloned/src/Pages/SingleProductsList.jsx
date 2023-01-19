@@ -14,6 +14,7 @@ import React, { useEffect, useState } from "react";
 import { BsHeart, BsHeartFill } from "react-icons/bs";
 import { useParams } from "react-router-dom";
 
+
 const SingleFeaturesPage = () => {
   const [liked, setLiked] = useState(false);
   let params = useParams();
@@ -23,6 +24,8 @@ const SingleFeaturesPage = () => {
   let [diffproduct, setdiffproduct]= useState([]);
   let [error, seterror] = useState("");
   let [isloading, setisloading] = useState(false);
+
+
 
   let getmydata = async (id) => {
     try {
@@ -36,11 +39,17 @@ const SingleFeaturesPage = () => {
     }
   };
 
-  useEffect(() => {
-    getmydata(params.id);
-  }, [params.id]);
 
-  console.log(mydata);
+
+  useEffect(() => {
+
+    getmydata(params.id);
+
+  }, [params.id]);
+ 
+
+
+  // console.log(mydata);
 
   if (isloading) {
     return (
@@ -50,36 +59,57 @@ const SingleFeaturesPage = () => {
     );
   }
 
+
+let handleCart=(id) =>{
+ 
+  setLiked(!liked)
+
+  console.log(id,"id")
+
+}
+
+
+
+
+
   return (
-    <Box>
+    <Box >
       {error !== "" && <Heading> Error: {error}</Heading>}
 
       <Stack
         direction={{ base: "column", md: "row" }}
         gap={10}
-        w={{ base: "95%", lg: "90%" }}
+        w={{ base: "90%", lg: "85%" }}
         margin="auto"
-        mt={10}
+        mt={20}
       >
-        <Box w={"35%"}>
-          <Image src={mydata.img} />
+        <Box width={{base:"98%" , md:"40%"}}  overflow="hidden">
+          <Image src={mydata.img} w={"100%"} transition={"transform 2s"} _hover={{transform: "scale(1.1)"}}/>
         </Box>
 
-        <Box w={"60%"}>
-          <Heading>{mydata.main_title}</Heading>
+
+        <Box width={{base:"95%" , md:"60%"}} margin="auto" textAlign={"left"}>
+          <Heading my={5}>{mydata.main_title}</Heading>
           <Text>{mydata.main_description}</Text>
 
-          <Stack>
+          <Stack mt={10} textAlign="center">
             {diffproduct.map((el) => (
-              <HStack key={el.title}  gap={20}>
+              <HStack key={el.title}  justifyContent="space-between"  >
 
 
-<Box><Image src={el.image1} alt="image 1 starting"  w={"100%"} h={"200px"}/></Box>
-                <Box>
-                  <Heading>{el.title}</Heading>
+      <Box w={"150px"} position="relative" ><Image  src={el.image1}  alt="image 1 starting"  />
+
+      <Box position={"absolute"} top="0px" left={"0px"}  _hover={{display:"none"}}  >
+      <Image  src={el.image2} alt="image 2 starting"  />
+      </Box>
+
+      </Box>
+                <Box  >
+                  <Heading fontSize={"25px"}>{el.title}</Heading>
                   <Text>{el.description} </Text>
                   <Text> ₹ {el.price}</Text>
                 </Box>
+
 
                 <Box>
                   
@@ -90,7 +120,7 @@ const SingleFeaturesPage = () => {
                     roundedBottom={"sm"}
                     borderLeft={"1px"}
                     cursor="pointer"
-                    onClick={() => setLiked(!liked)}
+                    onClick={() => handleCart(el.title) }
                   >
                     {liked ? (
                       <BsHeartFill fill="red" fontSize={"24px"} />
@@ -100,15 +130,23 @@ const SingleFeaturesPage = () => {
                   </Flex>
 
                 </Box>
+
               </HStack>
             ))}
           </Stack>
 
 
         </Box>
+
+
+
+
       </Stack>
     </Box>
   );
 };
 
+
 export default SingleFeaturesPage;
+
+
