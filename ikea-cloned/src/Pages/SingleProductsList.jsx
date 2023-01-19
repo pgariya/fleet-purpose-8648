@@ -38,7 +38,10 @@ const SingleFeaturesPage = () => {
 
   useEffect(() => {
     getmydata(params.id);
-  }, [params.id]);
+
+  }, [params.id,liked]);
+ 
+
 
   console.log(mydata);
 
@@ -49,6 +52,21 @@ const SingleFeaturesPage = () => {
       </HStack>
     );
   }
+
+
+let handleCart=(id) =>{
+ 
+  if(diffproduct.title==id){
+    setLiked(!liked)
+  }
+  console.log(id,"id")
+ console.log(mydata.title,"title")
+
+}
+
+
+
+
 
   return (
     <Box>
@@ -64,6 +82,22 @@ const SingleFeaturesPage = () => {
         <Box w={"35%"}>
           <Image src={mydata.img} />
         </Box>
+
+
+        <Box w={"60%"} textAlign="left">
+          <Heading >{mydata.main_title}</Heading>
+          <Text my={10} >{mydata.main_description}</Text>
+
+          <Stack>
+            {diffproduct.map((el) => (
+              <HStack key={el.title}  gap={20} border="2px solid">
+
+           <Box><Image src={el.image1} alt="image 1 starting"  w={"200px"} h={"200px"}/></Box>
+                <Stack w={"40%"} textAlign="left">
+                  <Heading fontSize={"25px"}>{el.title}</Heading>
+                  <Text>{el.description} </Text>
+                  <Text> ₹ {el.price}</Text>
+                </Stack>
 
         <Box w={"60%"}>
           <Heading>{mydata.main_title}</Heading>
@@ -81,6 +115,7 @@ const SingleFeaturesPage = () => {
                   <Text> ₹ {el.price}</Text>
                 </Box>
 
+
                 <Box>
                   
                   <Flex
@@ -90,7 +125,11 @@ const SingleFeaturesPage = () => {
                     roundedBottom={"sm"}
                     borderLeft={"1px"}
                     cursor="pointer"
+
+                    onClick={() => handleCart(el.title) }
+
                     onClick={() => setLiked(!liked)}
+
                   >
                     {liked ? (
                       <BsHeartFill fill="red" fontSize={"24px"} />
@@ -100,6 +139,7 @@ const SingleFeaturesPage = () => {
                   </Flex>
 
                 </Box>
+
               </HStack>
             ))}
           </Stack>
@@ -111,4 +151,7 @@ const SingleFeaturesPage = () => {
   );
 };
 
+
 export default SingleFeaturesPage;
+
+
