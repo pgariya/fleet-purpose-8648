@@ -1,14 +1,14 @@
 import { useState } from "react";
 import { Box, Input, Button, Text, Image, Center } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
-import logo from "../project.png"
+import logo from "../project.png";
 
 const initial = {
   Name: "",
   password: "",
 };
 
-function Login() {
+function AdminLogin() {
   const [admin, setAdmin] = useState(initial);
   const navigate = useNavigate();
 
@@ -27,7 +27,15 @@ function Login() {
   return (
     <div>
       <Box bg="grey" p={4} color="white">
-        <Center><Image src={logo} boxSize='100px'  objectFit='cover' alignContent="center" alt="" /></Center>
+        <Center>
+          <Image
+            src={logo}
+            boxSize="100px"
+            objectFit="cover"
+            alignContent="center"
+            alt=""
+          />
+        </Center>
       </Box>
       <Box
         margin="auto"
@@ -67,4 +75,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default AdminLogin;
