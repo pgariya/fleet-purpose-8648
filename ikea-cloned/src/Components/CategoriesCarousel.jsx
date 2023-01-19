@@ -98,6 +98,7 @@ const CategoriesCarousel = () => {
 
   return (
     <Box bg={"white"} px={10} py={8}>
+
       {/* <h1>CategoriesCarousel</h1> */}
 
       {isError !== "" && <h1>{isError}</h1>}
@@ -129,6 +130,7 @@ const CategoriesCarousel = () => {
               </Box>
             </Box>
           ))}
+
         </Slider>
       </Box>
     </Box>

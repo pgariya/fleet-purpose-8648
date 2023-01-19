@@ -100,12 +100,7 @@ const DashBoard = () => {
         </Stack>
       </Box>
 
-      <Box w={{ base: "95%", lg: "90%" }} margin="auto" textAlign={"left"}>
-        <Heading py={7} fontSize="30px">
-          Categories for better storage and organisation
-        </Heading>
-        <CategoriesCarousel />
-      </Box>
+
 
       <Box w={{ base: "95%", lg: "90%" }} margin="auto">
         <BigScrollerCarousel />
