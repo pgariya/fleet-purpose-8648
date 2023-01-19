@@ -30,7 +30,7 @@ useEffect(() =>{
 },[])
 
 
-console.log(mydata)
+// console.log(mydata)
 
 
 if(isloading){
