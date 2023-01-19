@@ -5,6 +5,8 @@ import Signup from "../Components/Signup";
 import DashBoard from './DashBoard'
 import ProductsList from './ProductsList'
 import SingleProductsList from './SingleProductsList'
+import AdminLogin from "./adminLogin";
+import AdminDash from "./AdminDash";
 const AllRoutes = () => {
   return (
     <div>
@@ -14,8 +16,11 @@ const AllRoutes = () => {
  <Route path='/productslist/:id' element={<SingleProductsList/>}/>
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
+              <Route path="/AdminLogin" element={<AdminLogin />} />
+      <Route path="/AdminDash" element={<AdminDash />} />
       </Routes>
     </div>
   );
 };
+
 export default AllRoutes;
