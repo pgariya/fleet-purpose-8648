@@ -189,6 +189,7 @@
   height: 700px;
   margin-top: 15px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   width: 100%;
@@ -201,6 +202,9 @@
   text-align: left;
   width: 23%;
 }
+/* .Compoent_2_blue_1:hover {
+  
+} */
 .Compoent_2_blue_1 p {
   /* border: 1px solid rgb(58, 250, 28); */
   font-weight: bold;
@@ -209,7 +213,6 @@
 .Compoent_2_blue_1 h1 {
   /* border: 1px solid rgb(58, 250, 28); */
   font-size: 4.5rem;
-
   line-height: 108%;
   font-weight: 700;
   letter-spacing: -0.115rem;
@@ -218,7 +221,6 @@
 .Compoent_2_blue_2 {
   /* border: 2px solid rgb(246, 0, 0); */
   width: 70%;
-
   border-radius: 12px;
 }
 .Compoent_2_blue_2 video {
@@ -231,12 +233,49 @@
   /* border: 2px solid black; */
   margin-top: 15px;
   height: 650px;
+  position: relative;
 }
 .Compoent_farmhouse_1 img {
   /* border: 2px solid black; */
   height: 650px;
   width: 100%;
   border-radius: 11px;
+}
+
+.farmouse_text {
+  position: absolute;
+  top: 90%;
+  left: 22%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  color: white;
+  /* border: 1px solid red; */
+  font-size: 2.25rem;
+  line-height: 50px;
+  font-weight: 700;
+  margin: 1rem 0;
+  letter-spacing: -0.06rem;
+  text-align: center;
+}
+
+.hide_farmouse {
+  /* border:1px solid red; */
+  font-size: 52px;
+  margin-right: 8px;
+}
+
+.image_farmouse_h1 {
+  /* border: 1px solid red; */
+  position: absolute;
+  top: 85%;
+  left: 11%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin: 1rem 0;
+  letter-spacing: -0.06rem;
 }
 
 /* farmhouse compent */
@@ -250,9 +289,10 @@
   gap: 18px;
   width: 100%;
   height: 600px;
+  position: relative;
 }
 .Compoent_map div {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   width: 100%;
 }
 .Compoent_map_1 img {
@@ -266,4 +306,744 @@
   width: 100%;
   height: 600px;
   border-radius: 11px;
+}
+
+/*this is compoent map 1nd div section  Compoent_map_1_p heading */
+.Compoent_map_1_p {
+  position: absolute;
+  top: 88%;
+  left: 11%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  color: white;
+  /* border: 1px solid red; */
+  font-size: 2.25rem;
+  line-height: 50px;
+  font-weight: 700;
+  margin: 1rem 0;
+  letter-spacing: -0.06rem;
+  text-align: center;
+}
+
+.Compoent_map_1_hide {
+  /* border:1px solid red; */
+  font-size: 52px;
+  margin-right: 8px;
+}
+
+.Compoent_map_1_h1 {
+  /* border: 1px solid red; */
+  position: absolute;
+  top: 83%;
+  left: 10%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin: 1rem 0;
+  letter-spacing: -0.06rem;
+}
+
+/*this is compoent map 2nd div section  Compoent_map_2_p heading */
+
+.Compoent_map_2_p {
+  position: absolute;
+  top: 88%;
+  left: 64%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  color: white;
+  /* border: 1px solid red; */
+  font-size: 2.25rem;
+  line-height: 50px;
+  font-weight: 700;
+  margin: 1rem 0;
+  letter-spacing: -0.06rem;
+  text-align: center;
+}
+
+.Compoent_map_2_hide {
+  /* border:1px solid red; */
+  font-size: 52px;
+  margin-right: 8px;
+}
+
+.Compoent_map_2_h1 {
+  /* border: 1px solid red; */
+  position: absolute;
+  top: 83%;
+  left: 62.5%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin: 1rem 0;
+  letter-spacing: -0.06rem;
+}
+
+/* map compoent complete */
+
+.Compoent_room {
+  /* border: 2px solid black; */
+  margin-top: 15px;
+  position: relative;
+  height: 650px;
+}
+.Compoent_room_1 img {
+  /* border: 2px solid black; */
+  height: 650px;
+  width: 100%;
+  border-radius: 11px;
+}
+.image_text {
+  position: absolute;
+  top: 90%;
+  left: 17%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  color: white;
+  /* border: 1px solid red; */
+  font-size: 2.25rem;
+  line-height: 50px;
+  font-weight: 700;
+  margin: 1rem 0;
+  letter-spacing: -0.06rem;
+  text-align: center;
+}
+
+.hide_arrow {
+  /* opacity: 0; 
+  transition: opacity 0.5s; */
+  /* border:1px solid red; */
+  font-size: 52px;
+  margin-right: 8px;
+}
+/* .hide_arrow:hover {
+  opacity: 1;
+} */
+.image_text_h1 {
+  /* border: 1px solid red; */
+  position: absolute;
+  top: 85%;
+  left: 11%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin: 1rem 0;
+  letter-spacing: -0.06rem;
+}
+
+/* room compoent complete */
+
+/* 4 div start compent */
+
+/*this is compoent map 1nd div section  Compoent_map_1_p heading */
+.Compoent_map_1_p_2ndsession {
+  position: absolute;
+  top: 88%;
+  left: 15%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  color: white;
+  /* border: 1px solid red; */
+  font-size: 2.25rem;
+  line-height: 50px;
+  font-weight: 700;
+  margin: 1rem 0;
+  letter-spacing: -0.06rem;
+  text-align: center;
+}
+
+.Compoent_map_1_hide_2ndsession {
+  /* border:1px solid red; */
+  font-size: 52px;
+  margin-right: 8px;
+}
+
+.Compoent_map_1_h1_2ndsession {
+  /* border: 1px solid red; */
+  position: absolute;
+  top: 83%;
+  left: 19%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin: 1rem 0;
+  letter-spacing: -0.06rem;
+}
+
+/*this is compoent map 2nd div section  Compoent_map_2_p heading */
+
+.Compoent_map_2_p_2ndsession {
+  position: absolute;
+  top: 88%;
+  left: 65%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  color: white;
+  /* border: 1px solid red; */
+  font-size: 2.25rem;
+  line-height: 50px;
+  font-weight: 700;
+  margin: 1rem 0;
+  letter-spacing: -0.06rem;
+  text-align: center;
+  background: transparent;
+}
+
+.Compoent_map_2_hide_2ndsession {
+  /* border:1px solid red; */
+  font-size: 52px;
+  margin-right: 8px;
+}
+
+.Compoent_map_2_h1_2ndsession {
+  /* border: 1px solid red; */
+  position: absolute;
+  top: 83%;
+  left: 62.5%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin: 1rem 0;
+  letter-spacing: -0.06rem;
+}
+
+/* olde copoent mp use */
+/* 4 div start compent complete */
+
+/* panaaa compent chalu zal */
+
+.Compoent_mafia {
+  border: 1px solid red;
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 18px;
+  width: 100%;
+  height: 100px;
+}
+.Compoent_mafia div {
+  border: 1px solid red;
+  width: 100%;
+  text-align: start;
+}
+.Compoent_mafia_1 p {
+  font-size: 1rem;
+  text-shadow: 0 0 0.625rem rgb(255 255 255 / 50%);
+  margin-left: 6%;
+}
+
+.Compoent_mafia_1 h1 {
+  font-size: 2.25rem;
+  line-height: 45px;
+  font-weight: 700;
+  letter-spacing: -0.06rem;
+}
+
+/* media quaires  */
+
+/* mediam screens */
+@media all and (min-width: 550px) and (max-width: 950px) {
+  .Compoent_2_blue {
+    /* border:2px solid red; */
+    background-color: #005aa6;
+    height: 550px;
+    margin-top: 32px;
+    width: 100%;
+    border-radius: 12px;
+    padding-left: 20px;
+  }
+
+  .Compoent_2_blue_1 {
+    /* border: 2px solid black; */
+    margin-left: 28px;
+    text-align: left;
+    width: 100%;
+  }
+  .Compoent_2_blue_1 h1 {
+    /* border: 1px solid rgb(58, 250, 28); */
+    font-size: 2rem;
+    line-height: 108%;
+    font-weight: 600;
+    letter-spacing: -0.115rem;
+    color: aliceblue;
+  }
+  .Compoent_2_blue_2 {
+    /* border: 2px solid rgb(246, 0, 0); */
+    width: 90%;
+    border-radius: 12px;
+    margin-top: -13px;
+  }
+
+  /* blue component complete*/
+
+  .Compoent_farmhouse {
+    /* border: 2px solid black; */
+    margin-top: 15px;
+    height: 650px;
+    position: relative;
+  }
+
+  .farmouse_text {
+    position: absolute;
+    top: 90%;
+    left: 29%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    color: white;
+    /* border: 1px solid red; */
+    font-size: 1.7rem;
+
+    font-weight: 600;
+    margin: 1rem 0;
+    letter-spacing: -0.06rem;
+    text-align: center;
+  }
+
+  .hide_farmouse {
+    /* border:1px solid red; */
+    font-size: 33px;
+    margin-right: 8px;
+  }
+
+  .image_farmouse_h1 {
+    /* border: 1px solid red; */
+    position: absolute;
+    top: 85%;
+    left: 17%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin: 1rem 0;
+    letter-spacing: -0.06rem;
+  }
+
+  /* farmhouse compent */
+
+  .Compoent_map {
+    /* border: 1px solid rgb(23, 0, 0); */
+    display: flex;
+    flex-wrap: wrap;
+    /* flex-direction: column; */
+    width: 100%;
+    height: auto;
+  }
+  .Compoent_map div {
+    /* border: 1px solid red; */
+    width: 100%;
+  }
+  .Compoent_map_1 img {
+    /* border: 2px solid rgb(34, 0, 0); */
+    width: 100%;
+    height: auto;
+    border-radius: 11px;
+  }
+  .Compoent_map_2 img {
+    /* border: 1px solid red; */
+    width: 100%;
+    height: auto;
+    border-radius: 11px;
+  }
+
+  /*this is compoent map 1nd div section  Compoent_map_1_p heading */
+  .Compoent_map_1_p {
+    position: absolute;
+    top: 39%;
+    left: 22%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    color: white;
+    /* border: 1px solid red; */
+    font-size: 2.25rem;
+    line-height: 50px;
+    font-weight: 700;
+    margin: 1rem 0;
+    letter-spacing: -0.06rem;
+    text-align: center;
+  }
+
+  .Compoent_map_1_hide {
+    /* border:1px solid red; */
+    font-size: 42px;
+    margin-right: 8px;
+  }
+
+  .Compoent_map_1_h1 {
+    /* border: 1px solid red; */
+    position: absolute;
+    top: 37%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin: 1rem 0;
+    letter-spacing: -0.06rem;
+  }
+
+  /*this is compoent map 2nd div section  Compoent_map_2_p heading */
+
+  .Compoent_map_2_p {
+    position: absolute;
+    top: 96%;
+    left: 22%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    color: white;
+    /* border: 1px solid red; */
+    font-size: 2.25rem;
+    line-height: 50px;
+    font-weight: 700;
+    margin: 1rem 0;
+    letter-spacing: -0.06rem;
+    text-align: center;
+  }
+
+  .Compoent_map_2_hide {
+    /* border:1px solid red; */
+    font-size: 39px;
+    margin-right: 8px;
+  }
+
+  .Compoent_map_2_h1 {
+    /* border: 1px solid red; */
+    position: absolute;
+    top: 94%;
+    left: 18%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin: 1rem 0;
+    letter-spacing: -0.06rem;
+  }
+
+  /* map compoent complete */
+
+  .Compoent_room {
+    /* border: 2px solid black; */
+    margin-top: 15px;
+    position: relative;
+    height: auto;
+  }
+  .image_text {
+    position: absolute;
+    top: 90%;
+    left: 32%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    color: white;
+    /* border: 1px solid red; */
+    font-size: 2.25rem;
+    line-height: 50px;
+    font-weight: 700;
+    margin: 1rem 0;
+    letter-spacing: -0.06rem;
+    text-align: center;
+  }
+
+  .hide_arrow {
+    /* opacity: 0; 
+  transition: opacity 0.5s; */
+    /* border:1px solid red; */
+    font-size: 40px;
+    margin-right: 8px;
+  }
+  /* .hide_arrow:hover {
+  opacity: 1;
+} */
+  .image_text_h1 {
+    /* border: 1px solid red; */
+    position: absolute;
+    top: 85%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin: 1rem 0;
+    letter-spacing: -0.06rem;
+  }
+
+  /* room compoent complete */
+
+  /* 4 div start compent */
+
+  /*this is compoent map 1nd div section  Compoent_map_1_p heading */
+  .Compoent_map_1_p_2ndsession {
+    position: absolute;
+    top: 33%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    color: white;
+    /* border: 1px solid red; */
+    font-size: 2.25rem;
+    line-height: 50px;
+    font-weight: 700;
+    margin: 1rem 0;
+    letter-spacing: -0.06rem;
+    text-align: center;
+  }
+  .Compoent_map_1_hide_2ndsession {
+    /* border:1px solid red; */
+    font-size: 42px;
+    margin-right: 8px;
+  }
+
+  .Compoent_map_1_h1_2ndsession {
+    /* border: 1px solid red; */
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin: 1rem 0;
+    letter-spacing: -0.06rem;
+  }
+
+  /*this is compoent map 2nd div section  Compoent_map_2_p heading */
+
+  .Compoent_map_2_p_2ndsession {
+    position: absolute;
+    top: 93%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    color: white;
+    /* border: 1px solid red; */
+    font-size: 2.25rem;
+    line-height: 50px;
+    font-weight: 700;
+    margin: 1rem 0;
+    letter-spacing: -0.06rem;
+    text-align: center;
+    background: transparent;
+  }
+
+  .Compoent_map_2_hide_2ndsession {
+    /* border:1px solid red; */
+    font-size: 42px;
+    margin-right: 8px;
+  }
+
+  .Compoent_map_2_h1_2ndsession {
+    /* border: 1px solid red; */
+    position: absolute;
+    top: 90%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin: 1rem 0;
+    letter-spacing: -0.06rem;
+  }
+
+  /* olde copoent mp use */
+  /* 4 div start compent complete */
+}
+
+/* small screens */
+@media all and (min-width: 200px) and (max-width: 549px) {
+  .Compoent_2_blue {
+    /* border:2px solid red; */
+    background-color: #005aa6;
+    height: 350px;
+    margin-top: 32px;
+    width: 100%;
+    border-radius: 12px;
+    padding-left: 20px;
+  }
+
+  .Compoent_2_blue_1 {
+    /* border: 2px solid black; */
+    margin-left: 12px;
+    text-align: left;
+    width: 100%;
+  }
+  .Compoent_2_blue_1 h1 {
+    /* border: 1px solid rgb(58, 250, 28); */
+    font-size: 1.7rem;
+    font-weight: 500;
+    letter-spacing: -0.115rem;
+    color: rgb(255, 255, 255);
+  }
+  .Compoent_2_blue_2 {
+    /* border: 2px solid rgb(246, 0, 0); */
+    width: 90%;
+    border-radius: 12px;
+    margin: auto;
+    margin-left: -2px;
+  }
+
+  /* blue component complete*/
+
+  .Compoent_farmhouse {
+    /* border: 2px solid black; */
+    margin-top: 15px;
+    height: 350px;
+    position: relative;
+  }
+  .Compoent_farmhouse_1 img {
+    /* border: 2px solid black; */
+    height: 350px;
+    width: 100%;
+    border-radius: 11px;
+  }
+
+  .farmouse_text {
+    position: absolute;
+    top: 86%;
+    left: 42%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    color: white;
+    /* border: 1px solid red; */
+    font-size: 1.3rem;
+    font-weight: 500;
+    width: 100%;
+    text-align: center;
+  }
+
+  .hide_farmouse {
+    /* border:1px solid red; */
+    font-size: 28px;
+    margin-right: 8px;
+  }
+
+  .image_farmouse_h1 {
+    /* border: 1px solid red; */
+    position: absolute;
+    top: 80%;
+    left: 28%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin: 1rem 0;
+    letter-spacing: -0.06rem;
+  }
+
+  /* farmhouse compent */
+
+  /* farmhouse compent */
+
+  .Compoent_map {
+    /* border: 1px solid rgb(23, 0, 0); */
+    display: flex;
+    flex-wrap: wrap;
+    /* flex-direction: column; */
+    width: 100%;
+    height: auto;
+  }
+  .Compoent_map div {
+    /* border: 1px solid red; */
+    width: 100%;
+  }
+  .Compoent_map_1 img {
+    /* border: 2px solid rgb(34, 0, 0); */
+    width: 100%;
+    height: 380px;
+    border-radius: 11px;
+  }
+  .Compoent_map_2 img {
+    /* border: 1px solid red; */
+    width: 100%;
+    height: 380px;
+    border-radius: 11px;
+  }
+
+  /*this is compoent map 1nd div section  Compoent_map_1_p heading */
+  .Compoent_map_1_p {
+    position: absolute;
+    top: 43%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    color: white;
+    /* border: 1px solid red; */
+    font-size: 1.7rem;
+    line-height: 50px;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  .Compoent_map_1_hide {
+    /* border:1px solid red; */
+    font-size: 32px;
+    margin-right: 8px;
+  }
+
+  .Compoent_map_1_h1 {
+    /* border: 1px solid red; */
+    position: absolute;
+    top: 39%;
+    left: 21%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    color: white;
+    font-size: 0.8rem;
+    font-weight: 400;
+    margin: 1rem 0;
+    letter-spacing: -0.06rem;
+  }
+
+  /*this is compoent map 2nd div section  Compoent_map_2_p heading */
+
+  .Compoent_map_2_p {
+    position: absolute;
+    top: 94%;
+    left: 32%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    color: white;
+    /* border: 1px solid red; */
+    font-size: 1.6rem;
+    line-height: 50px;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  .Compoent_map_2_hide {
+    /* border:1px solid red; */
+    font-size: 32px;
+    margin-right: 8px;
+  }
+
+  .Compoent_map_2_h1 {
+    /* border: 1px solid red; */
+    position: absolute;
+    top: 91%;
+    left: 27%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 400;
+    margin: 1rem 0;
+    letter-spacing: -0.06rem;
+  }
+
+  /* map compoent complete */
 }
