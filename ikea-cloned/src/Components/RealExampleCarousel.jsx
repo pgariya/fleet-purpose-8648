@@ -1,4 +1,4 @@
-import { Box,  Image,  Text } from '@chakra-ui/react';
+import { Box,  Image } from '@chakra-ui/react';
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import Slider from "react-slick";
