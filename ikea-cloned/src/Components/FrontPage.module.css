@@ -16,7 +16,9 @@
   padding: 25px;
 }
 .frontNavbarHeading {
-  font-size: 27px;
+  /* border:2px solid red; */
+  font-size: 30px;
+  font-weight: bolder;
   font-weight: bold;
 }
 .frontNavbarLogo {
@@ -133,7 +135,7 @@
     /* outline: rgb(204, 38, 67) solid 2px !important; */
   }
   .Compoent_1watch_image img {
-    border: 2px solid blueviolet;
+    /* border: 2px solid blueviolet; */
     width: 80%;
     margin-top: 23px;
     margin-left: 20px;
@@ -523,7 +525,7 @@
 /* panaaa compent chalu zal */
 
 .Compoent_mafia {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   margin-top: 15px;
   display: flex;
   justify-content: space-evenly;
@@ -533,7 +535,7 @@
   height: 100px;
 }
 .Compoent_mafia div {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   width: 100%;
   text-align: start;
 }
@@ -544,6 +546,19 @@
 }
 
 .Compoent_mafia_1 h1 {
+  font-size: 2.25rem;
+  line-height: 45px;
+  font-weight: 700;
+  letter-spacing: -0.06rem;
+}
+
+.Compoent_mafia_2 p {
+  font-size: 1rem;
+  text-shadow: 0 0 0.625rem rgb(255 255 255 / 50%);
+  margin-left: 6%;
+}
+
+.Compoent_mafia_2 h1 {
   font-size: 2.25rem;
   line-height: 45px;
   font-weight: 700;
@@ -914,12 +929,12 @@
   .farmouse_text {
     position: absolute;
     top: 86%;
-    left: 42%;
+    left: 39%;
     transform: translate(-50%, -50%);
     z-index: 1;
     color: white;
     /* border: 1px solid red; */
-    font-size: 1.3rem;
+    font-size: 1rem;
     font-weight: 500;
     width: 100%;
     text-align: center;
@@ -927,7 +942,7 @@
 
   .hide_farmouse {
     /* border:1px solid red; */
-    font-size: 28px;
+    font-size: 25px;
     margin-right: 8px;
   }
 
@@ -935,11 +950,11 @@
     /* border: 1px solid red; */
     position: absolute;
     top: 80%;
-    left: 28%;
+    left: 30%;
     transform: translate(-50%, -50%);
     z-index: 1;
     color: white;
-    font-size: 1.2rem;
+    font-size: 0.9rem;
     font-weight: 400;
     margin: 1rem 0;
     letter-spacing: -0.06rem;
@@ -983,7 +998,7 @@
     z-index: 1;
     color: white;
     /* border: 1px solid red; */
-    font-size: 1.7rem;
+    font-size: 1.1rem;
     line-height: 50px;
     font-weight: 600;
     text-align: center;
@@ -991,20 +1006,20 @@
 
   .Compoent_map_1_hide {
     /* border:1px solid red; */
-    font-size: 32px;
+    font-size: 26px;
     margin-right: 8px;
   }
 
   .Compoent_map_1_h1 {
     /* border: 1px solid red; */
     position: absolute;
-    top: 39%;
-    left: 21%;
+    top: 40%;
+    left: 29%;
     transform: translate(-50%, -50%);
     z-index: 1;
     color: white;
     font-size: 0.8rem;
-    font-weight: 400;
+    font-weight: 300;
     margin: 1rem 0;
     letter-spacing: -0.06rem;
   }
@@ -1019,7 +1034,7 @@
     z-index: 1;
     color: white;
     /* border: 1px solid red; */
-    font-size: 1.6rem;
+    font-size: 1.2rem;
     line-height: 50px;
     font-weight: 600;
     text-align: center;
@@ -1027,7 +1042,7 @@
 
   .Compoent_map_2_hide {
     /* border:1px solid red; */
-    font-size: 32px;
+    font-size: 26px;
     margin-right: 8px;
   }
 
@@ -1035,15 +1050,1393 @@
     /* border: 1px solid red; */
     position: absolute;
     top: 91%;
-    left: 27%;
+    left: 31%;
     transform: translate(-50%, -50%);
     z-index: 1;
     color: white;
-    font-size: 0.9rem;
-    font-weight: 400;
+    font-size: 0.8rem;
+    font-weight: 300;
     margin: 1rem 0;
     letter-spacing: -0.06rem;
   }
 
   /* map compoent complete */
+
+  .Compoent_room {
+    /* border: 2px solid black; */
+    margin-top: 15px;
+    position: relative;
+    height: auto;
+  }
+  .Compoent_room_1 img {
+    /* border: 2px solid black; */
+    height: auto;
+    width: 100%;
+    border-radius: 10px;
+  }
+  .image_text {
+    position: absolute;
+    top: 85%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    color: white;
+    /* border: 1px solid red; */
+    font-size: 1rem;
+    line-height: 50px;
+    font-weight: 700;
+    margin: 1rem 0;
+    letter-spacing: -0.06rem;
+    text-align: center;
+  }
+
+  .hide_arrow {
+    /* opacity: 0; 
+  transition: opacity 0.5s; */
+    /* border:1px solid red; */
+    font-size: 24px;
+    margin-right: 8px;
+  }
+  /* .hide_arrow:hover {
+  opacity: 1;
+} */
+  .image_text_h1 {
+    /* border: 1px solid red; */
+    position: absolute;
+    top: 77%;
+    left: 26%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 300;
+    margin: 1rem 0;
+    letter-spacing: -0.06rem;
+  }
+
+  /* room compoent complete */
+
+  /* 4 div start compent */
+
+  /*this is compoent map 1nd div section  Compoent_map_1_p heading */
+  .Compoent_map_2_vido video {
+    border: 1px solid rgb(0, 0, 0);
+    height: auto;
+    /* padding:10px; */
+  }
+  .Compoent_map_1_p_2ndsession {
+    position: absolute;
+    top: 82%;
+    left: 29%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    color: white;
+    /* border: 1px solid red; */
+    font-size: 1.1rem;
+    line-height: 50px;
+    font-weight: 600;
+    margin: 1rem 0;
+    letter-spacing: -0.06rem;
+    text-align: center;
+  }
+  .Compoent_map_1_hide_2ndsession {
+    /* border:1px solid red; */
+    font-size: 24px;
+    margin-right: 8px;
+  }
+
+  .Compoent_map_1_h1_2ndsession {
+    /* border: 1px solid red; */
+    position: absolute;
+
+    top: 80%;
+    left: 39%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    color: white;
+    font-size: 0.8rem;
+    font-weight: 300;
+    margin: 1rem 0;
+    letter-spacing: -0.06rem;
+  }
+
+  /*this is compoent map 2nd div section  Compoent_map_2_p heading */
+
+  .Compoent_map_2_p_2ndsession {
+    position: absolute;
+    top: 93%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    color: white;
+    /* border: 1px solid red; */
+    font-size: 2.25rem;
+    line-height: 50px;
+    font-weight: 700;
+    margin: 1rem 0;
+    letter-spacing: -0.06rem;
+    text-align: center;
+    background: transparent;
+  }
+
+  .Compoent_map_2_hide_2ndsession {
+    /* border:1px solid red; */
+    font-size: 42px;
+    margin-right: 8px;
+  }
+
+  .Compoent_map_2_h1_2ndsession {
+    /* border: 1px solid red; */
+    position: absolute;
+    top: 90%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin: 1rem 0;
+    letter-spacing: -0.06rem;
+  }
+
+  /* olde copoent mp use */
+  /* 4 div start compent complete */
+}
+
+/* 
+media quriesss complete 2nd part */
+
+.third_green {
+  /* border:2px solid red; */
+  background-color: #309843;
+  height: 800px;
+  margin-top: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  border-radius: 12px;
+  gap: 70px;
+}
+
+.third_green_1 {
+  /* border: 2px solid black; */
+  margin-left: 8px;
+  text-align: left;
+  width: 24%;
+}
+.third_green_1 p {
+  /* border: 1px solid rgb(58, 250, 28); */
+  font-weight: bold;
+  color: white;
+}
+.third_green_1 h1 {
+  /* border: 1px solid rgb(58, 250, 28); */
+  font-size: 3.5rem;
+  line-height: 100%;
+  font-weight: 600;
+  letter-spacing: -0.115rem;
+  color: aliceblue;
+}
+.third_green_2 {
+  /* border: 2px solid rgb(246, 0, 0); */
+  width: 60%;
+  border-radius: 12px;
+}
+.third_green_2 img {
+  border-radius: 12px;
+}
+
+/* 
+third compoent complete */
+
+.third_pink {
+  /* border: 1px solid red; */
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 18px;
+  width: 100%;
+  height: 600px;
+  position: relative;
+}
+.third_pink div {
+  /* border: 1px solid red; */
+  width: 100%;
+}
+.third_pink_1 img {
+  /* border: 1px solid red; */
+  width: 100%;
+  height: 600px;
+  border-radius: 11px;
+}
+.third_pink_2 img {
+  /* border: 1px solid red; */
+  width: 100%;
+  height: 600px;
+  border-radius: 11px;
+}
+
+/*this is compoent map 1nd div section  Compoent_map_1_p heading */
+.third_pink_1_p {
+  position: absolute;
+  top: 89%;
+  left: 18%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  color: white;
+  /* border: 1px solid red; */
+  font-size: 2.25rem;
+  line-height: 50px;
+  font-weight: 700;
+  margin: 1rem 0;
+  letter-spacing: -0.06rem;
+  text-align: center;
+}
+
+.third_pink_1_hide {
+  /* border:1px solid red; */
+  font-size: 52px;
+  margin-right: 8px;
+}
+
+.third_pink_1_h1 {
+  /* border: 1px solid red; */
+  position: absolute;
+  top: 83%;
+  left: 14%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin: 1rem 0;
+  letter-spacing: -0.06rem;
+}
+
+/*this is compoent map 2nd div section  Compoent_map_2_p heading */
+
+.third_pink_2_p {
+  position: absolute;
+  top: 88%;
+  left: 66%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  color: white;
+  /* border: 1px solid red; */
+  font-size: 2.25rem;
+  line-height: 50px;
+  font-weight: 700;
+  margin: 1rem 0;
+  letter-spacing: -0.06rem;
+  text-align: center;
+}
+
+.third_pink_2_hide {
+  /* border:1px solid red; */
+  font-size: 52px;
+  margin-right: 8px;
+}
+
+.third_pink_2_h1 {
+  /* border: 1px solid red; */
+  position: absolute;
+  top: 83%;
+  left: 66%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin: 1rem 0;
+  letter-spacing: -0.06rem;
+}
+
+/* third pink compoent complete */
+
+/* third pin div 1 */
+
+.third_pink_div {
+  /* border: 1px solid red; */
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 18px;
+  width: 100%;
+  height: 600px;
+  position: relative;
+}
+.third_pink_div div {
+  /* border: 1px solid red; */
+  width: 100%;
+}
+.third_pink_1_div img {
+  /* border: 1px solid red; */
+  width: 100%;
+  height: 600px;
+  border-radius: 11px;
+}
+.third_pink_2_div img {
+  /* border: 1px solid red; */
+  width: 100%;
+  height: 600px;
+  border-radius: 11px;
+}
+
+/*this is compoent map 1nd div section  Compoent_map_1_p heading */
+.third_pink_1_p_div {
+  position: absolute;
+  top: 89%;
+  left: 18%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  color: white;
+  /* border: 1px solid red; */
+  font-size: 2.25rem;
+  line-height: 50px;
+  font-weight: 700;
+  margin: 1rem 0;
+  letter-spacing: -0.06rem;
+  text-align: center;
+}
+
+.third_pink_1_hide_div {
+  /* border:1px solid red; */
+  font-size: 52px;
+  margin-right: 8px;
+}
+
+.third_pink_1_h1_div {
+  /* border: 1px solid red; */
+  position: absolute;
+  top: 83%;
+  left: 14%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin: 1rem 0;
+  letter-spacing: -0.06rem;
+}
+
+/*this is compoent map 2nd div section  Compoent_map_2_p heading */
+
+.third_pink_2_p_div {
+  position: absolute;
+  top: 88%;
+  left: 66%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  color: white;
+  /* border: 1px solid red; */
+  font-size: 2.25rem;
+  line-height: 50px;
+  font-weight: 700;
+  margin: 1rem 0;
+  letter-spacing: -0.06rem;
+  text-align: center;
+}
+
+.third_pink_2_hide_div {
+  /* border:1px solid red; */
+  font-size: 52px;
+  margin-right: 8px;
+}
+
+.third_pink_2_h1_div {
+  /* border: 1px solid red; */
+  position: absolute;
+  top: 83%;
+  left: 66%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin: 1rem 0;
+  letter-spacing: -0.06rem;
+}
+/* third pink div complete */
+
+/* third div1 start */
+
+.third_pink_div1 {
+  /* border: 1px solid red; */
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 18px;
+  width: 100%;
+  height: 600px;
+  position: relative;
+}
+.third_pink_div1 div {
+  /* border: 1px solid red; */
+  width: 100%;
+}
+.third_pink_1_div1 img {
+  /* border: 1px solid red; */
+  width: 100%;
+  height: 600px;
+  border-radius: 11px;
+}
+.third_pink_2_div1 img {
+  /* border: 1px solid red; */
+  width: 100%;
+  height: 600px;
+  border-radius: 11px;
+}
+
+/*this is compoent map 1nd div section  Compoent_map_1_p heading */
+.third_pink_1_p_div1 {
+  position: absolute;
+  top: 89%;
+  left: 18%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  color: rgb(0, 0, 0);
+  /* border: 1px solid red; */
+  font-size: 2.25rem;
+  line-height: 50px;
+  font-weight: 700;
+  margin: 1rem 0;
+  letter-spacing: -0.06rem;
+  text-align: center;
+}
+
+.third_pink_1_hide_div1 {
+  /* border:1px solid red; */
+  font-size: 52px;
+  margin-right: 8px;
+  color: rgb(0, 0, 0);
+}
+
+.third_pink_1_h1_div1 {
+  /* border: 1px solid red; */
+  position: absolute;
+  top: 83%;
+  left: 14%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  color: rgb(0, 0, 0);
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin: 1rem 0;
+  letter-spacing: -0.06rem;
+}
+
+/*this is compoent map 2nd div section  Compoent_map_2_p heading */
+
+.third_pink_2_p_div1 {
+  position: absolute;
+  top: 88%;
+  left: 66%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  color: white;
+  /* border: 1px solid red; */
+  font-size: 2.25rem;
+  line-height: 50px;
+  font-weight: 700;
+  margin: 1rem 0;
+  letter-spacing: -0.06rem;
+  text-align: center;
+}
+
+.third_pink_2_hide_div1 {
+  /* border:1px solid red; */
+  font-size: 52px;
+  margin-right: 8px;
+}
+
+.third_pink_2_h1_div1 {
+  /* border: 1px solid red; */
+  position: absolute;
+  top: 83%;
+  left: 66%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin: 1rem 0;
+  letter-spacing: -0.06rem;
+}
+
+@media all and (min-width: 550px) and (max-width: 950px) {
+  .Compoent_mafia {
+    /* border: 1px solid red; */
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 18px;
+    width: 100%;
+    height: 100px;
+  }
+  .Compoent_mafia div {
+    /* border: 1px solid red; */
+    width: 100%;
+    text-align: start;
+  }
+  .Compoent_mafia_1 p {
+    font-size: 0.9rem;
+    text-shadow: 0 0 0.625rem rgb(255 255 255 / 50%);
+    margin-left: 6%;
+  }
+
+  .Compoent_mafia_1 h1 {
+    font-size: 1.3rem;
+    line-height: 45px;
+    font-weight: 700;
+    letter-spacing: -0.06rem;
+  }
+
+  .Compoent_mafia_2 p {
+    font-size: 0.9rem;
+    text-shadow: 0 0 0.625rem rgb(255 255 255 / 50%);
+    margin-left: 6%;
+  }
+
+  .Compoent_mafia_2 h1 {
+    font-size: 1.3rem;
+    line-height: 45px;
+    font-weight: 700;
+    letter-spacing: -0.06rem;
+  }
+  /* 
+  mafia complet mid size */
+
+  .third_green {
+    /* border:2px solid red; */
+    background-color: #309843;
+    height: 550px;
+    margin-top: 32px;
+    width: 100%;
+    border-radius: 12px;
+    padding-left: 20px;
+    padding-top: -35px;
+  }
+
+  .third_green_1 {
+    /* border: 2px solid black; */
+    margin-left: 28px;
+    text-align: left;
+    width: 100%;
+  }
+  .third_green_1 h1 {
+    /* border: 1px solid rgb(58, 250, 28); */
+    font-size: 1.6rem;
+    line-height: 108%;
+    font-weight: 600;
+    letter-spacing: -0.115rem;
+    color: aliceblue;
+  }
+  .third_green_2 {
+    /* border: 2px solid rgb(246, 0, 0); */
+    width: 60%;
+    border-radius: 12px;
+  }
+
+  /*third green component complete*/
+
+  .third_pink {
+    /* border: 1px solid rgb(23, 0, 0); */
+    display: flex;
+    flex-wrap: wrap;
+    /* flex-direction: column; */
+    width: 100%;
+    height: auto;
+  }
+  .third_pink div {
+    /* border: 1px solid red; */
+    width: 100%;
+  }
+  .third_pink_1 img {
+    /* border: 2px solid rgb(34, 0, 0); */
+    width: 100%;
+    height: auto;
+    border-radius: 11px;
+  }
+  .third_pink_2 img {
+    /* border: 1px solid red; */
+    width: 100%;
+    height: auto;
+    border-radius: 11px;
+  }
+
+  /*this is compoent map 1nd div section  Compoent_map_1_p heading */
+  .third_pink_1_p {
+    position: absolute;
+    top: 55%;
+    left: 28%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    color: white;
+    /* border: 1px solid red; */
+    font-size: 1.7rem;
+    line-height: 50px;
+    font-weight: 700;
+    margin: 1rem 0;
+    letter-spacing: -0.06rem;
+    text-align: center;
+  }
+
+  .third_pink_1_hide {
+    /* border:1px solid red; */
+    font-size: 32px;
+    margin-right: 8px;
+  }
+
+  .third_pink_1_h1 {
+    /* border: 1px solid red; */
+    position: absolute;
+    top: 54%;
+    left: 23%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    color: white;
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 1rem 0;
+    letter-spacing: -0.06rem;
+  }
+
+  /*this is compoent map 2nd div section  Compoent_map_2_p heading */
+
+  .third_pink_2_p {
+    position: absolute;
+    top: 97%;
+    left: 22%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    color: white;
+    /* border: 1px solid red; */
+    font-size: 1.7rem;
+    line-height: 50px;
+    font-weight: 700;
+    margin: 1rem 0;
+    letter-spacing: -0.06rem;
+    text-align: center;
+  }
+
+  .third_pink_2_hide {
+    /* border:1px solid red; */
+    font-size: 32px;
+    margin-right: 8px;
+  }
+
+  .third_pink_2_h1 {
+    /* border: 1px solid red; */
+    position: absolute;
+    top: 95.5%;
+    left: 22%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    color: white;
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 1rem 0;
+    letter-spacing: -0.06rem;
+  }
+
+  /* third pink compoent complete */
+  /* third pink div compoent start */
+  .third_pink_div {
+    /* border: 1px solid rgb(23, 0, 0); */
+    display: flex;
+    flex-wrap: wrap;
+    /* flex-direction: column; */
+    width: 100%;
+    height: auto;
+  }
+  .third_pink_div div {
+    /* border: 1px solid red; */
+    width: 100%;
+  }
+  .third_pink_1_div img {
+    /* border: 2px solid rgb(34, 0, 0); */
+    width: 100%;
+    height: auto;
+    border-radius: 11px;
+  }
+  .third_pink_2_div img {
+    /* border: 1px solid red; */
+    width: 100%;
+    height: auto;
+    border-radius: 11px;
+  }
+
+  /*this is compoent map 1nd div section  Compoent_map_1_p heading */
+  .third_pink_1_p_div {
+    position: absolute;
+    top: 35%;
+    left: 23%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    color: white;
+    /* border: 1px solid red; */
+    font-size: 1.7rem;
+    line-height: 50px;
+    font-weight: 700;
+    margin: 1rem 0;
+    letter-spacing: -0.06rem;
+    text-align: center;
+  }
+
+  .third_pink_1_hide_div {
+    /* border:1px solid red; */
+    font-size: 32px;
+    margin-right: 8px;
+  }
+
+  .third_pink_1_h1_div {
+    /* border: 1px solid red; */
+    position: absolute;
+    top: 33%;
+    left: 19%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    color: white;
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 1rem 0;
+    letter-spacing: -0.06rem;
+  }
+
+  /*this is compoent map 2nd div section  Compoent_map_2_p heading */
+
+  .third_pink_2_p_div {
+    position: absolute;
+    top: 96%;
+    left: 21%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    color: white;
+    /* border: 1px solid red; */
+    font-size: 1.7rem;
+    line-height: 50px;
+    font-weight: 700;
+    margin: 1rem 0;
+    letter-spacing: -0.06rem;
+    text-align: center;
+  }
+
+  .third_pink_2_hide_div {
+    /* border:1px solid red; */
+    font-size: 32px;
+    margin-right: 8px;
+  }
+
+  .third_pink_2_h1_div {
+    /* border: 1px solid red; */
+    position: absolute;
+    top: 94%;
+    left: 22%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    color: white;
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 1rem 0;
+    letter-spacing: -0.06rem;
+  }
+  /* third pin div complete */
+
+  /* third pink div compoent start */
+  .third_pink_div1 {
+    /* border: 1px solid rgb(23, 0, 0); */
+    display: flex;
+    flex-wrap: wrap;
+    /* flex-direction: column; */
+    width: 100%;
+    height: auto;
+  }
+  .third_pink_div1 div {
+    /* border: 1px solid red; */
+    width: 100%;
+  }
+  .third_pink_1_div1 img {
+    /* border: 2px solid rgb(34, 0, 0); */
+    width: 100%;
+    height: auto;
+    border-radius: 11px;
+  }
+  .third_pink_2_div1 img {
+    /* border: 1px solid red; */
+    width: 100%;
+    height: auto;
+    border-radius: 11px;
+  }
+
+  /*this is compoent map 1nd div section  Compoent_map_1_p heading */
+  .third_pink_1_p_div1 {
+    position: absolute;
+    top: 57%;
+    left: 23%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    color: rgb(0, 0, 0);
+    /* border: 1px solid red; */
+    font-size: 1.7rem;
+    line-height: 50px;
+    font-weight: 700;
+    margin: 1rem 0;
+    letter-spacing: -0.06rem;
+    text-align: center;
+  }
+
+  .third_pink_1_hide_div1 {
+    /* border:1px solid red; */
+    font-size: 32px;
+    margin-right: 8px;
+  }
+
+  .third_pink_1_h1_div1 {
+    /* border: 1px solid red; */
+    position: absolute;
+    top: 55.5%;
+    left: 19%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    color: rgb(0, 0, 0);
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 1rem 0;
+    letter-spacing: -0.06rem;
+  }
+
+  /*this is compoent map 2nd div section  Compoent_map_2_p heading */
+
+  .third_pink_2_p_div1 {
+    position: absolute;
+    top: 97%;
+    left: 19%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    color: white;
+    /* border: 1px solid red; */
+    font-size: 1.7rem;
+    line-height: 50px;
+    font-weight: 700;
+    margin: 1rem 0;
+    letter-spacing: -0.06rem;
+    text-align: center;
+  }
+
+  .third_pink_2_hide_div1 {
+    /* border:1px solid red; */
+    font-size: 32px;
+    margin-right: 8px;
+  }
+
+  .third_pink_2_h1_div1 {
+    /* border: 1px solid red; */
+    position: absolute;
+    top: 95.5%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    color: white;
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 1rem 0;
+    letter-spacing: -0.06rem;
+  }
+}
+
+@media all and (min-width: 200px) and (max-width: 549px) {
+  .Compoent_mafia {
+    /* border: 1px solid red; */
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 18px;
+    width: 100%;
+    height: 100px;
+  }
+  .Compoent_mafia div {
+    /* border: 1px solid red; */
+    width: 100%;
+    text-align: start;
+  }
+  .Compoent_mafia_1 p {
+    font-size: 0.5rem;
+    text-shadow: 0 0 0.625rem rgb(255 255 255 / 50%);
+    margin-left: 6%;
+  }
+
+  .Compoent_mafia_1 h1 {
+    font-size: 0.9rem;
+    line-height: 22px;
+    font-weight: 700;
+    letter-spacing: -0.06rem;
+  }
+
+  .Compoent_mafia_2 p {
+    /* border: 1px solid red; */
+    font-size: 0.5rem;
+    text-shadow: 0 0 0.625rem rgb(255 255 255 / 50%);
+    margin-left: 6%;
+    margin-top: 17px;
+  }
+
+  .Compoent_mafia_2 h1 {
+    font-size: 0.9rem;
+    line-height: 21px;
+    font-weight: 700;
+    letter-spacing: -0.06rem;
+  }
+  /* 
+  mafia complet mid size */
+  .third_green {
+    /* border:2px solid red; */
+    background-color: #309843;
+    height: auto;
+    margin-top: 25px;
+    width: 100%;
+    border-radius: 12px;
+    padding-left: 20px;
+  }
+
+  .third_green_1 {
+    /* border: 2px solid black; */
+    margin-left: 12px;
+    text-align: left;
+    width: 100%;
+    margin-top: 20px;
+  }
+  .third_green_1 h1 {
+    /* border: 1px solid rgb(58, 250, 28); */
+    font-size: 1.7rem;
+    font-weight: 500;
+    letter-spacing: -0.115rem;
+    color: rgb(255, 255, 255);
+  }
+  .third_green_2 {
+    /* border: 2px solid rgb(246, 0, 0); */
+    width: 60%;
+    border-radius: 12px;
+    margin: auto;
+    margin-bottom: 20px;
+    margin-left: 20px;
+  }
+
+  /* third green component complete*/
+
+  /* third pin start */
+
+  .third_pink {
+    /* border: 1px solid rgb(23, 0, 0); */
+    display: flex;
+    flex-wrap: wrap;
+    /* flex-direction: column; */
+    width: 100%;
+    height: auto;
+  }
+  .third_pink div {
+    /* border: 1px solid red; */
+    width: 100%;
+  }
+  .third_pink_1 img {
+    /* border: 2px solid rgb(34, 0, 0); */
+    width: 100%;
+    height: 380px;
+    border-radius: 11px;
+  }
+  .third_pink_2 img {
+    /* border: 1px solid red; */
+    width: 100%;
+    height: 380px;
+    border-radius: 11px;
+  }
+
+  /*this is compoent map 1nd div section  Compoent_map_1_p heading */
+  .third_pink_1_p {
+    position: absolute;
+    top: 43%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    color: white;
+    /* border: 1px solid red; */
+    font-size: 1.1rem;
+    line-height: 50px;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  .third_pink_1_hide {
+    /* border:1px solid red; */
+    font-size: 26px;
+    margin-right: 8px;
+  }
+
+  .third_pink_1_h1 {
+    /* border: 1px solid red; */
+    position: absolute;
+    top: 40%;
+    left: 24%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    color: white;
+    font-size: 0.8rem;
+    font-weight: 300;
+    margin: 1rem 0;
+    letter-spacing: -0.06rem;
+  }
+
+  /*this is compoent map 2nd div section  Compoent_map_2_p heading */
+
+  .third_pink_2_p {
+    position: absolute;
+    top: 94%;
+    left: 24%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    color: white;
+    /* border: 1px solid red; */
+    font-size: 1.1rem;
+    line-height: 50px;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  .third_pink_2_hide {
+    /* border:1px solid red; */
+    font-size: 26px;
+    margin-right: 8px;
+  }
+
+  .third_pink_2_h1 {
+    /* border: 1px solid red; */
+    position: absolute;
+    top: 91%;
+    left: 29%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    color: white;
+    font-size: 0.8rem;
+    font-weight: 300;
+    margin: 1rem 0;
+    letter-spacing: -0.06rem;
+  }
+
+  /*third pink  complete */
+  /*third pink div start */
+
+  .third_pink_div {
+    /* border: 1px solid rgb(23, 0, 0); */
+    display: flex;
+    flex-wrap: wrap;
+    /* flex-direction: column; */
+    width: 100%;
+    height: auto;
+  }
+  .third_pink_div div {
+    /* border: 1px solid red; */
+    width: 100%;
+  }
+  .third_pink_1_div img {
+    /* border: 2px solid rgb(34, 0, 0); */
+    width: 100%;
+    height: 380px;
+    border-radius: 11px;
+  }
+  .third_pink_2_div img {
+    /* border: 1px solid red; */
+    width: 100%;
+    height: 380px;
+    border-radius: 11px;
+  }
+
+  /*this is compoent map 1nd div section  Compoent_map_1_p heading */
+  .third_pink_1_p_div {
+    position: absolute;
+    top: 43%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    color: white;
+    /* border: 1px solid red; */
+    font-size: 1.1rem;
+    line-height: 50px;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  .third_pink_1_hide_div {
+    /* border:1px solid red; */
+    font-size: 26px;
+    margin-right: 8px;
+  }
+
+  .third_pink_1_h1_div {
+    /* border: 1px solid red; */
+    position: absolute;
+    top: 40%;
+    left: 24%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    color: white;
+    font-size: 0.8rem;
+    font-weight: 300;
+    margin: 1rem 0;
+    letter-spacing: -0.06rem;
+  }
+
+  /*this is compoent map 2nd div section  Compoent_map_2_p heading */
+
+  .third_pink_2_p_div {
+    position: absolute;
+    top: 94%;
+    left: 24%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    color: white;
+    /* border: 1px solid red; */
+    font-size: 1.1rem;
+    line-height: 50px;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  .third_pink_2_hide_div {
+    /* border:1px solid red; */
+    font-size: 26px;
+    margin-right: 8px;
+  }
+
+  .third_pink_2_h1_div {
+    /* border: 1px solid red; */
+    position: absolute;
+    top: 91%;
+    left: 29%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    color: white;
+    font-size: 0.8rem;
+    font-weight: 300;
+    margin: 1rem 0;
+    letter-spacing: -0.06rem;
+  }
+
+  /*third pink div  complete */
+  /*third pink div1 start */
+
+  .third_pink_div1 {
+    /* border: 1px solid rgb(23, 0, 0); */
+    display: flex;
+    flex-wrap: wrap;
+    /* flex-direction: column; */
+    width: 100%;
+    height: auto;
+  }
+  .third_pink_div1 div {
+    /* border: 1px solid red; */
+    width: 100%;
+  }
+  .third_pink_1_div1 img {
+    /* border: 2px solid rgb(34, 0, 0); */
+    width: 100%;
+    height: 380px;
+    border-radius: 11px;
+  }
+  .third_pink_2_div1 img {
+    /* border: 1px solid red; */
+    width: 100%;
+    height: 380px;
+    border-radius: 11px;
+  }
+
+  /*this is compoent map 1nd div section  Compoent_map_1_p heading */
+  .third_pink_1_p_div1 {
+    position: absolute;
+    top: 43%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    color: white;
+    /* border: 1px solid red; */
+    font-size: 1.1rem;
+    line-height: 50px;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  .third_pink_1_hide_div1 {
+    /* border:1px solid red; */
+    font-size: 26px;
+    margin-right: 8px;
+  }
+
+  .third_pink_1_h1_div1 {
+    /* border: 1px solid red; */
+    position: absolute;
+    top: 40%;
+    left: 24%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    color: white;
+    font-size: 0.8rem;
+    font-weight: 300;
+    margin: 1rem 0;
+    letter-spacing: -0.06rem;
+  }
+
+  /*this is compoent map 2nd div section  Compoent_map_2_p heading */
+
+  .third_pink_2_p_div1 {
+    position: absolute;
+    top: 94%;
+    left: 24%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    color: white;
+    /* border: 1px solid red; */
+    font-size: 1.1rem;
+    line-height: 50px;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  .third_pink_2_hide_div1 {
+    /* border:1px solid red; */
+    font-size: 26px;
+    margin-right: 8px;
+  }
+
+  .third_pink_2_h1_div1 {
+    /* border: 1px solid red; */
+    position: absolute;
+    top: 91%;
+    left: 29%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    color: white;
+    font-size: 0.8rem;
+    font-weight: 300;
+    margin: 1rem 0;
+    letter-spacing: -0.06rem;
+  }
+}
+
+/* //fotter part start */
+.ikeaLogo {
+  /* border: 2px solid black; */
+  margin: 70px;
+}
+.ikeaLogo_h1 {
+  /* border: 2px solid black; */
+  margin-top: 20px;
+  font-size: 1.5625rem;
+  font-weight: 700;
+}
+
+.ikeaLogo_img img {
+  /* border: 2px solid black; */
+  margin: auto;
+  margin-top: 30px;
+}
+
+.beutifulimage {
+  /* border: 2px solid red; */
+  width: 100%;
+}
+
+.footerpart {
+  /* border: 1px solid black; */
+  background-color: #005aa6;
+  height: 240px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.footerpart div {
+  /* border: 1px solid rgb(183, 183, 183); */
+  text-align: center;
+  color: #fff;
+  font-size: 1.5625rem;
+  line-height: 162.5%;
+  font-weight: 500;
+}
+
+@media all and (min-width: 550px) and (max-width: 950px) {
+  /* //fotter part start */
+  .beutifulimage {
+    /* border: 2px solid red; */
+    width: 100%;
+  }
+
+  .footerpart {
+    /* border: 1px solid black; */
+    background-color: #005aa6;
+    height: 240px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .footerpart div {
+    /* border: 1px solid rgb(183, 183, 183); */
+    text-align: center;
+    color: #fff;
+    font-size: 1.1rem;
+
+    font-weight: 500;
+  }
+}
+@media all and (min-width: 200px) and (max-width: 549px) {
+  .ikeaLogo {
+    /* border: 2px solid black; */
+    margin: 60px;
+  }
+  .ikeaLogo_h1 {
+    /* border: 2px solid black; */
+    margin-top: 20px;
+    font-size: 1.3rem;
+    font-weight: 700;
+  }
+
+  .ikeaLogo_img img {
+    /* border: 2px solid black; */
+    margin: auto;
+    margin-top: 30px;
+    width: 35%;
+  }
+  .beutifulimage {
+    /* border: 2px solid red; */
+    width: 100%;
+  }
+
+  .footerpart {
+    /* border: 1px solid black; */
+    background-color: #005aa6;
+    height: 240px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    /* margin-bottom: 20px; */
+  }
+
+  .footerpart div {
+    /* border: 1px solid rgb(183, 183, 183); */
+    text-align: center;
+    color: #fff;
+    font-size: 0.7rem;
+    font-weight: 500;
+  }
 }
