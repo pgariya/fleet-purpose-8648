@@ -16,7 +16,9 @@ import { useParams } from "react-router-dom";
 
 
 const SingleFeaturesPage = () => {
-  const [liked, setLiked] = useState(false);
+
+
+
   let params = useParams();
   // console.log(params.id);
 
@@ -41,13 +43,23 @@ const SingleFeaturesPage = () => {
 
 
 
-  useEffect(() => {
-
-    getmydata(params.id);
-
-  }, [params.id]);
  
+ 
+  let handleCart=(id) =>{
+   console.log(id);
+   let update= diffproduct.map((el) => (el.title==id)  ? {...el,heart:!el.heart} : el)
+   
+   setdiffproduct(update)
+   
+   console.log(diffproduct);
+  
+  }
 
+  useEffect(() => {
+  
+    getmydata(params.id);
+  
+  }, [params.id]);
 
   // console.log(mydata);
 
@@ -59,14 +71,6 @@ const SingleFeaturesPage = () => {
     );
   }
 
-
-let handleCart=(id) =>{
- 
-  setLiked(!liked)
-
-  console.log(id,"id")
-
-}
 
 
 
@@ -83,7 +87,7 @@ let handleCart=(id) =>{
         margin="auto"
         mt={20}
       >
-        <Box width={{base:"98%" , md:"40%"}}  overflow="hidden">
+        <Box width={{base:"98%" , md:"40%"}}  overflow="hidden" >
           <Image src={mydata.img} w={"100%"} transition={"transform 2s"} _hover={{transform: "scale(1.1)"}}/>
         </Box>
 
@@ -122,8 +126,8 @@ let handleCart=(id) =>{
                     cursor="pointer"
                     onClick={() => handleCart(el.title) }
                   >
-                    {liked ? (
-                      <BsHeartFill fill="red" fontSize={"24px"} />
+                    {el.heart ? (
+                      <BsHeartFill  fill="red" fontSize={"24px"} />
                     ) : (
                       <BsHeart fontSize={"24px"} />
                     )}

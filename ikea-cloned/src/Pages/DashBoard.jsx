@@ -23,7 +23,6 @@ const DashBoard = () => {
 
 <Navbar/>
 
-
 {/* search box -- it is only for small screen */}
 <Box w={"80%"} display={{base:"block" , md:"none"}} margin="auto">
         <InputGroup>

@@ -6,6 +6,8 @@ import {
   DrawerBody,
   DrawerCloseButton,
   DrawerContent,
+  DrawerFooter,
+  DrawerHeader,
   DrawerOverlay,
   Heading,
   HStack,
@@ -14,6 +16,8 @@ import {
   InputGroup,
   InputLeftElement,
   InputRightElement,
+  Stack,
+  Text,
   useDisclosure,
   VStack,
 } from "@chakra-ui/react";
@@ -26,11 +30,25 @@ import {
 } from "react-icons/bs";
 import { CgProfile } from "react-icons/cg";
 import { GrDeliver } from "react-icons/gr";
+
+import { useSelector } from "react-redux";
+
 import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
+
+
   const btnRef = React.useRef();
+let navigate= useNavigate();
+
+
+  let store= useSelector((state) => state.cartManager)
+  // console.log(store.cartItems , "cart Itemsssssss");
+
+ 
+  
+
 
   let Navigate = useNavigate();
 
@@ -116,9 +134,22 @@ const Navbar = () => {
 
           {/* Navigate("/login") */}
 
-          <Button>
-            <BsFillCartCheckFill />
-          </Button>
+
+{/* add to cart button and drawer  */}
+          
+      {/* <Navigate to="/cartitemspage"> */}
+        
+      <Button onClick={() => navigate("/cartitemspage")}>
+          <BsFillCartCheckFill />
+            <Text>{store.count}</Text>
+      </Button>
+
+        {/* </Navigate>   */}
+     
+    
+
+
+
 
           <Button>
             <GrDeliver />
