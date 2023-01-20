@@ -1,6 +1,8 @@
-import { Box, Button, Heading, HStack, Image, Input, InputGroup, InputLeftElement, InputRightElement, Stack, Text } from '@chakra-ui/react'
+import { ChevronDownIcon } from '@chakra-ui/icons'
+import { Box, Button, Heading, HStack, Image, Input, InputGroup, InputLeftElement, InputRightElement, Menu, MenuButton, MenuDivider, MenuItem, MenuList, Stack, Text } from '@chakra-ui/react'
 import React from 'react'
 import { BsFillCameraFill, BsSearch } from 'react-icons/bs'
+import { Link } from 'react-router-dom'
 
 import AccessoriesCarousel from '../Components/AccessoriesCarousel'
 import BigScrollerCarousel from '../Components/BigScrollerCarousel'
@@ -41,8 +43,32 @@ const DashBoard = () => {
 <Box ml={"10%"} mt={15} display={{base:"none" , sm:"block"}}>
 
 <HStack gap={10} fontWeight="bold">
-    <Text>Product</Text>
-    <Text>Rooms</Text>
+    {/* <Text>Product</Text> */}
+
+<Box>
+<Menu>
+  <MenuButton
+    px={4}
+    py={2}
+    transition='all 0.2s'
+    fontWeight={"bold"}
+  >
+    Product <ChevronDownIcon />
+  </MenuButton>
+  <MenuList py={2} fontSize="18px" color={"white"} bg={"teal.400"}>
+    <MenuItem _hover={{bg:"teal"}} bg={"teal.400"} >Chairs</MenuItem>
+    
+    <Link to={"/sofaproducts"}>
+    <MenuItem _hover={{bg:"teal"}} bg={"teal.400"}>Sofa</MenuItem>
+    </Link>
+
+    <MenuItem _hover={{bg:"teal"}} bg={"teal.400"}>Bed</MenuItem>
+    <MenuItem _hover={{bg:"teal"}} bg={"teal.400"}>Clothes</MenuItem>
+  </MenuList>
+</Menu>
+</Box>
+
+  <Link to={"/productslist"}> <Text> Rooms </Text> </Link>  
     <Text>New At IKEA</Text>
     <Text>Offers</Text>
 

@@ -12,11 +12,13 @@ import SofaProducts from "./SofaProducts";
 
 import AdminLogin from "./adminLogin";
 import AdminDash from "./AdminDash";
+import FrontPage from "../Components/FrontPage";
 
 const AllRoutes = () => {
   return (
     <div>
       <Routes>
+        <Route path="/" element={<FrontPage/>}/>
        <Route path='/dashboard' element={<DashBoard/>}/>
        <Route path='/productslist' element={<ProductsList/>}/>
        <Route path='/productslist/:id' element={<SingleProductsList/>}/>

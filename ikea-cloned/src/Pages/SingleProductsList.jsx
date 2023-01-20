@@ -13,6 +13,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { BsHeart, BsHeartFill } from "react-icons/bs";
 import { useParams } from "react-router-dom";
+import Navbar from "../Components/Navbar";
 
 
 const SingleFeaturesPage = () => {
@@ -79,6 +80,8 @@ const SingleFeaturesPage = () => {
   return (
     <Box >
       {error !== "" && <Heading> Error: {error}</Heading>}
+
+      <Navbar/>
 
       <Stack
         direction={{ base: "column", md: "row" }}

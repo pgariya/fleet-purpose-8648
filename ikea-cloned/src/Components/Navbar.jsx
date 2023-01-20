@@ -33,7 +33,7 @@ import { GrDeliver } from "react-icons/gr";
 
 import { useSelector } from "react-redux";
 
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -62,7 +62,7 @@ let navigate= useNavigate();
         <HStack gap={7}>
           {/* menu button and drawer  */}
           <Box>
-            <Button ref={btnRef} colorScheme="teal" onClick={onOpen}>
+            <Button ref={btnRef} colorScheme="teal" onClick={onOpen} color="white">
               <RxHamburgerMenu />
             </Button>
             <Drawer
@@ -82,19 +82,26 @@ let navigate= useNavigate();
                       <CgProfile /> Hei! Log in or Sign up{" "}
                     </Heading>
 
+            <Link to={"/dashboard"}>
                     <Image
-                      src="https://tse4.mm.bing.net/th?id=OIP.dkG0ervqYt4ox2XJluo48wHaHa&pid=Api&P=0"
+                      src="/ourlogo.png"
                       alt="logo"
                       w={"50px"}
                       h={"50px"}
                       my={5}
                     />
+            </Link>
 
                     <Divider />
                   </Box>
                   <VStack gap={5} textAlign="left">
+
                     <Heading>Products</Heading>
+
+                    <Link to={"/productslist"}>
                     <Heading>Rooms</Heading>
+                    </Link>
+
                     <Heading>New At IKEA</Heading>
                     <Heading>Offers</Heading>
                   </VStack>
@@ -103,7 +110,7 @@ let navigate= useNavigate();
             </Drawer>
           </Box>
 
-          <Box>LOGO</Box>
+         <Link to={"/dashboard"}> <Box> <Image src="/ourlogo.png" w={"50px"} borderRadius="50%" /> </Box></Link>
         </HStack>
       </Box>
 
