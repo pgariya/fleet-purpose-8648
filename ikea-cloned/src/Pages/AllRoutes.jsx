@@ -13,6 +13,8 @@ import SofaProducts from "./SofaProducts";
 import AdminLogin from "./adminLogin";
 import AdminDash from "./AdminDash";
 import FrontPage from "../Components/FrontPage";
+import Payment from "./Payment";
+import Wishlist from "./Wishlist";
 
 const AllRoutes = () => {
   return (
@@ -30,8 +32,10 @@ const AllRoutes = () => {
         <Route path="/cartitemspage" element={<CartItemsPage/>}/>
 
        
-              <Route path="/AdminLogin" element={<AdminLogin />} />
+         <Route path="/AdminLogin" element={<AdminLogin />} />
       <Route path="/AdminDash" element={<AdminDash />} />
+      <Route path="/payment" element={<Payment/>}/>
+      <Route path="/wishlist" element={<Wishlist/>}/>
 
       </Routes>
     </div>
