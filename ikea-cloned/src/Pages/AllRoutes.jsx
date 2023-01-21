@@ -11,6 +11,11 @@ import DashBoard from './DashBoard'
 import SingleSofaProducts from "./SingleSofaProducts";
 import SofaProducts from "./SofaProducts";
 import FrontPage from "../Components/FrontPage";
+
+import Payment from "./Payment";
+import Wishlist from "./Wishlist";
+
+
 const AllRoutes = () => {
   return (
     <div>
@@ -28,6 +33,14 @@ const AllRoutes = () => {
         <Route path="/sofaproducts" element={<SofaProducts/>}/>
         <Route path='/sofaproducts/:id' element={<SingleSofaProducts/>}/>
         <Route path="/cartitemspage" element={<CartItemsPage/>}/>
+
+
+       
+        
+      <Route path="/payment" element={<Payment/>}/>
+      <Route path="/wishlist" element={<Wishlist/>}/>
+
+
       </Routes>
     </div>
   );

@@ -11,6 +11,7 @@ import {
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { BsFillCartCheckFill, BsFillStarFill } from "react-icons/bs";
+import {HiInformationCircle} from "react-icons/hi"
 import { useDispatch } from "react-redux";
 import { useParams } from "react-router-dom";
 import Navbar from "../Components/Navbar";
@@ -29,7 +30,7 @@ const SingleSofaProducts = () => {
   let getmydata = async (id) => {
     try {
       setisloading(true);
-      let res = await axios.get(`https://server-jrrq.onrender.com/sofa/${id}`);
+      let res = await axios.get(`http://localhost:8080/cart_items/${id}`);
       setsofadata(res.data);
       setisloading(false);
     } catch (err) {
@@ -45,7 +46,8 @@ const SingleSofaProducts = () => {
     id:sofadata.id,
     title:sofadata.title,
     image:sofadata.image1,
-    price:sofadata.price
+    price:sofadata.price,
+    cart_count:sofadata.cart_count
    }
 
   //  console.log(new_item)
@@ -70,8 +72,9 @@ const SingleSofaProducts = () => {
       <Heading>SingleSofaProducts</Heading>
       <Navbar/>
 
-      <Stack direction={{ base: "column", md: "row" }} gap={10} margin="auto" mt={10} alignItems="left" w="90%">
-        <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}   margin="auto">
+      <Stack direction={{ base: "column", md: "row" }} gap={10} margin="auto" mt={10}  w="90%" >
+        
+        <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}   margin="auto" mt={{base:"none" , md:"-30px" , lg:"10px"}}>
           <Image src={sofadata.image1} alt="1st image" />
           <Image src={sofadata.image2} alt="2nd image" />
           <Image src={sofadata.image3} alt="3rd image" />
@@ -89,7 +92,7 @@ const SingleSofaProducts = () => {
             <BsFillStarFill fill="#ffad47" />
           </HStack>
 
-          <HStack gap={5}>
+          <HStack gap={{base:"1px" , md:"5px"}}>
             <Image
               src={sofadata.thumbnail1}
               alt="no variants"
@@ -115,9 +118,56 @@ const SingleSofaProducts = () => {
           </Box>     
 
 
+<Box>
+
+<HStack  h="50px" overflow={"hidden"} position="relative">
+  <Image src="https://m.media-amazon.com/images/G/31/A2I_CEPC/VSX/vsx_sprite_2x.png" alt="offeers image"  position={"absolute"} top="-50px"/>
+  <Text  fontWeight={"bold"} position="absolute" left={"50px"}>offers</Text>
+</HStack>
+
+
+<HStack textAlign={"left"}>
+ 
+<Stack gap={1} border="1px solid grey" p={2} >
+  <Text fontWeight={"bold"}>No Cost EMI</Text>
+  <Text>Avail No Cost EMI on select cards for orders above ₹3000</Text>
+  <Text color={"teal"}>1 offer</Text>
+</Stack>
+
+<Stack gap={1} p={2}  border="1px solid grey">
+  <Text fontWeight={"bold"}>No Cost EMI</Text>
+  <Text>Avail No Cost EMI on select cards for orders above ₹3000</Text>
+  <Text color={"teal"}>1 offer</Text>
+</Stack>
+
+<Stack gap={1} p={2}  border="1px solid grey">
+  <Text fontWeight={"bold"}>No Cost EMI</Text>
+  <Text>Avail No Cost EMI on select cards for orders above ₹3000</Text>
+  <Text color={"teal"}>1 offer</Text>
+</Stack>
+
+</HStack>
+
+
+</Box>
+
+
+
+
+
+<Stack textAlign={"left"} w={{base:"90%" , md:"80%" }} p={5}  border={"1px solid grey"} box-shadow= "rgb(38, 57, 77) 0px 20px 30px -10px ">
+  <HiInformationCircle fontSize={"25px"}/>
+  <Text fontWeight={"bold"}>Made In India</Text>
+  <Text>Designed by IKEA of Sweden. Bringing quality, design, and affordability together.</Text>
+</Stack>
+
+
+
+
+
 {/* add to cart is here  */}
 
-          <Button onClick={ handleAddCart} bg={"blue.500"} color="white" fontSize={"20px"} w="250px"> <BsFillCartCheckFill fill="white" /> <Text fontSize={"20px"} ml={"10px"} color="white">Add to cart</Text></Button>
+          <Button onClick={ handleAddCart} bg={"blue.500"} color="white" fontSize={"20px"} w={{base:"90%" , md:"60%" }} > <BsFillCartCheckFill fill="white" /> <Text fontSize={"20px"} ml={"10px"} color="white">Add to cart</Text></Button>
 
 
 
