@@ -1,5 +1,13 @@
 import { useState } from "react";
-import { Box, Input, Button, Text, Image, Center } from "@chakra-ui/react";
+import {
+  Box,
+  Input,
+  Button,
+  Text,
+  Image,
+  Center,
+  Flex,
+} from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
 import logo from "../project.png";
 
@@ -25,25 +33,18 @@ function AdminLogin() {
   };
 
   return (
-    <div>
-      <Box bg="grey" p={4} color="white">
+    <>
+      <Box bg="grey" p={4} color="white" height="100px">
         <Center>
-          <Image
-            src={logo}
-            boxSize="100px"
-            objectFit="cover"
-            alignContent="center"
-            alt=""
-          />
+          <Image src={logo} boxSize="70px" width="15%" alt="" />
         </Center>
       </Box>
-      <Box
+      <Flex
         margin="auto"
         width="450px"
         padding="20px"
         shadow="dark-lg"
-        display="flex"
-        flexDirection="column"
+        direction="column"
         height="280px"
         justifyContent="space-evenly"
         marginTop="40px"
@@ -52,7 +53,8 @@ function AdminLogin() {
         <Input
           type="text"
           placeholder="Admin"
-          width="80%"
+          padding="20px"
+          maxWidth="80%"
           name="Name"
           value={admin.Name}
           onChange={handleAdmin}
@@ -60,18 +62,19 @@ function AdminLogin() {
         <Input
           type="password"
           placeholder="Enter Password"
-          width="80%"
           name="password"
+          padding="20px"
+          maxWidth="80%"
           value={admin.password}
           onChange={handleAdmin}
         />
         <Button width="80%" onClick={handleClick} colorScheme="blue">
-          <Text fontSize="18px" fontWeight="bold">
+          <Text fontSize="18px" fontWeight="bold" color="white">
             Submit
           </Text>
         </Button>
-      </Box>
-    </div>
+      </Flex>
+    </>
   );
 }
 
