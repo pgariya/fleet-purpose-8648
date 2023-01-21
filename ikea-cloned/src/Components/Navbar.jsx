@@ -112,7 +112,7 @@ const Navbar = () => {
             display={{ base: "none", lg: "block" }}>
             Hei! Log in or Sign up
           </Button>
-          <Button onClick={() => Navigate("/login")}>admin</Button>
+          <Button onClick={() => Navigate("/AdminLogin")}>admin</Button>
 
           {/* Navigate("/login") */}
 
