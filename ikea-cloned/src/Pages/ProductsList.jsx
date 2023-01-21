@@ -5,6 +5,7 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 
 import React, { useEffect, useState } from 'react'
+import Navbar from '../Components/Navbar';
 
 
 const ProductsList = () => {
@@ -101,15 +102,17 @@ if(isloading){
 
 
   return (
-    <Box bg={'gray.100'}>
+    <Box bg={'gray.100'} py={5}>
 
 {error !== ""  && <Heading> Error: {error}</Heading>}
 
 
 
 
+  <Navbar/>
 
  <Box w='90%' m='auto' textAlign={"left"}>
+
 
 <Box py={10}>
   <Heading>More inspiration like this</Heading>
