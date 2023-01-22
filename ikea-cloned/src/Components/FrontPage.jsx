@@ -427,28 +427,43 @@ const FrontPage = () => {
       </div>
 
       <div className={style.footerpart}>
-        <div>
-          <h2>
-            International sales <span style={{ color: "grey" }}>|</span>
-          </h2>
+        <div className={style.footerpart1}>
+          {" "}
+          <div>
+            <h2>
+              International sales <span style={{ color: "grey" }}>|</span>
+            </h2>
+          </div>
+          <div>
+            <h2>
+              About IKEA <span style={{ color: "grey" }}>|</span>
+            </h2>
+          </div>
+          <div>
+            <h2>
+              IKEA Museum <span style={{ color: "grey" }}>|</span>
+            </h2>
+          </div>
+          <div>
+            <h2>
+              Work with us <span style={{ color: "grey" }}>|</span>
+            </h2>
+          </div>
+          <div>
+            <h2>Ethics & INtegrity </h2>
+          </div>
         </div>
-        <div>
-          <h2>
-            About IKEA <span style={{ color: "grey" }}>|</span>
-          </h2>
-        </div>
-        <div>
-          <h2>
-            IKEA Museum <span style={{ color: "grey" }}>|</span>
-          </h2>
-        </div>
-        <div>
-          <h2>
-            Work with us <span style={{ color: "grey" }}>|</span>
-          </h2>
-        </div>
-        <div>
-          <h2>Ethics & INtegrity </h2>
+
+        <div className={style.footerpart2}>
+          <div>
+            <h1>Cookie information | Privacy statement</h1>
+          </div>
+          <div>
+            <p>© Inter IKEA Systems B.V. 1999 - 2023</p>
+          </div>
+          <div>
+            <h2>Co-worker login</h2>
+          </div>
         </div>
       </div>
     </div>

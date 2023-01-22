@@ -164,79 +164,93 @@ const CinumBun = () => {
         </div>
       </div>
 
+      <Stack
+        minH={"100vh"}
+        direction={{ base: "column", md: "row" }}
+        backgroundColor={"#936e55"}
+      >
+        <Flex p={8} flex={1} align={"center"} justify={"center"}>
+          <Stack spacing={6} w={"full"} maxW={"lg"}>
+            <Heading fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }}>
+              <br />{" "}
+              <Text color={"white"} as={"span"}>
+                "A cinnamon bun can warm the coldest heart."
+              </Text>{" "}
+            </Heading>
+          </Stack>
+        </Flex>
+        <Flex flex={1}>
+          <Image
+            alt={"Login Image"}
+            objectFit={"cover"}
+            fit="contain"
+            src={
+              "https://www.ikea.com/global/en/images/PE_808354p_9adda171da_740f034814.jpg?f=l"
+            }
+          />
+        </Flex>
+      </Stack>
 
-      <Stack minH={'100vh'} direction={{ base: 'column', md: 'row' }} backgroundColor={"#936e55"}>
-      <Flex p={8} flex={1} align={'center'} justify={'center'}>
-        <Stack spacing={6} w={'full'} maxW={'lg'} >
-          <Heading fontSize={{ base: '3xl', md: '4xl', lg: '5xl' }}>
-            <br />{' '}
-            <Text color={'white'} as={'span'}>
-            "A cinnamon bun can warm the coldest heart."
-            </Text>{' '}
-          </Heading>
-        
-        </Stack>
-      </Flex>
-      <Flex flex={1}>
-        <Image
-          alt={'Login Image'}
-          objectFit={'cover'}
-          fit="contain"
-          src={
-            'https://www.ikea.com/global/en/images/PE_808354p_9adda171da_740f034814.jpg?f=l'
-          }
+      <div className={style.ikeaLogo1}>
+        <div className={style.ikeaLogo_h11}>
+          <h1>A world of inspiration for your home</h1>
+        </div>
+        <div className={style.ikeaLogo_img1}>
+          {" "}
+          <img
+            src="https://www.ikea.com/global/en/images/ikea-logo.svg"
+            alt="logo"
+          />
+        </div>
+      </div>
+
+      <div className={style.beutifulimage1}>
+        <img
+          src="https://www.ikea.com/global/en/images/footer-illustration.svg"
+          alt="beuty"
         />
-      </Flex>
-    </Stack>
+      </div>
 
+      <div className={style.footerpart_bun}>
+        <div className={style.footerpart1_bun}>
+          {" "}
+          <div>
+            <h2>
+              International sales <span style={{ color: "grey" }}>|</span>
+            </h2>
+          </div>
+          <div>
+            <h2>
+              About IKEA <span style={{ color: "grey" }}>|</span>
+            </h2>
+          </div>
+          <div>
+            <h2>
+              IKEA Museum <span style={{ color: "grey" }}>|</span>
+            </h2>
+          </div>
+          <div>
+            <h2>
+              Work with us <span style={{ color: "grey" }}>|</span>
+            </h2>
+          </div>
+          <div>
+            <h2>Ethics & INtegrity </h2>
+          </div>
+        </div>
 
-    <div className={style.ikeaLogo1}>
-    <div className={style.ikeaLogo_h11}>
-      <h1>A world of inspiration for your home</h1>
-    </div>
-    <div className={style.ikeaLogo_img1}>
-      {" "}
-      <img
-        src="https://www.ikea.com/global/en/images/ikea-logo.svg"
-        alt="logo"
-      />
-    </div>
-  </div>
-
-  <div className={style.beutifulimage1}>
-    <img
-      src="https://www.ikea.com/global/en/images/footer-illustration.svg"
-      alt="beuty"
-    />
-  </div>
-
-  <div className={style.footerpart1}>
-    <div>
-      <h2>
-        International sales <span style={{ color: "grey" }}>|</span>
-      </h2>
-    </div>
-    <div>
-      <h2>
-        About IKEA <span style={{ color: "grey" }}>|</span>
-      </h2>
-    </div>
-    <div>
-      <h2>
-        IKEA Museum <span style={{ color: "grey" }}>|</span>
-      </h2>
-    </div>
-    <div>
-      <h2>
-        Work with us <span style={{ color: "grey" }}>|</span>
-      </h2>
-    </div>
-    <div>
-      <h2>Ethics & INtegrity </h2>
-    </div>
-  </div>
-
-
+        <div className={style.footerpart2_bun}>
+          <div>
+            <h1>Cookie information | Privacy statement</h1>
+          </div>
+          <div>
+            <p>© Inter IKEA Systems B.V. 1999 - 2023</p>
+          </div>
+          <div>
+            <h2>Co-worker login</h2>
+          </div>
+        </div>
+      </div>
     </>
   );
 };
