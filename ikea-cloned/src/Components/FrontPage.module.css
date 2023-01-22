@@ -2332,11 +2332,12 @@ third compoent complete */
   /* border: 2px solid black; */
   margin: 70px;
 }
-.ikeaLogo_h1 {
+.ikeaLogo_h1 h1 {
   /* border: 2px solid black; */
   margin-top: 20px;
   font-size: 1.5625rem;
   font-weight: 700;
+  text-align: center;
 }
 
 .ikeaLogo_img img {
