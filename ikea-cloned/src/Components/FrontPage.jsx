@@ -5,7 +5,7 @@ import { IoIosArrowUp } from "react-icons/io";
 import { ArrowForwardIcon } from "@chakra-ui/icons";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { Link } from "react-router-dom";
+import { border } from "@chakra-ui/react";
 
 const FrontPage = () => {
   const videoEl = useRef(null);
@@ -47,14 +47,11 @@ const FrontPage = () => {
           />
         </div>
 
-
         <div className={style.Compoent_1watch}>
           <div className={style.Compoent_1yellow}>
-          <Link to={"/dashboard"}>
             <h1>
               Go Shopping <ArrowForwardIcon />
             </h1>
-            </Link>
 
             <br />
             <br />
@@ -72,10 +69,6 @@ const FrontPage = () => {
             />
           </div>
         </div>
-
-
-
-
       </div>
 
       <div className={style.Compoent_2_blue}>
