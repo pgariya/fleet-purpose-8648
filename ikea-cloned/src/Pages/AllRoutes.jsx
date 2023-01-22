@@ -14,6 +14,7 @@ import FrontPage from "../Components/FrontPage";
 
 import Payment from "./Payment";
 import Wishlist from "./Wishlist";
+import CinumBun from "../Components/CinumBun";
 
 
 const AllRoutes = () => {
@@ -28,6 +29,7 @@ const AllRoutes = () => {
         <Route path="/Adminadd" element={<AdminAdd />} />
         <Route path="/AdminManage" element={<AdminManage />}/>
         <Route path="/" element={<FrontPage/>}/>
+        <Route path="/sweedan" element={<CinumBun/>}/>
        <Route path='/productslist' element={<ProductsList/>}/>
        <Route path='/productslist/:id' element={<SingleProductsList/>}/>
         <Route path="/sofaproducts" element={<SofaProducts/>}/>

@@ -14,13 +14,18 @@ import {
   useBreakpointValue,
   VStack,
 } from "@chakra-ui/react";
+import { Link } from "react-router-dom/dist";
 
 const CinumBun = () => {
   return (
     <>
       <div className={style.bunContainer}>
         <div className={style.bunfrontNavbar}>
-          <div className={style.bunfrontNavbarHeading}>IKEA</div>
+          <Link to="/dashboard">
+            {" "}
+            <div className={style.bunfrontNavbarHeading}>IKEA</div>
+          </Link>
+
           <div className={style.bunfrontNavbarLogo}>
             <GiHamburgerMenu />
           </div>
@@ -197,10 +202,12 @@ const CinumBun = () => {
         </div>
         <div className={style.ikeaLogo_img1}>
           {" "}
-          <img
-            src="https://www.ikea.com/global/en/images/ikea-logo.svg"
-            alt="logo"
-          />
+          <Link to="/dashboard">
+            <img
+              src="https://www.ikea.com/global/en/images/ikea-logo.svg"
+              alt="logo"
+            />
+          </Link>
         </div>
       </div>
 
