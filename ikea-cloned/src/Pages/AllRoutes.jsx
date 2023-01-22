@@ -7,10 +7,12 @@ import AdminDash from "./AdminDash";
 import AdminAdd from "./AdminAdd";
 import AdminManage from "./AdminManager";
 import CartItemsPage from "./CartItemsPage";
-import DashBoard from './DashBoard'
+import DashBoard from "./DashBoard";
 import SingleSofaProducts from "./SingleSofaProducts";
 import SofaProducts from "./SofaProducts";
 import FrontPage from "../Components/FrontPage";
+import Login from "../Components/Login";
+import Signup from "../Components/Signup";
 const AllRoutes = () => {
   return (
     <div>
@@ -21,13 +23,15 @@ const AllRoutes = () => {
         <Route path="/AdminLogin" element={<AdminLogin />} />
         <Route path="/AdminDash" element={<AdminDash />} />
         <Route path="/Adminadd" element={<AdminAdd />} />
-        <Route path="/AdminManage" element={<AdminManage />}/>
-        <Route path="/" element={<FrontPage/>}/>
-       <Route path='/productslist' element={<ProductsList/>}/>
-       <Route path='/productslist/:id' element={<SingleProductsList/>}/>
-        <Route path="/sofaproducts" element={<SofaProducts/>}/>
-        <Route path='/sofaproducts/:id' element={<SingleSofaProducts/>}/>
-        <Route path="/cartitemspage" element={<CartItemsPage/>}/>
+        <Route path="/AdminManage" element={<AdminManage />} />
+        <Route path="/" element={<FrontPage />} />
+        <Route path="/productslist" element={<ProductsList />} />
+        <Route path="/productslist/:id" element={<SingleProductsList />} />
+        <Route path="/sofaproducts" element={<SofaProducts />} />
+        <Route path="/sofaproducts/:id" element={<SingleSofaProducts />} />
+        <Route path="/cartitemspage" element={<CartItemsPage />} />
+        <Route path="/login" element={<Login/>} />
+        <Route path="/signup" element={<Signup/>} />
       </Routes>
     </div>
   );
