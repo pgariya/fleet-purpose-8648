@@ -2,20 +2,29 @@ import React from "react";
 import { Routes, Route } from "react-router-dom";
 import ProductsList from "./ProductsList";
 import SingleProductsList from "./SingleProductsList";
-import AdminLogin from "./adminLogin";
-import AdminDash from "./AdminDash";
-import AdminAdd from "./AdminAdd";
-import AdminManage from "./AdminManager";
+import AdminLogin from "../Components/Admin/adminLogin";
+import AdminDash from "../Components/Admin/AdminDash";
+import AdminAdd from "../Components/Admin/AdminAdd";
+import AdminManage from "../Components/Admin/AdminManager";
 import CartItemsPage from "./CartItemsPage";
-import DashBoard from './DashBoard'
+import DashBoard from "./DashBoard";
 import SingleSofaProducts from "./SingleSofaProducts";
 import SofaProducts from "./SofaProducts";
 import FrontPage from "../Components/FrontPage";
 
+import Login from "../Components/Login";
+import Signup from "../Components/Signup";
+
+
 import Payment from "./Payment";
 import Wishlist from "./Wishlist";
+
 import ChairProducts from "./ChairProducts";
 import SingleChairProducts from "./SingleChairProducts";
+
+import CinumBun from "../Components/CinumBun";
+
+
 
 
 const AllRoutes = () => {
@@ -23,26 +32,33 @@ const AllRoutes = () => {
     <div>
       <Routes>
         <Route path="/dashboard" element={<DashBoard />} />
-        <Route path="/productslist" element={<ProductsList />} />
-        <Route path="/productslist/:id" element={<SingleProductsList />} />
+
         <Route path="/AdminLogin" element={<AdminLogin />} />
         <Route path="/AdminDash" element={<AdminDash />} />
         <Route path="/Adminadd" element={<AdminAdd />} />
-        <Route path="/AdminManage" element={<AdminManage />}/>
-        <Route path="/" element={<FrontPage/>}/>
-       <Route path='/productslist' element={<ProductsList/>}/>
-       <Route path='/productslist/:id' element={<SingleProductsList/>}/>
-        <Route path="/sofaproducts" element={<SofaProducts/>}/>
-        <Route path='/sofaproducts/:id' element={<SingleSofaProducts/>}/>
-        <Route path="/cartitemspage" element={<CartItemsPage/>}/>
+
+       
 
         <Route path="/chairproducts" element={<ChairProducts/>}/>
         <Route path='/chairproducts/:id' element={<SingleChairProducts/>}/>
        
-        
+
+
+        <Route path="/AdminManage" element={<AdminManage />} />
+        <Route path="/" element={<FrontPage />} />
+        <Route path="/productslist" element={<ProductsList />} />
+        <Route path="/productslist/:id" element={<SingleProductsList />} />
+        <Route path="/sofaproducts" element={<SofaProducts />} />
+        <Route path="/sofaproducts/:id" element={<SingleSofaProducts />} />
+        <Route path="/cartitemspage" element={<CartItemsPage />} />
+        <Route path="/login" element={<Login/>} />
+        <Route path="/signup" element={<Signup/>} />
+        <Route path="/" element={<FrontPage/>}/>
+        <Route path="/sweedan" element={<CinumBun/>}/>    
+      
+
       <Route path="/payment" element={<Payment/>}/>
       <Route path="/wishlist" element={<Wishlist/>}/>
-
 
       </Routes>
     </div>
