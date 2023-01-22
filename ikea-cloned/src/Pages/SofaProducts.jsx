@@ -1,4 +1,4 @@
-import { Box, Card, CardBody, Divider, Heading, HStack, Image, SimpleGrid, Skeleton, Text } from '@chakra-ui/react'
+import { Box, Button, Card, CardBody, Divider, Heading, HStack, Image, SimpleGrid, Skeleton, Text } from '@chakra-ui/react'
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import { BsFillStarFill } from 'react-icons/bs';
@@ -10,21 +10,56 @@ const SofaProducts = () => {
     let [sofadata,setsofadata] = useState([]);
   let [error,seterror]= useState("");
   let [isloading,setisloading]= useState(false);
-  
+  let [count,setcount]= useState(0);
   
   let getmydata= async () =>{
       try{
         setisloading(true)
-          let res= await axios.get(`https://server-jrrq.onrender.com/sofa`)
+          let res= await axios.get(`http://localhost:8080/cart_items`)
           setsofadata(res.data)
           setisloading(false)
       }catch(err){
           seterror(err.message)
       }
   }
+
+
+  let handleHigh=() =>{
+setcount(count+1)
+let highdata= sofadata.sort((a,b)=>{
+  return +b.price - +a.price
+})
+// console.log("huhihh")
+
+setsofadata(highdata);
+
+// console.log(sofadata)
+
+
+  }
+
+
+
+  let handleLow=() =>{
+    setcount(count+1)
+    let lowdata= sofadata.sort((a,b)=>{
+      return +a.price - +b.price
+    })
+    // console.log("huhihh")
+    
+    setsofadata(lowdata);
+    
+    // console.log(sofadata)
+
+  }
   
+useEffect(() =>{
+
+},[count])
+
   useEffect(() =>{
       getmydata()
+      
   },[])
   
   console.log(sofadata);
@@ -49,6 +84,11 @@ const SofaProducts = () => {
   return (
     <Box>
 <Navbar/>
+
+<Button onClick={handleHigh}>HTl</Button>
+<Button onClick={handleLow}>l</Button> 
+
+
 
 <Box>
 <SimpleGrid columns={{base:1,sm:2 ,md:3 ,lg:4}} gap={5} textAlign='left' w={"90%"} margin="auto">

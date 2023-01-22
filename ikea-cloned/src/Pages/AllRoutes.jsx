@@ -11,18 +11,27 @@ import DashBoard from "./DashBoard";
 import SingleSofaProducts from "./SingleSofaProducts";
 import SofaProducts from "./SofaProducts";
 import FrontPage from "../Components/FrontPage";
+
 import Login from "../Components/Login";
 import Signup from "../Components/Signup";
+
+
+import Payment from "./Payment";
+import Wishlist from "./Wishlist";
+import CinumBun from "../Components/CinumBun";
+
+
+
 const AllRoutes = () => {
   return (
     <div>
       <Routes>
         <Route path="/dashboard" element={<DashBoard />} />
-        <Route path="/productslist" element={<ProductsList />} />
-        <Route path="/productslist/:id" element={<SingleProductsList />} />
+
         <Route path="/AdminLogin" element={<AdminLogin />} />
         <Route path="/AdminDash" element={<AdminDash />} />
         <Route path="/Adminadd" element={<AdminAdd />} />
+
         <Route path="/AdminManage" element={<AdminManage />} />
         <Route path="/" element={<FrontPage />} />
         <Route path="/productslist" element={<ProductsList />} />
@@ -32,6 +41,20 @@ const AllRoutes = () => {
         <Route path="/cartitemspage" element={<CartItemsPage />} />
         <Route path="/login" element={<Login/>} />
         <Route path="/signup" element={<Signup/>} />
+
+        <Route path="/AdminManage" element={<AdminManage />}/>
+        <Route path="/" element={<FrontPage/>}/>
+        <Route path="/sweedan" element={<CinumBun/>}/>
+      
+
+
+       
+        
+      <Route path="/payment" element={<Payment/>}/>
+      <Route path="/wishlist" element={<Wishlist/>}/>
+
+
+
       </Routes>
     </div>
   );
