@@ -12,11 +12,19 @@ import {
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { BsHeart, BsHeartFill } from "react-icons/bs";
+import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import Navbar from "../Components/Navbar";
+import { heart_cart_products } from "../redux/Heart/heart_action";
 
 
 const SingleFeaturesPage = () => {
+
+    let dispatch= useDispatch();
+
+   
+
+
 
 
 
@@ -33,7 +41,7 @@ const SingleFeaturesPage = () => {
   let getmydata = async (id) => {
     try {
       setisloading(true);
-      let res = await axios.get(`http://localhost:8080/real_products/${id}`);
+      let res = await axios.get(`https://project-bv3o.onrender.com/real_products/${id}`);
       setmydata(res.data);
       setdiffproduct(res.data.different_item)
       setisloading(false);
@@ -46,19 +54,38 @@ const SingleFeaturesPage = () => {
 
  
  
-  let handleCart=(id) =>{
-   console.log(id);
-   let update= diffproduct.map((el) => (el.title==id)  ? {...el,heart:!el.heart} : el)
-   
+  let handleCart= (id) =>{
+
+  //  console.log(id);
+   let update= diffproduct.map((el) => (el.title==id)  ? {...el , heart:!el.heart } : el)
    setdiffproduct(update)
    
-   console.log(diffproduct);
+   console.log(diffproduct,"diff product");
+
+
+   let x=diffproduct.filter((el) => el.heart !== false)
+  console.log(x,"x")
+    
+  dispatch(heart_cart_products(x[x.length-1]))
+// console.log(x[x.length-1])
+    
   
   }
+
+
+
+
+
+   
+
+
+  
+
 
   useEffect(() => {
   
     getmydata(params.id);
+
   
   }, [params.id]);
 

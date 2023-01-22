@@ -2,8 +2,9 @@ import { Box, Button, Heading, HStack, Image, Stack, Text } from '@chakra-ui/rea
 import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
+import Footer from '../Components/Footer'
 import Navbar from '../Components/Navbar'
-import {  decrement, decrement_cart_count, increment_cartitems_count, remove_from_cart } from '../redux/cart/cart.action'
+import {   decrement_cart_count, increment_cartitems_count, remove_from_cart } from '../redux/cart/cart.action'
 
 const CartItemsPage = () => {
   let dispatch= useDispatch()
@@ -44,29 +45,33 @@ let handleRemove=(id)=>{
 
 
   return (
-    <Box>
+    <Box >
         <Navbar/>
 
-   <Heading>CartItemsPage</Heading>
 
-<Stack>
+
+
+
+   <Heading textAlign={"center"} py="20px">Your Cart : {store.cartItems.length } Items </Heading>
+
+<Stack gap={5} p={5} w={"90%"} margin="auto" box-shadow="rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px" >
 
   {
-     store.cartItems.map((el) => <Stack direction={{base:"column" , md:"row"}} alignItems="center" justifyContent={"space-around"} border="1px solid grey" >
+     store.cartItems.map((el) => <Stack direction={{base:"column" , md:"row"}} bg="rgb(220,220,220)" borderRadius={"20px"} p={5} alignItems="center" justifyContent={"space-around"}  box-shadow= "rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px" >
 
 <Box w={{base:"70%" , md:"18%"}}  ><Image src={el.image} w="100%"/></Box>
-<Box><Text  fontSize={"20px"}>Title: {el.title}</Text></Box>
-<Box><Text fontSize={"20px"}>Price: {el.price}</Text></Box>
+<Box   ><Text  fontSize={"20px"}>Title: {el.title}</Text></Box>
+<Box  ><Text fontSize={"20px"}>Price: ₹ {el.price}</Text></Box>
 
 <HStack>
-<Button onClick={ () => handleDecrement(el.id) } >-</Button>
-<Button >{el.cart_count+1}</Button>
-  <Button onClick={ () => handleIncrement(el.id) }>+</Button>
+<Button onClick={ () => handleDecrement(el.id) }  bg="blue" color={"white"}>-</Button>
+<Button bg="blue" color={"white"} >{el.cart_count+1}</Button>
+  <Button bg="blue" color={"white"} onClick={ () => handleIncrement(el.id) }>+</Button>
 </HStack>
 
-<Box><Text fontSize={"20px"}>Total: {(el.cart_count+1) * el.price} </Text></Box>
+<Box><Text fontSize={"20px"}>Total: ₹ {(el.cart_count+1) * el.price} </Text></Box>
 
-<Box><Button onClick={() => handleRemove(el.id)}>Delete</Button></Box>
+<Box><Button onClick={() => handleRemove(el.id)} color="white" bg={"red"}>Delete</Button></Box>
 
      </Stack>)
      
@@ -77,8 +82,8 @@ let handleRemove=(id)=>{
 
 
 
-<Stack  mb={20} gap={5} mt="10px">
-  <Heading>Total Price: {totalvalue} </Heading>
+<Stack m={"auto"} mb={20} gap={5} mt="10px"  alignItems="center">
+  <Heading>Total Price: ₹ {totalvalue} </Heading>
   <Link to={"/payment"}>
   
   <Box>
@@ -86,6 +91,9 @@ let handleRemove=(id)=>{
   </Box>
   </Link>
 </Stack>
+
+
+<Footer/>
 
  
     </Box>

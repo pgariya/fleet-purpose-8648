@@ -72,7 +72,7 @@ const CategoriesCarousel = () => {
     let getCrousaldata= async () =>{
 
       try{
-        let res= await axios.get("http://localhost:8080/better_storage")
+        let res= await axios.get("https://project-bv3o.onrender.com/better_storage")
       let data= await res.data
       // console.log(data,"dataaaa")
        setCrouselProduct(data)

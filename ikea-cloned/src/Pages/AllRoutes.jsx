@@ -14,6 +14,8 @@ import FrontPage from "../Components/FrontPage";
 
 import Payment from "./Payment";
 import Wishlist from "./Wishlist";
+import ChairProducts from "./ChairProducts";
+import SingleChairProducts from "./SingleChairProducts";
 
 
 const AllRoutes = () => {
@@ -34,7 +36,8 @@ const AllRoutes = () => {
         <Route path='/sofaproducts/:id' element={<SingleSofaProducts/>}/>
         <Route path="/cartitemspage" element={<CartItemsPage/>}/>
 
-
+        <Route path="/chairproducts" element={<ChairProducts/>}/>
+        <Route path='/chairproducts/:id' element={<SingleChairProducts/>}/>
        
         
       <Route path="/payment" element={<Payment/>}/>

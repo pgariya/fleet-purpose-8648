@@ -76,7 +76,7 @@ const RealExampleCarousel = () => {
     let getCrousaldata= async () =>{
 
       try{
-        let res= await axios.get("http://localhost:8080/real_example")
+        let res= await axios.get("https://project-bv3o.onrender.com/real_example")
       let data= await res.data
       // console.log(data,"dataaaa")
        setscroller(data)
@@ -111,10 +111,10 @@ const RealExampleCarousel = () => {
             <Slider {...settings} >
     {
     
-    scroller.map((el) =>(<Box key={el.id} mr={5}>
+    scroller.map((el) =>(<Box key={el.id} mr={5} overflow="hidden">
     
     
-    <Image src={el.image} alt="immages_real" w="95%" h="320px" borderRadius={"10px"}/>
+    <Image src={el.image} alt="immages_real" w="95%" h="300px" borderRadius={"10px"} transition={"transform 2s"} _hover={{transform: "scale(1.1)"}}/>
     
    
     

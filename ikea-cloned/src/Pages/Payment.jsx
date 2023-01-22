@@ -5,10 +5,15 @@ import {
   MDBRow,
   MDBBtnGroup,
   MDBBtn,
+  MDBCard,
+  MDBCardBody,
+  MDBInput,
 } from "mdb-react-ui-kit";
+
 import { useSelector } from "react-redux";
-import { Alert, AlertDescription, AlertDialog, AlertDialogBody, AlertDialogCloseButton, AlertDialogContent, AlertDialogFooter, AlertDialogHeader, AlertDialogOverlay, AlertIcon, AlertTitle, Box, Button, CircularProgress, HStack, PinInput, PinInputField, Spinner, useDisclosure } from "@chakra-ui/react";
+import { Alert, AlertDescription, AlertDialog, AlertDialogBody, AlertDialogCloseButton, AlertDialogContent, AlertDialogFooter, AlertDialogHeader, AlertDialogOverlay, AlertIcon, AlertTitle, Box, Button, CircularProgress, Heading, HStack, PinInput, PinInputField, Spinner, Stack, Text, useDisclosure } from "@chakra-ui/react";
 import Navbar from "../Components/Navbar";
+import Footer from "../Components/Footer";
 
 export default function Payment() {
 
@@ -45,6 +50,11 @@ export default function Payment() {
 if(changeSkelton1){
   return<>
   <Navbar/>
+
+  <Box mb={20} >
+
+
+
 <Alert
   status='success'
   variant='subtle'
@@ -55,99 +65,166 @@ if(changeSkelton1){
   height='200px'
 >
   <AlertIcon boxSize='40px' mr={0} />
-  <AlertTitle mt={4} mb={1} fontSize='lg'>
+  <AlertTitle mt={4} mb={1} fontSize='50px'>
     Payment Successfull !
   </AlertTitle>
-  <AlertDescription maxWidth='sm'>
+  <AlertDescription maxWidth='sm' mt={5}>
     Thanks for Shopping
   </AlertDescription>
 </Alert>
+
+  </Box>
+
+
+<Footer/>
 
   </>
 }
 
   return ( <>
   <Navbar/>
-    <MDBContainer className="py-5">
-      <div className="d-flex justify-content-between align-items-center mb-5">
-        <div className="d-flex flex-row align-items-center">
-          <h4 className="text-uppercase mt-1">Eligible</h4>
-          <span className="ms-2 me-3">Pay</span>
-        </div>
-        <a href="#!">Cancel and return to the website</a>
-      </div>
-      <MDBRow>
-        <MDBCol md="7" lg="7" xl="6" className="mb-4 mb-md-0">
-          <h5 className="mb-0 text-success">  ₹ {totalvalue} </h5>
-          <h5 className="mb-3">Diabites Pump &amp; Supplies</h5>
-          <div>
-            <div className="d-flex justify-content-between">
-              <div className="d-flex flex-row mt-1">
-                <h6>Insurance Responsibility</h6>
-                <h6 className="fw-bold text-success ms-1">$71.76</h6>
-              </div>
-              <div className="d-flex flex-row align-items-center text-primary">
-                <span className="ms-1">Add Insurer card</span>
-              </div>
-            </div>
-            <p>
-              Insurance claim and all neccessary dependencies will be submitted
-              to your insurer for the covered portion of this order.
-            </p>
-            <div
-              className="p-2 d-flex justify-content-between align-items-center"
-              style={{ backgroundColor: "#eee" }}
-            >
-              <span>Aetna - Open Access</span>
-              <span>Aetna - OAP</span>
-            </div>
-            <hr />
-            <div className="d-flex justify-content-between align-items-center">
-              <div className="d-flex flex-row mt-1">
-                <h6>Patient Balance</h6>
-                <h6 className="fw-bold text-success ms-1">$13.24</h6>
-              </div>
-              <div className="d-flex flex-row align-items-center text-primary">
-                <span className="ms-1">Add Payment card</span>
-              </div>
-            </div>
-            <p>
-              Insurance claim and all neccessary dependencies will be submitted
-              to your insurer for the covered portion of this order.
-            </p>
-            <div class="d-flex flex-column mb-3">
-              <MDBBtnGroup vertical aria-label="Vertical button group">
-                <input
-                  type="radio"
-                  className="btn-check"
-                  name="options"
-                  id="option1"
-                  autocomplete="off"
-                />
-                <label className="btn btn-outline-primary btn-lg" for="option1">
-                  <div className="d-flex justify-content-between">
-                    <span>VISA </span>
-                    <span>**** 5436</span>
-                  </div>
-                </label>
 
-                <input
-                  type="radio"
-                  className="btn-check"
-                  name="options"
-                  id="option2"
-                  autocomplete="off"
-                  checked
+
+    <Stack py={5} gap={5} mb={10}>
+
+      {/* <Box className="d-flex justify-content-between align-items-center mb-5">
+        <Box className="d-flex flex-row align-items-center">
+          <Heading className="text-uppercase mt-1">Eligible</Heading>
+          <span className="ms-2 me-3">Pay</span>
+        </Box>
+        <a href="#!">Cancel and return to the website</a>
+      </Box> */}
+      <Box   w={{base:"90%" , lg:"40%"}} margin="auto" >
+    
+        <Box md="5" lg="4" xl="4"  >  
+          <Box p={5}  style={{ backgroundColor: "#eee" }} h={"500px"} borderRadius="20px">
+            <Heading textAlign={"Center"} >Order Recap</Heading>
+            <Box justifyContent={"space-between"} mt="10" display={"flex"}>
+              <Text fontWeight={"bold"}>Amount</Text> <Text> ₹ {totalvalue} </Text>
+            </Box>
+            <Box justifyContent={"space-between"} mt="5" display={"flex"} >
+              <Text fontWeight={"bold"}>Delivery Charges</Text> <Text>₹100.0</Text>
+            </Box>
+            <Box justifyContent={"space-between"} mt="5" display={"flex"} >
+              <Text fontWeight={"bold"}>Shipping Charges</Text> <Text> ₹ 00.0</Text>
+            </Box>
+            <Box justifyContent={"space-between"} mt="5" display={"flex"} >
+              <Text fontWeight={"bold"}>GST(18%)</Text> <Text>+ ₹ {totalvalue/10} </Text>
+            </Box>
+            <Box justifyContent={"space-between"} mt="5" display={"flex"} >
+              <Text fontWeight={"bold"} >Extra Charges</Text> <Text>  ₹ 0.00 </Text>
+            </Box>
+            <Box justifyContent={"space-between"} mt="5" display={"flex"} mb="2">
+              <Text fontWeight={"bold"} >Purchase Total </Text> <Text> ₹{totalvalue}</Text>
+            </Box>
+           
+            <Box mt="10">
+
+            <hr />
+            </Box>
+            <Box justifyContent={"space-between"} mt="10" display={"flex"} mb="2">
+              <Heading fontSize={"25px"}>Total  </Heading> <Heading fontSize={"25px"}> ₹ {totalvalue+ totalvalue/10 + 100} </Heading>
+            </Box>
+          </Box>
+        </Box>
+      </Box>
+
+<Box  >
+
+<Box w={"90%"} margin="auto"
+borderRadius={20}
+      className="py-5"
+      fluid
+      style={{
+        backgroundImage:
+          "url(https://mdbcdn.b-cdn.net/img/Photos/Others/background3.webp)",
+      }}
+    >
+      <Box display={"flex"} justifyContent="center"  >
+        <MDBCol md="10" lg="8" xl="5">
+          <MDBCard className="rounded-5" >
+            <MDBCardBody className="p-4">
+              <div className="text-center mb-4">
+                
+                <Heading>Payment</Heading>
+              </div>
+              <p className="fw-bold mb-4 pb-2">Saved cards:</p>
+              <div className="d-flex flex-row align-items-center mb-4 pb-1">
+                <img
+                  className="img-fluid"
+                  src="https://img.icons8.com/color/48/000000/mastercard-logo.png"
+                  alt="second_im"
                 />
-                <label className="btn btn-outline-primary btn-lg" for="option2">
-                  <div className="d-flex justify-content-between">
-                    <span>MASTER CARD </span>
-                    <span>**** 5038</span>
+                <div className="flex-fill mx-3">
+                  <div className="form-outline">
+                    <MDBInput
+                      label="Card Number"
+                      id="form1"
+                      type="text"
+                      size="lg"
+                      value="**** **** **** 3193"
+                    />
                   </div>
-                </label>
-              </MDBBtnGroup>
-            </div>
-            {/* proceed button  */}
+                </div>
+                <a href="#!">Remove card</a>
+              </div>
+              <div className="d-flex flex-row align-items-center mb-4 pb-1">
+                <img
+                  className="img-fluid"
+                  src="https://img.icons8.com/color/48/000000/visa.png"
+                  alt="third img"
+                />
+                <div className="flex-fill mx-3">
+                  <div className="form-outline">
+                    <MDBInput
+                      label="Card Number"
+                      id="form2"
+                      type="text"
+                      size="lg"
+                      value="**** **** **** 4296"
+                    />
+                  </div>
+                </div>
+                <a href="#!">Remove card</a>
+              </div>
+              <p className="fw-bold mb-4"> Pay with this Card :</p>
+              <MDBInput
+                label="Cardholder's Name"
+                id="form3"
+                type="text"
+                size="lg"
+                // value="Prakash Gariya"
+              />
+              <MDBRow className="my-4">
+                <MDBCol size="7">
+                  <MDBInput
+                    label="Card Number"
+                    id="form4"
+                    type="number"
+                    size="lg"
+                    // value="1234 5678 1234 5678"
+                  />
+                </MDBCol>
+                <MDBCol size="3">
+                  <MDBInput
+                    label="Expire"
+                    id="form5"
+                    type="password"
+                    size="lg"
+                    placeholder="MM/YYYY"
+                  />
+                </MDBCol>
+                <MDBCol size="2">
+                  <MDBInput
+                    label="CVV"
+                    id="form6"
+                    type="password"
+                    size="lg"
+                    placeholder="CVV"
+                  />
+                </MDBCol>
+              </MDBRow>
+                    {/* proceed button  */}
             <MDBBtn onClick={onOpen} color="success" size="lg" block>
               Proceed to payment
             </MDBBtn>
@@ -167,17 +244,19 @@ if(changeSkelton1){
         <AlertDialogContent>
           <AlertDialogHeader> Enter Your Pin </AlertDialogHeader>
           <AlertDialogCloseButton />
-          <AlertDialogBody>
+          <AlertDialogBody p={5}>
 
-            Are you sure you want to discard all of your notes? 44 words will be
-            deleted.
+           Please Enter 6 Digit Pin which is send in Your Mobile Number ********55
 
-            <HStack>
+            <HStack mt={5}>
   <PinInput type='alphanumeric' mask>
     <PinInputField />
     <PinInputField />
     <PinInputField />
     <PinInputField />
+    <PinInputField />
+    <PinInputField />
+
   </PinInput>
 </HStack>
 
@@ -196,60 +275,21 @@ if(changeSkelton1){
         </AlertDialogContent>
       </AlertDialog>
     </>
-
-
-
-
-
-
-          </div>
+            </MDBCardBody>
+          </MDBCard>
         </MDBCol>
-        <MDBCol md="5" lg="4" xl="4" offsetLg="1" offsetXl="2">
-          <div className="p-3" style={{ backgroundColor: "#eee" }}>
-            <span className="fw-bold">Order Recap</span>
-            <div className="d-flex justify-content-between mt-2">
-              <span>contracted Price</span> <span>$186.86</span>
-            </div>
-            <div className="d-flex justify-content-between mt-2">
-              <span>Amount Deductible</span> <span>$0.0</span>
-            </div>
-            <div className="d-flex justify-content-between mt-2">
-              <span>Coinsurance(0%)</span> <span>+ $0.0</span>
-            </div>
-            <div className="d-flex justify-content-between mt-2">
-              <span>Copayment </span> <span>+ 40.00</span>
-            </div>
-            <hr />
-            <div className="d-flex justify-content-between mt-2">
-              <span className="lh-sm">
-                Total Deductible,
-                <br />
-                Coinsurance and copay
-              </span>
-              <span>$40.00</span>
-            </div>
-            <div className="d-flex justify-content-between mt-2">
-              <span className="lh-sm">
-                Maximum out-of-pocket <br />
-                on insurance policy
-              </span>
-              <span>$40.00</span>
-            </div>
-            <hr />
-            <div className="d-flex justify-content-between mt-2">
-              <span>Insurance Responsibility </span> <span>$71.76</span>
-            </div>
-            <div className="d-flex justify-content-between mt-2">
-              <span>Patient Balance </span> <span>$13.24</span>
-            </div>
-            <hr />
-            <div className="d-flex justify-content-between mt-2">
-              <span>Total </span> <span class="text-success">$85.00</span>
-            </div>
-          </div>
-        </MDBCol>
-      </MDBRow>
-    </MDBContainer>
+      </Box>
+    </Box>
+ 
+
+</Box>
+
+
+
+    </Stack>
+
+
+    <Footer/>
     </>
   );
 }

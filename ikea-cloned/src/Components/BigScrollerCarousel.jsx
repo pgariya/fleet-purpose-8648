@@ -70,7 +70,7 @@ const BigScrollerCarousel = () => {
     let getCrousaldata= async () =>{
 
       try{
-        let res= await axios.get("http://localhost:8080/big_scroller")
+        let res= await axios.get("https://project-bv3o.onrender.com/big_scroller")
       let data= await res.data
       // console.log(data,"dataaaa")
        setscroller(data)
@@ -108,7 +108,7 @@ const BigScrollerCarousel = () => {
 scroller.map((el) =>(<Box key={el.id}  >
 
 
-<Image src={el.image} alt={el.title} w="95%" h="500px"  m="auto"/>
+<Image src={el.image} alt={el.title} w="95%" h="500px"  m="auto" />
 
 <Stack  w="95%" m={"auto"}    bg={array_color[el.id-9]} color="white" p={2} h="350px">
 
