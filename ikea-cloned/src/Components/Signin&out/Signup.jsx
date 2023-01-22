@@ -1,16 +1,8 @@
 import React, { useState } from "react";
-import styles from "../styles/Signup.module.css";
-import {
-  Box,
-  Flex,
-  Image,
-  Input,
-  Formlabel,
-  Button,
-  Divider,
-} from "@chakra-ui/react";
-import Navbar from "../Components/Navbar";
-import Footer from "../Components/Footer";
+import styles from "../../styles/Signup.module.css";
+import { Box, Flex, Image, Input, Divider } from "@chakra-ui/react";
+import Navbar from "../Navbar/Navbar";
+import Footer from "../Footer";
 import { useNavigate } from "react-router-dom";
 
 const initialState = {
@@ -26,6 +18,7 @@ const Signup = () => {
   const [initialValue, setInitialValue] = useState(initialState);
   const [login_value, setLogin_value] = useState([]);
 
+  const navigate = useNavigate();
   const handleChange = (e) => {
     const { name, value } = e.target;
     console.log(name, value);
@@ -34,8 +27,10 @@ const Signup = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setLogin_value([...login_value, initialValue]);
-
+    // navigate("/login");
   };
+
+  
 
   // console.log(initialValue);
   localStorage.setItem("login_data", JSON.stringify(login_value));
@@ -190,7 +185,10 @@ const Signup = () => {
             <br />
             <br />
             <Divider />
-            <button onClick={handleSubmit} className={styles.btn_14}>Submit</button>
+            <button onClick={handleSubmit} className={styles.btn_14}>
+              Submit
+            </button>
+
           </Box>
         </Box>
       </Flex>

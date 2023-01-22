@@ -15,7 +15,7 @@ import {
   Center,
 } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
-import logo from "../project.png";
+import logo from "../../project.png";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { useRef } from "react";
 

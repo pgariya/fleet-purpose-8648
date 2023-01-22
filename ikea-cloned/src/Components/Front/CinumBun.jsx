@@ -1,11 +1,8 @@
 import React from "react";
 
-import style from "./CinumBun.module.css";
-import { ArrowForwardIcon } from "@chakra-ui/icons";
+import style from "../../styles/CinumBun.module.css";
 import { GiHamburgerMenu } from "react-icons/gi";
 import {
-  Box,
-  Button,
   Flex,
   Heading,
   Image,

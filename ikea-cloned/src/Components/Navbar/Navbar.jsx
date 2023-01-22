@@ -14,7 +14,6 @@ import {
   InputGroup,
   InputLeftElement,
   InputRightElement,
-  Stack,
   Text,
   useDisclosure,
   VStack,
@@ -36,17 +35,11 @@ import { Link, useNavigate } from "react-router-dom";
 const Navbar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
-
   const btnRef = React.useRef();
-let navigate= useNavigate();
+  let navigate = useNavigate();
 
-
-  let store= useSelector((state) => state.cartManager)
+  let store = useSelector((state) => state.cartManager);
   // console.log(store.cartItems , "cart Itemsssssss");
-
- 
-  
-
 
   let Navigate = useNavigate();
 
@@ -60,7 +53,11 @@ let navigate= useNavigate();
         <HStack gap={7}>
           {/* menu button and drawer  */}
           <Box>
-            <Button ref={btnRef} colorScheme="teal" onClick={onOpen} color="white">
+            <Button
+              ref={btnRef}
+              colorScheme="teal"
+              onClick={onOpen}
+              color="white">
               <RxHamburgerMenu />
             </Button>
             <Drawer
@@ -80,24 +77,23 @@ let navigate= useNavigate();
                       <CgProfile /> Hei! Log in or Sign up{" "}
                     </Heading>
 
-            <Link to={"/dashboard"}>
-                    <Image
-                      src="/ourlogo.png"
-                      alt="logo"
-                      w={"50px"}
-                      h={"50px"}
-                      my={5}
-                    />
-            </Link>
+                    <Link to={"/dashboard"}>
+                      <Image
+                        src="/ourlogo.png"
+                        alt="logo"
+                        w={"50px"}
+                        h={"50px"}
+                        my={5}
+                      />
+                    </Link>
 
                     <Divider />
                   </Box>
                   <VStack gap={5} textAlign="left">
-
                     <Heading>Products</Heading>
 
                     <Link to={"/productslist"}>
-                    <Heading>Rooms</Heading>
+                      <Heading>Rooms</Heading>
                     </Link>
 
                     <Heading>New At IKEA</Heading>
@@ -108,7 +104,13 @@ let navigate= useNavigate();
             </Drawer>
           </Box>
 
-         <Link to={"/dashboard"}> <Box> <Image src="/ourlogo.png" w={"50px"} borderRadius="50%" /> </Box></Link>
+          <Link to={"/dashboard"}>
+            {" "}
+            <Box>
+              {" "}
+              <Image src="/ourlogo.png" w={"50px"} borderRadius="50%" />{" "}
+            </Box>
+          </Link>
         </HStack>
       </Box>
 
@@ -132,35 +134,30 @@ let navigate= useNavigate();
             leftIcon={<CgProfile />}
             colorScheme="teal"
             variant="solid"
-            display={{ base: "none", lg: "block" }}>
+            display={{ base: "none", lg: "block" }}
+            onClick={() => Navigate("/signup")}>
             Hei! Log in or Sign up
           </Button>
-          <Button onClick={() => Navigate("/AdminLogin")}>admin</Button>
+          <Button onClick={() => Navigate("/AdminLogin")}>Admin</Button>
 
           {/* Navigate("/login") */}
 
+          {/* add to cart button and drawer  */}
 
-{/* add to cart button and drawer  */}
-          
-      {/* <Navigate to="/cartitemspage"> */}
-        
-      <Button onClick={() => navigate("/cartitemspage")}>
-          <BsFillCartCheckFill />
+          {/* <Navigate to="/cartitemspage"> */}
+
+          <Button onClick={() => navigate("/cartitemspage")}>
+            <BsFillCartCheckFill />
             <Text>{store.cartItems.length}</Text>
-      </Button>
-
-        {/* </Navigate>   */}
-     
-    
-
-
-
-<Link to="/wishlist">
-<Button >
-            <GrDeliver />
           </Button>
-</Link>
-          
+
+          {/* </Navigate>   */}
+
+          {/* <Link to="/wishlist"> */}
+            <Button>
+              <GrDeliver />
+            </Button>
+          {/* </Link> */}
         </HStack>
       </Box>
     </Box>

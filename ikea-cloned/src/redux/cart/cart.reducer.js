@@ -27,7 +27,7 @@ case INC_CARTITEMS_COUNT:{
 
    let updateCartItems = state.cartItems.map((el) => {
     
-        if(el.id==action.payload){
+        if(el.id===action.payload){
             return {...el,cart_count:el.cart_count+1}
         }else{
             return el
@@ -43,7 +43,7 @@ case DEC_CARTITMES_COUNT:{
 
     let updateCartItems = state.cartItems.map((el) => {
      
-         if(el.id==action.payload){
+         if(el.id===action.payload){
              return {...el,cart_count:el.cart_count-1}
          }else{
              return el

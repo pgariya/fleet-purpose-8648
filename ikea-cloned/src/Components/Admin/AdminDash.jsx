@@ -8,7 +8,7 @@ import {
   Select,
   Center,
 } from "@chakra-ui/react";
-import AdminNavbar from "../../Pages/AdminNavbar";
+import AdminNavbar from "../Navbar/AdminNavbar";
 import { useEffect } from "react";
 
 const AdminDash = () => {
@@ -38,14 +38,29 @@ const AdminDash = () => {
         flexDirection={{ base: "column", sm: "row", md: "row", lg: "row" }}
         justifyContent="space-evenly"
         margin="15">
-        <Button disabled colorScheme="teal" variant="solid" margin="5px" fontSize={{base:"10px",sm:"18px"}}>
+        <Button
+          disabled
+          colorScheme="teal"
+          variant="solid"
+          margin="5px"
+          fontSize={{ base: "10px", sm: "18px" }}>
           Total Product : {dash.length}
         </Button>
-        <Button disabled colorScheme="teal" variant="solid" margin="5px" fontSize={{base:"10px",sm:"18px"}}>
+        <Button
+          disabled
+          colorScheme="teal"
+          variant="solid"
+          margin="5px"
+          fontSize={{ base: "10px", sm: "18px" }}>
           Total Inventory : ₹ {total}
         </Button>
       </Box>
-      <Box width="30%" margin="auto" marginBottom="20px" fontSize={{base:"10px",sm:"18px"}} textAlign="center">
+      <Box
+        width="30%"
+        margin="auto"
+        marginBottom="20px"
+        fontSize={{ base: "10px", sm: "18px" }}
+        textAlign="center">
         <Center fontWeight="bold">Select Product to see details</Center>
         <Select
           width="40%"
@@ -53,7 +68,7 @@ const AdminDash = () => {
           value={cate}
           placeholder="select"
           onChange={handleChange}
-          size={{base:"xs",sm:"sm",md:"md",lg:"lg"}}>
+          size={{ base: "xs", sm: "sm", md: "md", lg: "lg" }}>
           <option value="sofa">sofa</option>
           <option value="chair">chair</option>
         </Select>
@@ -91,7 +106,7 @@ const AdminDash = () => {
               <Image width="15" src={e.thumbnail1} alt="" />
               <Image width="15" src={e.thumbnail2} alt="" />
               <Image width="15" src={e.thumbnail3} alt="" />
-            </Grid> 
+            </Grid>
           </Box>
         ))}
       </Grid>

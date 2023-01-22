@@ -9,7 +9,7 @@ import {
   Input,
 } from "@chakra-ui/react";
 import { useState } from "react";
-import AdminNavbar from "../../Pages/AdminNavbar";
+import AdminNavbar from "../Navbar/AdminNavbar";
 
 const initial = {
   image1: "",
@@ -42,7 +42,7 @@ const AdminAdd = () => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    if (name === "price" || name==="reviews") {
+    if (name === "price" || name === "reviews") {
       setAdd({ ...add, [name]: +value });
     } else {
       setAdd({ ...add, [name]: value });

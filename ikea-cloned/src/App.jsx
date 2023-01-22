@@ -1,5 +1,5 @@
 import './App.css';
-import AllRoutes from './Pages/AllRoutes';
+import AllRoutes from '../src/Routes/AllRoutes';
 
 // import Login from "./Components/Login";
 // import Signup from "./Components/Signup";

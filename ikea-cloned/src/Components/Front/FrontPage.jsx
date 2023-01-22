@@ -1,12 +1,11 @@
 import React, { useEffect, useRef } from "react";
-import style from "./FrontPage.module.css";
+import style from "../../styles/FrontPage.module.css";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoIosArrowUp } from "react-icons/io";
 import { ArrowForwardIcon } from "@chakra-ui/icons";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { border } from "@chakra-ui/react";
-import { Link } from "react-router-dom/dist";
+import { Link } from "react-router-dom";
 
 const FrontPage = () => {
   const videoEl = useRef(null);
@@ -50,9 +49,12 @@ const FrontPage = () => {
 
         <div className={style.Compoent_1watch}>
           <div className={style.Compoent_1yellow}>
-            <h1>
-              Go Shopping <ArrowForwardIcon />
-            </h1>
+            <Link to={"/dashboard"}>
+              {" "}
+              <h1>
+                Go Shopping <ArrowForwardIcon />
+              </h1>
+            </Link>
 
             <br />
             <br />
@@ -177,8 +179,7 @@ const FrontPage = () => {
             <p className={style.Compoent_map_1_p_2ndsession}>
               <span
                 data-aos="fade-right"
-                className={style.Compoent_map_1_hide_2ndsession}
-              >
+                className={style.Compoent_map_1_hide_2ndsession}>
                 <ArrowForwardIcon />
               </span>
               The trash collection
@@ -213,8 +214,7 @@ const FrontPage = () => {
             <p className={style.Compoent_map_2_p_2ndsession}>
               <span
                 data-aos="fade-right"
-                className={style.Compoent_map_2_hide_2ndsession}
-              >
+                className={style.Compoent_map_2_hide_2ndsession}>
                 <ArrowForwardIcon />
               </span>
               IKEA bathroom
@@ -329,8 +329,7 @@ const FrontPage = () => {
             <p className={style.third_pink_1_p_div}>
               <span
                 data-aos="fade-right"
-                className={style.third_pink_1_hide_div}
-              >
+                className={style.third_pink_1_hide_div}>
                 <ArrowForwardIcon />
               </span>
               Highlights from Milano
@@ -351,8 +350,7 @@ const FrontPage = () => {
             <p className={style.third_pink_2_p_div}>
               <span
                 data-aos="fade-right"
-                className={style.third_pink_2_hide_div}
-              >
+                className={style.third_pink_2_hide_div}>
                 <ArrowForwardIcon />
               </span>
               Change our story
@@ -375,8 +373,7 @@ const FrontPage = () => {
             <p className={style.third_pink_1_p_div1}>
               <span
                 data-aos="fade-right"
-                className={style.third_pink_1_hide_div1}
-              >
+                className={style.third_pink_1_hide_div1}>
                 <ArrowForwardIcon />
               </span>
               Surf style comes home
@@ -399,8 +396,7 @@ const FrontPage = () => {
               <p className={style.third_pink_2_p_div1}>
                 <span
                   data-aos="fade-right"
-                  className={style.third_pink_2_hide_div1}
-                >
+                  className={style.third_pink_2_hide_div1}>
                   <ArrowForwardIcon />
                 </span>
                 Cinnamon bun
