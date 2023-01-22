@@ -6,6 +6,7 @@ import { ArrowForwardIcon } from "@chakra-ui/icons";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { border } from "@chakra-ui/react";
+import { Link } from "react-router-dom/dist";
 
 const FrontPage = () => {
   const videoEl = useRef(null);
@@ -393,15 +394,18 @@ const FrontPage = () => {
             <h1 className={style.third_pink_2_h1_div1}>
               Swedish tradition IKEA
             </h1>
-            <p className={style.third_pink_2_p_div1}>
-              <span
-                data-aos="fade-right"
-                className={style.third_pink_2_hide_div1}
-              >
-                <ArrowForwardIcon />
-              </span>
-              Cinnamon bun
-            </p>
+            <Link to="/sweedan">
+              {" "}
+              <p className={style.third_pink_2_p_div1}>
+                <span
+                  data-aos="fade-right"
+                  className={style.third_pink_2_hide_div1}
+                >
+                  <ArrowForwardIcon />
+                </span>
+                Cinnamon bun
+              </p>
+            </Link>
           </div>
         </div>
       </div>
