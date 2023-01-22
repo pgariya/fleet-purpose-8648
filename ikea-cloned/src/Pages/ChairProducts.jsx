@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import Footer from '../Components/Footer';
 import Navbar from '../Components/Navbar';
 
-const SofaProducts = () => {
+const ChairProducts = () => {
 
     let [sofadata,setsofadata] = useState([]);
   let [error,seterror]= useState("");
@@ -16,7 +16,7 @@ const SofaProducts = () => {
   let getmydata= async () =>{
       try{
         setisloading(true)
-          let res= await axios.get(`https://project-bv3o.onrender.com/cart_items`)
+          let res= await axios.get(`https://server-jrrq.onrender.com/chair`)
           setsofadata(res.data)
           setisloading(false)
       }catch(err){
@@ -102,7 +102,7 @@ sofadata.map((el) => (
 
 
 <Card  borderRadius='10px' bg={'white'} key={el.id} >
-  <Link to={`/sofaproducts/${el.id}`}>
+  <Link to={`/chairproducts/${el.id}`}>
 <CardBody box-shadow= "rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px ">
 
 <Box  position="relative" ><Image  src={el.image1}  alt="image 1 starting"  />
@@ -154,4 +154,4 @@ sofadata.map((el) => (
   )
 }
 
-export default SofaProducts
+export default ChairProducts

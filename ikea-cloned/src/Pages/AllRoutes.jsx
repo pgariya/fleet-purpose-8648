@@ -18,7 +18,12 @@ import Signup from "../Components/Signup";
 
 import Payment from "./Payment";
 import Wishlist from "./Wishlist";
+
+import ChairProducts from "./ChairProducts";
+import SingleChairProducts from "./SingleChairProducts";
+
 import CinumBun from "../Components/CinumBun";
+
 
 
 
@@ -32,6 +37,13 @@ const AllRoutes = () => {
         <Route path="/AdminDash" element={<AdminDash />} />
         <Route path="/Adminadd" element={<AdminAdd />} />
 
+       
+
+        <Route path="/chairproducts" element={<ChairProducts/>}/>
+        <Route path='/chairproducts/:id' element={<SingleChairProducts/>}/>
+       
+
+
         <Route path="/AdminManage" element={<AdminManage />} />
         <Route path="/" element={<FrontPage />} />
         <Route path="/productslist" element={<ProductsList />} />
@@ -44,6 +56,7 @@ const AllRoutes = () => {
         <Route path="/" element={<FrontPage/>}/>
         <Route path="/sweedan" element={<CinumBun/>}/>    
       
+
       <Route path="/payment" element={<Payment/>}/>
       <Route path="/wishlist" element={<Wishlist/>}/>
 

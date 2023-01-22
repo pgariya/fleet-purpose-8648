@@ -14,6 +14,7 @@ import { BsFillCartCheckFill, BsFillStarFill } from "react-icons/bs";
 import {HiInformationCircle} from "react-icons/hi"
 import { useDispatch } from "react-redux";
 import { useParams } from "react-router-dom";
+import Footer from "../Components/Footer";
 import Navbar from "../Components/Navbar";
 import { add_cart_products, increment } from "../redux/cart/cart.action";
 
@@ -30,7 +31,7 @@ const SingleSofaProducts = () => {
   let getmydata = async (id) => {
     try {
       setisloading(true);
-      let res = await axios.get(`http://localhost:8080/cart_items/${id}`);
+      let res = await axios.get(`https://project-bv3o.onrender.com/cart_items/${id}`);
       setsofadata(res.data);
       setisloading(false);
     } catch (err) {
@@ -69,10 +70,10 @@ const SingleSofaProducts = () => {
 
   return (
     <div>
-      <Heading>SingleSofaProducts</Heading>
+      
       <Navbar/>
 
-      <Stack direction={{ base: "column", md: "row" }} gap={10} margin="auto" mt={10}  w="90%" >
+      <Stack direction={{ base: "column", md: "row" }} gap={10} margin="auto" mt={10}  w="90%"  mb={20}>
         
         <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}   margin="auto" mt={{base:"none" , md:"-30px" , lg:"10px"}}>
           <Image src={sofadata.image1} alt="1st image" />
@@ -173,6 +174,9 @@ const SingleSofaProducts = () => {
 
         </Stack>
       </Stack>
+
+
+      <Footer/>
     </div>
   );
 };

@@ -19,7 +19,7 @@ let [isloading,setisloading]= useState(false);
 let getmydata= async () =>{
     try{
       setisloading(true)
-        let res= await axios.get(`http://localhost:8080/real_products`)
+        let res= await axios.get(`https://project-bv3o.onrender.com/real_products`)
         setmydata(res.data)
         setupdatedData(res.data)
         setisloading(false)

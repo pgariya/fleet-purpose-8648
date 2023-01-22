@@ -18,9 +18,8 @@ const DashBoard = () => {
     <Box m={"auto"}>
 
   {/* -offer  section  */}
-<Box h={"35px"}  py={2} bg={"black"} color="white">
-
-<Text>Get 20% off* on delivery charges - limited period offer! </Text>
+<Box h={"40px"}  py={2} bg={"black"} color="white" textAlign={"center"} >
+<Text >Get 20% off* on delivery charges - limited period offer! </Text>
 </Box>
 
 <Navbar/>
@@ -56,14 +55,16 @@ const DashBoard = () => {
     Product <ChevronDownIcon />
   </MenuButton>
   <MenuList py={2} fontSize="18px" color={"white"} bg={"teal.400"}>
-    <MenuItem _hover={{bg:"teal"}} bg={"teal.400"} >Chairs</MenuItem>
+    <Link to="/chairproducts">
+    <MenuItem _hover={{bg:"teal"}} bg={"teal.400"} color="white" >Chairs</MenuItem>
+    </Link>
     
     <Link to={"/sofaproducts"}>
-    <MenuItem _hover={{bg:"teal"}} bg={"teal.400"}>Sofa</MenuItem>
+    <MenuItem _hover={{bg:"teal"}} bg={"teal.400"} color="white">Sofa</MenuItem>
     </Link>
 
-    <MenuItem _hover={{bg:"teal"}} bg={"teal.400"}>Bed</MenuItem>
-    <MenuItem _hover={{bg:"teal"}} bg={"teal.400"}>Clothes</MenuItem>
+    <MenuItem _hover={{bg:"teal"}} bg={"teal.400"} color="white">Bed</MenuItem>
+    <MenuItem _hover={{bg:"teal"}} bg={"teal.400"} color="white">Clothes</MenuItem>
   </MenuList>
 </Menu>
 </Box>
@@ -189,12 +190,12 @@ const DashBoard = () => {
 <Box w={{base:"95%" , lg:"90%"}} margin="auto" >
  <Stack direction={{base:"column" , lg:"row"}} gap="10px" >
 
-<Box  >
-   <Image src='https://www.ikea.com/images/a-hand-showing-ikea-app-download-screen-aec02826f4ecef443ec20186fa64c7d8.jpg?f=l' h={"700px"} alt='hand image' w={"100%"} />
+<Box overflow={"hidden"}>
+   <Image src='https://www.ikea.com/images/a-hand-showing-ikea-app-download-screen-aec02826f4ecef443ec20186fa64c7d8.jpg?f=l' transition={"transform 2s"} _hover={{transform: "scale(1.1)"}} h={"700px"} alt='hand image' w={"100%"} />
 </Box>
 
-<Box>
-<Image src="https://www.ikea.com/images/a3/f8/a3f8a40082462e029a7f5b6a93184b89.jpg?f=l" alt='right image' h={"700px"} w={"100%"} />
+<Box overflow={"hidden"}>
+<Image src="https://www.ikea.com/images/a3/f8/a3f8a40082462e029a7f5b6a93184b89.jpg?f=l" alt='right image' transition={"transform 2s"} _hover={{transform: "scale(1.1)"}} h={"700px"} w={"100%"} />
 </Box>
 
  </Stack>
@@ -209,20 +210,20 @@ const DashBoard = () => {
 </Stack>
 
 
-<Stack direction={{base:"column" , md:"row"}} w={{base:"95%" , lg:"90%"}} margin="auto" gap={5} textAlign="left">
+<Stack direction={{base:"column" , md:"row"}} w={{base:"95%" , lg:"90%"}} margin="auto" gap={5} textAlign="left" mb={10}>
 
-<Box>
-<Image src='https://www.ikea.com/images/top-sellers-fbeed0bb9bf644690c849abb7638a59d.png?f=s' alt="all offer"/>
+<Box overflow={"hidden"}>
+<Image src='https://www.ikea.com/images/top-sellers-fbeed0bb9bf644690c849abb7638a59d.png?f=s' alt="all offer"  transition={"transform 2s"} _hover={{transform: "scale(1.1)"}}/>
 <Heading fontSize={"30px"} mt="20px">All Offers</Heading>
 </Box>
 
-<Box>
-<Image src='https://www.ikea.com/images/fd/2e/fd2ef6a20e9487feca33f9be080bb9f3.png?f=s' alt="all offer"/>
+<Box overflow={"hidden"}>
+<Image src='https://www.ikea.com/images/fd/2e/fd2ef6a20e9487feca33f9be080bb9f3.png?f=s' alt="all offer" transition={"transform 2s"} _hover={{transform: "scale(1.1)"}}/>
 <Heading fontSize={"30px"} mt="20px">Every Day Essential</Heading>
 </Box>
 
-<Box>
-<Image src='https://www.ikea.com/images/ca/4a/ca4a9c34b0474f5e6598269a08a7c10e.png?f=s' alt="all offer"/>
+<Box overflow={"hidden"}>
+<Image src='https://www.ikea.com/images/ca/4a/ca4a9c34b0474f5e6598269a08a7c10e.png?f=s' alt="all offer" transition={"transform 2s"} _hover={{transform: "scale(1.1)"}}/>
 <Heading fontSize={"30px"} mt="20px">Clearance Sale</Heading>
 </Box>
 

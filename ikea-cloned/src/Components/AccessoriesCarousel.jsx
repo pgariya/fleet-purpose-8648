@@ -76,7 +76,7 @@ const AccessoriesCarousel = () => {
     let getCrousaldata= async () =>{
 
       try{
-        let res= await axios.get("http://localhost:8080/accessories")
+        let res= await axios.get("https://project-bv3o.onrender.com/accessories")
       let data= await res.data
       // console.log(data,"dataaaa")
        setscroller(data)
@@ -111,12 +111,12 @@ const AccessoriesCarousel = () => {
             <Slider {...settings} >
     {
     
-    scroller.map((el) =>(<Box key={el.id} mr={5}>
+    scroller.map((el) =>(<Box key={el.id} mr={5} overflow="hidden">
     
     
-    <Image src={el.image} alt={el.title} w="95%" h="300px" borderRadius={"10px"}/>
+    <Image src={el.image} alt={el.title} w="95%" h="300px" borderRadius={"10px"} transition={"transform 2s"} _hover={{transform: "scale(1.1)"}}/>
     
-    <Box bg={"white"} color="black"   w="80%" m={"auto"} p={2} px={10} borderRadius="20px"  position={"relative"} bottom="120px" >
+    <Box bg={"white"} color="black"   w="80%" m={"auto"} p={2} px={10} borderRadius="20px"   position={"relative"} bottom="120px" >
     <Text>{el.title}</Text>
     </Box>
     
