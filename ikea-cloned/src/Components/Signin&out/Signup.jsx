@@ -18,7 +18,7 @@ const Signup = () => {
   const [initialValue, setInitialValue] = useState(initialState);
   const [login_value, setLogin_value] = useState([]);
 
-  const navigate = useNavigate();
+  const Navigate = useNavigate();
   const handleChange = (e) => {
     const { name, value } = e.target;
     console.log(name, value);
@@ -30,7 +30,9 @@ const Signup = () => {
     // navigate("/login");
   };
 
-  
+  if (login_value.length !== 0) {
+    Navigate("/login");
+  }
 
   // console.log(initialValue);
   localStorage.setItem("login_data", JSON.stringify(login_value));
@@ -188,7 +190,6 @@ const Signup = () => {
             <button onClick={handleSubmit} className={styles.btn_14}>
               Submit
             </button>
-
           </Box>
         </Box>
       </Flex>
