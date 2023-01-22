@@ -2332,11 +2332,12 @@ third compoent complete */
   /* border: 2px solid black; */
   margin: 70px;
 }
-.ikeaLogo_h1 {
+.ikeaLogo_h1 h1 {
   /* border: 2px solid black; */
   margin-top: 20px;
   font-size: 1.5625rem;
   font-weight: 700;
+  text-align: center;
 }
 
 .ikeaLogo_img img {
@@ -2353,21 +2354,34 @@ third compoent complete */
 .footerpart {
   /* border: 1px solid black; */
   background-color: #005aa6;
-  height: 240px;
+  height: 220px;
+  padding-top: 70px;
+  color: #fff;
+}
+.footerpart1 {
+  /* border: 1px solid black; */
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 20px;
-  margin-bottom: 20px;
-}
-
-.footerpart div {
-  /* border: 1px solid rgb(183, 183, 183); */
-  text-align: center;
-  color: #fff;
   font-size: 1.5625rem;
   line-height: 162.5%;
-  font-weight: 500;
+}
+
+.footerpart2 {
+  /* border: 1px solid rgb(255, 41, 41); */
+  color: #fff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 20px;
+  margin-top: 80px;
+}
+.footerpart2 div p {
+  color: rgb(191, 190, 190);
+}
+.footerpart2 div h2 {
+  position: relative;
 }
 
 @media all and (min-width: 550px) and (max-width: 950px) {
@@ -2380,21 +2394,35 @@ third compoent complete */
   .footerpart {
     /* border: 1px solid black; */
     background-color: #005aa6;
-    height: 240px;
+    height: auto;
+    padding-top: 40px;
+    color: #fff;
+  }
+  .footerpart1 {
+    /* border: 1px solid black; */
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
-    gap: 15px;
+    gap: 18px;
+    font-size: 1.2rem;
+    line-height: 110.5%;
   }
 
-  .footerpart div {
-    /* border: 1px solid rgb(183, 183, 183); */
-    text-align: center;
+  .footerpart2 {
+    /* border: 1px solid rgb(255, 41, 41); */
     color: #fff;
-    font-size: 1.1rem;
-
-    font-weight: 500;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+    margin-top: 40px;
+    padding-bottom: 20px;
+    font-size: 15px;
+  }
+  .footerpart2 div p {
+    color: rgb(191, 190, 190);
   }
 }
 @media all and (min-width: 200px) and (max-width: 549px) {
@@ -2419,24 +2447,43 @@ third compoent complete */
     /* border: 2px solid red; */
     width: 100%;
   }
+  /* //fotter part start */
+  .beutifulimage {
+    /* border: 2px solid red; */
+    width: 100%;
+  }
 
   .footerpart {
     /* border: 1px solid black; */
     background-color: #005aa6;
-    height: 240px;
+    height: auto;
+    padding-top: 40px;
+    color: #fff;
+  }
+  .footerpart1 {
+    /* border: 1px solid black; */
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 8px;
-    /* margin-bottom: 20px; */
+    gap: 16px;
+    font-size: 1rem;
+    line-height: 60%;
   }
 
-  .footerpart div {
-    /* border: 1px solid rgb(183, 183, 183); */
-    text-align: center;
+  .footerpart2 {
+    /* border: 1px solid rgb(255, 41, 41); */
     color: #fff;
-    font-size: 0.7rem;
-    font-weight: 500;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+    margin-top: 40px;
+    padding-bottom: 2px;
+    font-size: 15px;
+  }
+  .footerpart2 div p {
+    color: rgb(191, 190, 190);
   }
 }

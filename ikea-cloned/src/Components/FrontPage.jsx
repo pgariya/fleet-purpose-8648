@@ -5,7 +5,8 @@ import { IoIosArrowUp } from "react-icons/io";
 import { ArrowForwardIcon } from "@chakra-ui/icons";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { Link } from "react-router-dom";
+import { border } from "@chakra-ui/react";
+import { Link } from "react-router-dom/dist";
 
 const FrontPage = () => {
   const videoEl = useRef(null);
@@ -47,14 +48,11 @@ const FrontPage = () => {
           />
         </div>
 
-
         <div className={style.Compoent_1watch}>
           <div className={style.Compoent_1yellow}>
-          <Link to={"/dashboard"}>
             <h1>
               Go Shopping <ArrowForwardIcon />
             </h1>
-            </Link>
 
             <br />
             <br />
@@ -72,10 +70,6 @@ const FrontPage = () => {
             />
           </div>
         </div>
-
-
-
-
       </div>
 
       <div className={style.Compoent_2_blue}>
@@ -400,15 +394,18 @@ const FrontPage = () => {
             <h1 className={style.third_pink_2_h1_div1}>
               Swedish tradition IKEA
             </h1>
-            <p className={style.third_pink_2_p_div1}>
-              <span
-                data-aos="fade-right"
-                className={style.third_pink_2_hide_div1}
-              >
-                <ArrowForwardIcon />
-              </span>
-              Cinnamon bun
-            </p>
+            <Link to="/sweedan">
+              {" "}
+              <p className={style.third_pink_2_p_div1}>
+                <span
+                  data-aos="fade-right"
+                  className={style.third_pink_2_hide_div1}
+                >
+                  <ArrowForwardIcon />
+                </span>
+                Cinnamon bun
+              </p>
+            </Link>
           </div>
         </div>
       </div>
@@ -434,28 +431,43 @@ const FrontPage = () => {
       </div>
 
       <div className={style.footerpart}>
-        <div>
-          <h2>
-            International sales <span style={{ color: "grey" }}>|</span>
-          </h2>
+        <div className={style.footerpart1}>
+          {" "}
+          <div>
+            <h2>
+              International sales <span style={{ color: "grey" }}>|</span>
+            </h2>
+          </div>
+          <div>
+            <h2>
+              About IKEA <span style={{ color: "grey" }}>|</span>
+            </h2>
+          </div>
+          <div>
+            <h2>
+              IKEA Museum <span style={{ color: "grey" }}>|</span>
+            </h2>
+          </div>
+          <div>
+            <h2>
+              Work with us <span style={{ color: "grey" }}>|</span>
+            </h2>
+          </div>
+          <div>
+            <h2>Ethics & INtegrity </h2>
+          </div>
         </div>
-        <div>
-          <h2>
-            About IKEA <span style={{ color: "grey" }}>|</span>
-          </h2>
-        </div>
-        <div>
-          <h2>
-            IKEA Museum <span style={{ color: "grey" }}>|</span>
-          </h2>
-        </div>
-        <div>
-          <h2>
-            Work with us <span style={{ color: "grey" }}>|</span>
-          </h2>
-        </div>
-        <div>
-          <h2>Ethics & INtegrity </h2>
+
+        <div className={style.footerpart2}>
+          <div>
+            <h1>Cookie information | Privacy statement</h1>
+          </div>
+          <div>
+            <p>© Inter IKEA Systems B.V. 1999 - 2023</p>
+          </div>
+          <div>
+            <h2>Co-worker login</h2>
+          </div>
         </div>
       </div>
     </div>

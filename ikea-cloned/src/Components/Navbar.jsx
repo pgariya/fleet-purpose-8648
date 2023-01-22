@@ -148,7 +148,7 @@ let navigate= useNavigate();
         
       <Button onClick={() => navigate("/cartitemspage")}>
           <BsFillCartCheckFill />
-            <Text>{store.count}</Text>
+            <Text>{store.cartItems.length}</Text>
       </Button>
 
         {/* </Navigate>   */}
@@ -157,10 +157,12 @@ let navigate= useNavigate();
 
 
 
-
-          <Button>
+<Link to="/wishlist">
+<Button >
             <GrDeliver />
           </Button>
+</Link>
+          
         </HStack>
       </Box>
     </Box>
