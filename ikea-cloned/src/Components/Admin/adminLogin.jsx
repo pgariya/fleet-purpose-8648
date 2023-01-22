@@ -9,7 +9,7 @@ import {
   Flex,
 } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
-import logo from "../project.png";
+import logo from "../../project.png";
 
 const initial = {
   Name: "",

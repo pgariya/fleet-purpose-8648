@@ -2,10 +2,10 @@ import React from "react";
 import { Routes, Route } from "react-router-dom";
 import ProductsList from "./ProductsList";
 import SingleProductsList from "./SingleProductsList";
-import AdminLogin from "./adminLogin";
-import AdminDash from "./AdminDash";
-import AdminAdd from "./AdminAdd";
-import AdminManage from "./AdminManager";
+import AdminLogin from "../Components/Admin/adminLogin";
+import AdminDash from "../Components/Admin/AdminDash";
+import AdminAdd from "../Components/Admin/AdminAdd";
+import AdminManage from "../Components/Admin/AdminManager";
 import CartItemsPage from "./CartItemsPage";
 import DashBoard from "./DashBoard";
 import SingleSofaProducts from "./SingleSofaProducts";
@@ -41,19 +41,11 @@ const AllRoutes = () => {
         <Route path="/cartitemspage" element={<CartItemsPage />} />
         <Route path="/login" element={<Login/>} />
         <Route path="/signup" element={<Signup/>} />
-
-        <Route path="/AdminManage" element={<AdminManage />}/>
         <Route path="/" element={<FrontPage/>}/>
-        <Route path="/sweedan" element={<CinumBun/>}/>
+        <Route path="/sweedan" element={<CinumBun/>}/>    
       
-
-
-       
-        
       <Route path="/payment" element={<Payment/>}/>
       <Route path="/wishlist" element={<Wishlist/>}/>
-
-
 
       </Routes>
     </div>
