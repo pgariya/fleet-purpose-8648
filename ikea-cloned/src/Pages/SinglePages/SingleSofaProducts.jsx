@@ -93,12 +93,12 @@ const SingleSofaProducts = () => {
           spacing={10}
           margin="auto"
           mt={{ base: "none", md: "-30px", lg: "10px" }}>
-          <Image src={sofadata.image1} alt="1st image" />
-          <Image src={sofadata.image2} alt="2nd image" />
-          <Image src={sofadata.image3} alt="3rd image" />
+          <Image src={sofadata.image1} alt="1st image"  boxShadow= "rgba(0, 0, 0, 0.35) 0px 5px 15px" />
+          <Image src={sofadata.image2} alt="2nd image"  boxShadow= "rgba(0, 0, 0, 0.35) 0px 5px 15px"/>
+          <Image src={sofadata.image3} alt="3rd image" boxShadow= "rgba(0, 0, 0, 0.35) 0px 5px 15px"/>
         </SimpleGrid>
 
-        <Stack gap={2} margin={"auto"} w={{ base: "80%", md: "45%" }}>
+        <Stack gap={2} margin={"auto"} w={{ base: "80%", md: "45%" }}  >
           <Heading textAlign={"left"}>{sofadata.title}</Heading>
           <Text textAlign={"left"}>{sofadata.short_description}</Text>
           <Text textAlign={"left"}> ₹ {sofadata.price}</Text>
@@ -148,8 +148,8 @@ const SingleSofaProducts = () => {
               </Text>
             </HStack>
 
-            <HStack textAlign={"left"}>
-              <Stack gap={1} border="1px solid grey" p={2}>
+            <HStack textAlign={"left"} mt={2}>
+              <Stack gap={1}  p={2} boxShadow= "rgba(0, 0, 0, 0.35) 0px 5px 15px">
                 <Text fontWeight={"bold"}>No Cost EMI</Text>
                 <Text>
                   Avail No Cost EMI on select cards for orders above ₹3000
@@ -157,7 +157,7 @@ const SingleSofaProducts = () => {
                 <Text color={"teal"}>1 offer</Text>
               </Stack>
 
-              <Stack gap={1} p={2} border="1px solid grey">
+              <Stack gap={1} p={2}  boxShadow= "rgba(0, 0, 0, 0.35) 0px 5px 15px">
                 <Text fontWeight={"bold"}>No Cost EMI</Text>
                 <Text>
                   Avail No Cost EMI on select cards for orders above ₹3000
@@ -165,7 +165,7 @@ const SingleSofaProducts = () => {
                 <Text color={"teal"}>1 offer</Text>
               </Stack>
 
-              <Stack gap={1} p={2} border="1px solid grey">
+              <Stack gap={1} p={2}  boxShadow= "rgba(0, 0, 0, 0.35) 0px 5px 15px">
                 <Text fontWeight={"bold"}>No Cost EMI</Text>
                 <Text>
                   Avail No Cost EMI on select cards for orders above ₹3000
@@ -179,8 +179,7 @@ const SingleSofaProducts = () => {
             textAlign={"left"}
             w={{ base: "90%", md: "80%" }}
             p={5}
-            border={"1px solid grey"}
-            box-shadow="rgb(38, 57, 77) 0px 20px 30px -10px ">
+            boxShadow= "rgba(0, 0, 0, 0.35) 0px 5px 15px" >
             <HiInformationCircle fontSize={"25px"} />
             <Text fontWeight={"bold"}>Made In India</Text>
             <Text>

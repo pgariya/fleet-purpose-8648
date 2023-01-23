@@ -1,4 +1,4 @@
-import { ADD_CART_ITEMS, DEC, DEC_CARTITMES_COUNT, INC, INC_CARTITEMS_COUNT, REMOVE_FROM_CART } from "./cart.type";
+import { ADD_CART_ITEMS, DEC, DEC_CARTITMES_COUNT, INC, INC_CARTITEMS_COUNT, PAYMENT_CART, REMOVE_FROM_CART } from "./cart.type";
 
 export let increment=() => ({
     type:INC, payload:1
@@ -6,6 +6,11 @@ export let increment=() => ({
 
 export let decrement=() =>({
     type:DEC, payload:1
+})
+
+
+export let payment_cart=() =>({
+    type:PAYMENT_CART
 })
 
 export let add_cart_products=(x) =>({

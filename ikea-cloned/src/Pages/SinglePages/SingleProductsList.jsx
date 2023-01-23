@@ -12,16 +12,16 @@ import {
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { BsHeart, BsHeartFill } from "react-icons/bs";
-import { useDispatch } from "react-redux";
-import { useParams } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { Link, useParams } from "react-router-dom";
 import Navbar from "../../Components/Navbar/Navbar";
 import { heart_cart_products } from "../../redux/Heart/heart_action";
 
 const SingleFeaturesPage = () => {
   let dispatch = useDispatch();
+  let heartData= useSelector((x) => x.heartManager)
 
   let params = useParams();
-  // console.log(params.id);
 
   let [mydata, setmydata] = useState([]);
   let [diffproduct, setdiffproduct] = useState([]);
@@ -54,8 +54,18 @@ const SingleFeaturesPage = () => {
     let x = diffproduct.filter((el) => el.heart !== false);
     console.log(x, "x");
 
-    dispatch(heart_cart_products(x[x.length - 1]));
-    // console.log(x[x.length-1])
+    
+    if(x.length>=1){
+      // console.log(dispatch(heart_cart_products(x[x.length-1])));
+
+      dispatch(heart_cart_products(x[x.length - 1]));
+      // console.log(x[x.length-1],"dispatch")
+
+
+      // console.log(heartData.heartArr,"storee wala")
+      
+
+    }
   };
 
   useEffect(() => {
@@ -103,6 +113,8 @@ const SingleFeaturesPage = () => {
 
           <Stack mt={10} textAlign="center">
             {diffproduct.map((el) => (
+
+              
               <HStack key={el.title} justifyContent="space-between">
                 <Box w={"150px"} position="relative">
                   <Image src={el.image1} alt="image 1 starting" />
@@ -115,11 +127,15 @@ const SingleFeaturesPage = () => {
                     <Image src={el.image2} alt="image 2 starting" />
                   </Box>
                 </Box>
+                {/* <Link to={"/wishlist"} > */}
+             
                 <Box>
                   <Heading fontSize={"25px"}>{el.title}</Heading>
                   <Text>{el.description} </Text>
                   <Text> ₹ {el.price}</Text>
                 </Box>
+
+                {/* </Link> */}
 
                 <Box>
                   <Flex
@@ -138,6 +154,8 @@ const SingleFeaturesPage = () => {
                   </Flex>
                 </Box>
               </HStack>
+
+              
             ))}
           </Stack>
         </Box>

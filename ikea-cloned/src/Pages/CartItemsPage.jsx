@@ -51,7 +51,7 @@ const CartItemsPage = () => {
     <Box>
       <Navbar />
 
-      <Heading textAlign={"center"} py="20px">
+      <Heading textAlign={"center"} py="20px" fontSize={"40px"}>
         Your Cart : {store.cartItems.length} Items{" "}
       </Heading>
 
@@ -59,18 +59,18 @@ const CartItemsPage = () => {
         gap={5}
         p={5}
         w={"90%"}
-        margin="auto"
-        box-shadow="rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px">
+        margin="auto">
+
         {store.cartItems.map((el) => (
           <Stack
             direction={{ base: "column", md: "row" }}
-            bg="rgb(220,220,220)"
+            // bg="rgb(220,220,220)"
             borderRadius={"20px"}
             p={5}
             alignItems="center"
             justifyContent={"space-around"}
-            box-shadow="rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px">
-            <Box w={{ base: "70%", md: "18%" }}>
+            boxShadow= "rgba(0, 0, 0, 0.35) 0px 5px 15px">
+            <Box w={{ base: "70%", md: "18%" }} >
               <Image src={el.image} w="100%" />
             </Box>
             <Box>
@@ -116,7 +116,7 @@ const CartItemsPage = () => {
         ))}
       </Stack>
 
-      <Stack m={"auto"} mb={20} gap={5} mt="10px" alignItems="center">
+      <Stack m={"auto"} mb={20} gap={5} mt="10px" alignItems="center" >
         <Heading>Total Price: ₹ {totalvalue} </Heading>
         <Link to={"/payment"}>
           <Box>

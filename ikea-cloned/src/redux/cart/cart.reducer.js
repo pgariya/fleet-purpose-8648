@@ -1,4 +1,4 @@
-import { ADD_CART_ITEMS, DEC, DEC_CARTITMES_COUNT, INC, INC_CARTITEMS_COUNT, REMOVE_FROM_CART } from "./cart.type"
+import { ADD_CART_ITEMS, DEC, DEC_CARTITMES_COUNT, INC, INC_CARTITEMS_COUNT, PAYMENT_CART, REMOVE_FROM_CART } from "./cart.type"
 
 let initstate={
     count:0 ,
@@ -20,6 +20,13 @@ case DEC:{
 case ADD_CART_ITEMS:{
     return {
         ...state,cartItems:[...state.cartItems,action.payload]
+    }
+}
+
+case PAYMENT_CART:{
+    return{
+
+        ...state,cartItems:[]
     }
 }
 

@@ -7,7 +7,7 @@ let inintvalue={
 
 export let HeartReducer=(state=inintvalue,action) =>{
 
-switch(state.action){
+switch(action.type){
 
    case HEART_ADD_ITEMS:{
     return {

@@ -10,7 +10,7 @@ import {
   MDBInput,
 } from "mdb-react-ui-kit";
 
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import {
   Alert,
   AlertDescription,
@@ -37,8 +37,11 @@ import {
 } from "@chakra-ui/react";
 import Navbar from "../Components/Navbar/Navbar";
 import Footer from "../Components/Footer";
+import { payment_cart } from "../redux/cart/cart.action";
 
 export default function Payment() {
+
+  let dispatch= useDispatch();
   let store = useSelector((state) => state.cartManager);
   console.log(store.cartItems, "cart ");
 
@@ -59,14 +62,29 @@ export default function Payment() {
   let handleChange = () => {
     setChangeSkelton(true);
 
+
+
+
     setTimeout(() => {
       setChangeSkelton(false);
       onClose();
       setChangeSkelton1(true);
+
+      dispatch(payment_cart())
+      console.log(store.cartItems,"cart arrrrrrrrrr")
+
     }, 3000);
+
+
+
+
   };
 
   if (changeSkelton1) {
+
+
+
+
     return (
       <>
         <Navbar />
@@ -195,6 +213,7 @@ export default function Payment() {
                             type="text"
                             size="lg"
                             value="**** **** **** 3193"
+                            
                           />
                         </div>
                       </div>
@@ -214,6 +233,7 @@ export default function Payment() {
                             type="text"
                             size="lg"
                             value="**** **** **** 4296"
+                           
                           />
                         </div>
                       </div>

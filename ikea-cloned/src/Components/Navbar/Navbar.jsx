@@ -24,6 +24,7 @@ import {
   BsFillCameraFill,
   BsSearch,
   BsFillCartCheckFill,
+  BsHeartFill,
 } from "react-icons/bs";
 import { CgProfile } from "react-icons/cg";
 import { GrDeliver } from "react-icons/gr";
@@ -154,9 +155,11 @@ const Navbar = () => {
           {/* </Navigate>   */}
 
           {/* <Link to="/wishlist"> */}
+          <Link to="/wishlist">
             <Button>
-              <GrDeliver />
+            <BsHeartFill fill="red" fontSize={"22px"} />
             </Button>
+          </Link>
           {/* </Link> */}
         </HStack>
       </Box>
