@@ -114,7 +114,7 @@ scroller.map((el) =>(<Box key={el.id}  >
 
   <Stack w={"85%"} margin="auto" gap={5} textAlign="left">
 
-<Heading fontSize={"30px"}>{el.heading}</Heading>
+<Heading fontSize={"30px"} color="white">{el.heading}</Heading>
 <Text>{el.title}</Text>
 <Box fontSize={"50px"} ><BsArrowRightSquareFill/></Box>
   </Stack>

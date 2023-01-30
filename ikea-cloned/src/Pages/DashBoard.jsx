@@ -274,7 +274,7 @@ const DashBoard = () => {
         px="50px"
         my={10}
         py="20px">
-        <Heading>Click & Collect</Heading>
+        <Heading color={"white "}>Click & Collect</Heading>
         <Text>
           You can now collect your orders from R CITY Mall (Mumbai) and
           Electronic City (Bengaluru)

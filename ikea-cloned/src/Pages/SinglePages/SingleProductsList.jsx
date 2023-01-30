@@ -13,13 +13,13 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { BsHeart, BsHeartFill } from "react-icons/bs";
 import { useDispatch, useSelector } from "react-redux";
-import { Link, useParams } from "react-router-dom";
+import {  useParams } from "react-router-dom";
 import Navbar from "../../Components/Navbar/Navbar";
 import { heart_cart_products } from "../../redux/Heart/heart_action";
 
 const SingleFeaturesPage = () => {
   let dispatch = useDispatch();
-  let heartData= useSelector((x) => x.heartManager)
+  // let heartData= useSelector((x) => x.heartManager)
 
   let params = useParams();
 
@@ -43,7 +43,7 @@ const SingleFeaturesPage = () => {
   };
 
   let handleCart = (id) => {
-    //  console.log(id);
+
     let update = diffproduct.map((el) =>
       el.title === id ? { ...el, heart: !el.heart } : el
     );
@@ -56,10 +56,9 @@ const SingleFeaturesPage = () => {
 
     
     if(x.length>=1){
-      // console.log(dispatch(heart_cart_products(x[x.length-1])));
 
       dispatch(heart_cart_products(x[x.length - 1]));
-      // console.log(x[x.length-1],"dispatch")
+      console.log(x[x.length-1],"dispatch")
 
 
       // console.log(heartData.heartArr,"storee wala")
@@ -67,6 +66,10 @@ const SingleFeaturesPage = () => {
 
     }
   };
+
+  useEffect(() =>{
+
+  },[diffproduct])
 
   useEffect(() => {
     getmydata(params.id);
@@ -108,29 +111,29 @@ const SingleFeaturesPage = () => {
           width={{ base: "95%", md: "60%" }}
           margin="auto"
           textAlign={"left"}>
-          <Heading my={5}>{mydata.main_title}</Heading>
+          <Heading my={5} color="blue.500">{mydata.main_title}</Heading>
           <Text>{mydata.main_description}</Text>
 
           <Stack mt={10} textAlign="center">
             {diffproduct.map((el) => (
 
               
-              <HStack key={el.title} justifyContent="space-between">
+              <HStack key={el.title} justifyContent="space-between" boxShadow= "rgba(0, 0, 0, 0.35) 0px 5px 15px" p={2} borderRadius="10px" >
                 <Box w={"150px"} position="relative">
                   <Image src={el.image1} alt="image 1 starting" />
 
-                  <Box
+                  <Box 
                     position={"absolute"}
                     top="0px"
                     left={"0px"}
-                    _hover={{ display: "none" }}>
+                    _hover={{ display: "none" }}  >
                     <Image src={el.image2} alt="image 2 starting" />
                   </Box>
                 </Box>
                 {/* <Link to={"/wishlist"} > */}
              
-                <Box>
-                  <Heading fontSize={"25px"}>{el.title}</Heading>
+                <Box >
+                  <Heading fontSize={"25px"} color="blue.500" >{el.title}</Heading>
                   <Text>{el.description} </Text>
                   <Text> ₹ {el.price}</Text>
                 </Box>

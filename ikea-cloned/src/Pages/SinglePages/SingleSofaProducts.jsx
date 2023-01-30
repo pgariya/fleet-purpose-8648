@@ -99,9 +99,9 @@ const SingleSofaProducts = () => {
         </SimpleGrid>
 
         <Stack gap={2} margin={"auto"} w={{ base: "80%", md: "45%" }}  >
-          <Heading textAlign={"left"}>{sofadata.title}</Heading>
-          <Text textAlign={"left"}>{sofadata.short_description}</Text>
-          <Text textAlign={"left"}> ₹ {sofadata.price}</Text>
+          <Heading textAlign={"left"} color={"blue.500"}>{sofadata.title}</Heading>
+          <Text textAlign={"left"} fontSize="25px" fontWeight={"bold"} >{sofadata.short_description}</Text>
+          <Text textAlign={"left"} fontSize="25px" fontWeight={"bold"} > ₹ {sofadata.price}</Text>
 
           <HStack>
             {" "}

@@ -64,7 +64,6 @@ case DEC_CARTITMES_COUNT:{
 
 case REMOVE_FROM_CART:{
 
-
 let dataArr= state.cartItems.filter((el) => el.id!==action.payload)
 
 

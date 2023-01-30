@@ -1,4 +1,4 @@
-import { HEART_ADD_ITEMS } from "./heart.type"
+import { HEART_ADD_ITEMS, REMOVE_FROM_WISHLIST } from "./heart.type"
 
 
 let inintvalue={
@@ -15,7 +15,17 @@ switch(action.type){
     }
 }
 
+case REMOVE_FROM_WISHLIST:{
 
+
+    let dataArr= state.heartArr.filter((el) => el.title!==action.payload)
+    
+    
+    return{
+        ...state,heartArr:dataArr
+    }
+    
+    }
 
 
     default:{

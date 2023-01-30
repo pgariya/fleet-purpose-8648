@@ -90,15 +90,15 @@ const SingleChairProducts = () => {
           spacing={10}
           margin="auto"
           mt={{ base: "none", md: "-30px", lg: "10px" }}>
-          <Image src={sofadata.image1} alt="1st image" boxShadow= "rgba(0, 0, 0, 0.35) 0px 5px 15px"/>
-          <Image src={sofadata.image2} alt="2nd image" boxShadow= "rgba(0, 0, 0, 0.35) 0px 5px 15px"/>
+          <Image src={sofadata.image1} alt="1st image" boxShadow= "rgba(0, 0, 0, 0.35) 0px 5px 15px" borderRadius={"10px"} />
+          <Image src={sofadata.image2} alt="2nd image" boxShadow= "rgba(0, 0, 0, 0.35) 0px 5px 15px" borderRadius={"10px"} />
           {/* <Image src={sofadata.image3} alt="3rd image" /> */}
         </SimpleGrid>
 
-        <Stack gap={2} margin={"auto"} w={{ base: "80%", md: "45%" }}>
-          <Heading textAlign={"left"}>{sofadata.title}</Heading>
-          <Text textAlign={"left"}>{sofadata.short_description}</Text>
-          <Text textAlign={"left"}> ₹ {sofadata.price}</Text>
+        <Stack gap={2} margin={"auto"} w={{ base: "80%", md: "45%" }}  >
+          <Heading textAlign={"left"} color={"blue.500"}>{sofadata.title}</Heading>
+          <Text textAlign={"left"} >{sofadata.short_description}</Text>
+          <Text textAlign={"left"} fontSize="25px" fontWeight={"bold"} > ₹ {sofadata.price}</Text>
 
           <HStack>
             {" "}
@@ -107,7 +107,7 @@ const SingleChairProducts = () => {
             <BsFillStarFill fill="#ffad47" />
           </HStack>
 
-          <HStack gap={{ base: "1px", md: "5px" }}>
+          <HStack gap={{ base: "1px", md: "5px" }}  >
             <Image
               src={sofadata.thumbnail1}
               alt="no variants"

@@ -17,6 +17,7 @@ export let add_cart_products=(x) =>({
     type:ADD_CART_ITEMS, payload:x
 })
 
+
 export let increment_cartitems_count=(id) =>({
     type:INC_CARTITEMS_COUNT,payload:id
 })

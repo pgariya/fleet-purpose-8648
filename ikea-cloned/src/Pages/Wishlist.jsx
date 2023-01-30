@@ -1,16 +1,24 @@
 
-import { Box, Heading, HStack, Image, Stack, Text } from '@chakra-ui/react';
+import { Box, Button, Heading, HStack, Image, Stack, Text } from '@chakra-ui/react';
 import React from 'react'
 import { BsHeartFill } from 'react-icons/bs';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import Navbar from '../Components/Navbar/Navbar';
+import { remove_from_wishlist } from '../redux/Heart/heart_action';
 
 const Wishlist = () => {
+  let dispatch= useDispatch();
     
   let heartdata = useSelector((store) => store.heartManager )
 
     
 console.log(heartdata.heartArr,"wishlist haa yaa")
+
+
+let Remove_Wishlist=(id) =>{
+  dispatch(remove_from_wishlist(id))
+
+}
 
 
   return (
@@ -26,25 +34,28 @@ console.log(heartdata.heartArr,"wishlist haa yaa")
    </HStack>
 
 
-<Stack  >
+<Stack gap={8} >
 
 
 {        
         heartdata.heartArr.map((el) => ( <HStack key={el.title} borderRadius="10px"  boxShadow ="rgba(0, 0, 0, 0.24) 0px 3px 8px" gap={10} justifyContent="space-around" >
           
-                 <Box  w={"25%"} >
+                 <Box  w={"20%"} boxShadow ="rgba(0, 0, 0, 0.24) 0px 3px 8px" borderRadius={"10px"}>
                   <Image src={el.image1} alt="image 1 starting"   />
                   </Box>
-                  <Box w={"25%"}  >
-                    <Image src={el.image2} alt="image 2 starting" />
+                  <Box w={"20%"} boxShadow ="rgba(0, 0, 0, 0.24) 0px 3px 8px" borderRadius={"10px"} >
+                    <Image src={el.image2} alt="image 2 starting"  />
                   </Box>
              
 
-                <Box w={"25%"}>
-                  <Heading fontSize={"40px"}>{el.title}</Heading>
+                <Box w={"20%"} p={12}>
+                  <Heading fontSize={"40px"} color="red">{el.title}</Heading>   
                   <Text>{el.description} </Text>
-                  <Text> ₹ {el.price}</Text>
+                  <Text> Price:  ₹ {el.price}</Text>
                 </Box>
+
+
+                <Box> <Button color={"white"} bg="red" onClick={() => Remove_Wishlist(el.title)}>Delete</Button> </Box>
           
           
           </HStack> )

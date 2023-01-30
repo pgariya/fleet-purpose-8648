@@ -1,9 +1,7 @@
 import React, { useState } from "react";
 import {
-  MDBContainer,
   MDBCol,
   MDBRow,
-  MDBBtnGroup,
   MDBBtn,
   MDBCard,
   MDBCardBody,
@@ -30,7 +28,6 @@ import {
   HStack,
   PinInput,
   PinInputField,
-  Spinner,
   Stack,
   Text,
   useDisclosure,
@@ -40,8 +37,7 @@ import Footer from "../Components/Footer";
 import { payment_cart } from "../redux/cart/cart.action";
 
 export default function Payment() {
-
-  let dispatch= useDispatch();
+  let dispatch = useDispatch();
   let store = useSelector((state) => state.cartManager);
   console.log(store.cartItems, "cart ");
 
@@ -53,8 +49,8 @@ export default function Payment() {
   for (let i = 0; i < store.cartItems.length; i++) {
     totalvalue +=
       (store.cartItems[i].cart_count + 1) * store.cartItems[i].price;
-    console.log(store);
-    console.log("inside", store.cartItems);
+    // console.log(store);
+    // console.log("inside", store.cartItems);
   }
   const { isOpen, onOpen, onClose } = useDisclosure();
   const cancelRef = React.useRef();
@@ -62,29 +58,17 @@ export default function Payment() {
   let handleChange = () => {
     setChangeSkelton(true);
 
-
-
-
     setTimeout(() => {
       setChangeSkelton(false);
       onClose();
       setChangeSkelton1(true);
 
-      dispatch(payment_cart())
-      console.log(store.cartItems,"cart arrrrrrrrrr")
-
+      dispatch(payment_cart());
+      console.log(store.cartItems, "cart arrrrrrrrrr");
     }, 3000);
-
-
-
-
   };
 
   if (changeSkelton1) {
-
-
-
-
     return (
       <>
         <Navbar />
@@ -97,7 +81,8 @@ export default function Payment() {
             alignItems="center"
             justifyContent="center"
             textAlign="center"
-            height="200px">
+            height="200px"
+          >
             <AlertIcon boxSize="40px" mr={0} />
             <AlertTitle mt={4} mb={1} fontSize="50px">
               Payment Successfull !
@@ -128,11 +113,16 @@ export default function Payment() {
         <Box w={{ base: "90%", lg: "40%" }} margin="auto">
           <Box md="5" lg="4" xl="4">
             <Box
+              boxShadow="rgba(0, 0, 0, 0.35) 0px 5px 15px"
               p={5}
+              // p={5}
               style={{ backgroundColor: "#eee" }}
               h={"500px"}
-              borderRadius="20px">
-              <Heading textAlign={"Center"}>Order Recap</Heading>
+              borderRadius="20px"
+            >
+              <Heading textAlign={"Center"} color="blue.500">
+                Order Recap
+              </Heading>
               <Box justifyContent={"space-between"} mt="10" display={"flex"}>
                 <Text fontWeight={"bold"}>Amount</Text>{" "}
                 <Text> ₹ {totalvalue} </Text>
@@ -157,7 +147,8 @@ export default function Payment() {
                 justifyContent={"space-between"}
                 mt="5"
                 display={"flex"}
-                mb="2">
+                mb="2"
+              >
                 <Text fontWeight={"bold"}>Purchase Total </Text>{" "}
                 <Text> ₹{totalvalue}</Text>
               </Box>
@@ -169,9 +160,12 @@ export default function Payment() {
                 justifyContent={"space-between"}
                 mt="10"
                 display={"flex"}
-                mb="2">
-                <Heading fontSize={"25px"}>Total </Heading>{" "}
-                <Heading fontSize={"25px"}>
+                mb="2"
+              >
+                <Heading fontSize={"25px"} color="blue.500">
+                  Total{" "}
+                </Heading>{" "}
+                <Heading fontSize={"25px"} color="blue.500">
                   {" "}
                   ₹ {totalvalue + totalvalue / 10 + 100}{" "}
                 </Heading>
@@ -190,7 +184,8 @@ export default function Payment() {
             style={{
               backgroundImage:
                 "url(https://mdbcdn.b-cdn.net/img/Photos/Others/background3.webp)",
-            }}>
+            }}
+          >
             <Box display={"flex"} justifyContent="center">
               <MDBCol md="10" lg="8" xl="5">
                 <MDBCard className="rounded-5">
@@ -213,7 +208,6 @@ export default function Payment() {
                             type="text"
                             size="lg"
                             value="**** **** **** 3193"
-                            
                           />
                         </div>
                       </div>
@@ -233,7 +227,6 @@ export default function Payment() {
                             type="text"
                             size="lg"
                             value="**** **** **** 4296"
-                           
                           />
                         </div>
                       </div>
@@ -287,7 +280,8 @@ export default function Payment() {
                         leastDestructiveRef={cancelRef}
                         onClose={onClose}
                         isOpen={isOpen}
-                        isCentered>
+                        isCentered
+                      >
                         <AlertDialogOverlay />
 
                         <AlertDialogContent>
@@ -318,7 +312,8 @@ export default function Payment() {
                               bg={changeSkelton ? "none" : "block"}
                               color="black"
                               ml={3}
-                              onClick={handleChange}>
+                              onClick={handleChange}
+                            >
                               {changeSkelton ? (
                                 <CircularProgress
                                   isIndeterminate

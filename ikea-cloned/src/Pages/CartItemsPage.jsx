@@ -69,22 +69,22 @@ const CartItemsPage = () => {
             p={5}
             alignItems="center"
             justifyContent={"space-around"}
-            boxShadow= "rgba(0, 0, 0, 0.35) 0px 5px 15px">
+            boxShadow= "rgba(0, 0, 0, 0.35) 0px 5px 15px" >
             <Box w={{ base: "70%", md: "18%" }} >
               <Image src={el.image} w="100%" />
             </Box>
             <Box>
-              <Text fontSize={"20px"}>Title: {el.title}</Text>
+              <Text fontSize={"25px"} fontWeight="bold"> {el.title}</Text>
             </Box>
             <Box>
-              <Text fontSize={"20px"}>Price: ₹ {el.price}</Text>
+              <Text fontSize={"25px"} fontWeight="bold">  ₹ {el.price}</Text>
             </Box>
 
             <HStack>
-              <Button
+              <Button disabled={true}
                 onClick={() => handleDecrement(el.id)}
                 bg="blue"
-                color={"white"}>
+                color={"white"} >
                 -
               </Button>
               <Button bg="blue" color={"white"}>
@@ -99,7 +99,7 @@ const CartItemsPage = () => {
             </HStack>
 
             <Box>
-              <Text fontSize={"20px"}>
+              <Text fontSize={"25px"} fontWeight="bold" >
                 Total: ₹ {(el.cart_count + 1) * el.price}{" "}
               </Text>
             </Box>

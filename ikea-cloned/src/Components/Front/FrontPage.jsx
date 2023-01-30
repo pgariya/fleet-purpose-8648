@@ -61,7 +61,7 @@ const FrontPage = () => {
             <hr style={{ border: "2px solid grey" }} />
             <div className={style.ikea}>
               <p>Online Store : </p>
-              <h2>ikea.in</h2>
+              <h2>Fabulous Finds</h2>
               <IoIosArrowUp />
             </div>
           </div>
@@ -120,12 +120,12 @@ const FrontPage = () => {
             data-aos="fade-up"
           />
           <div>
-            <h1 className={style.Compoent_map_1_h1}>IKEA everywhere!</h1>
+            <h1 className={style.Compoent_map_1_h1}>Fabulous Finds everywhere!</h1>
             <p className={style.Compoent_map_1_p}>
               <span data-aos="fade-right" className={style.Compoent_map_1_hide}>
                 <ArrowForwardIcon />
               </span>
-              IKEA in Japan
+              Fabulous Finds in Japan
             </p>
           </div>
         </div>
@@ -137,7 +137,7 @@ const FrontPage = () => {
             data-aos="fade-up"
           />
           <div>
-            <h1 className={style.Compoent_map_2_h1}>IKEA everyday rituals</h1>
+            <h1 className={style.Compoent_map_2_h1}>Fabulous Finds everyday rituals</h1>
             <p className={style.Compoent_map_2_p}>
               <span data-aos="fade-right" className={style.Compoent_map_2_hide}>
                 <ArrowForwardIcon />
@@ -174,7 +174,7 @@ const FrontPage = () => {
           />
           <div>
             <h1 className={style.Compoent_map_1_h1_2ndsession}>
-              IKEA Norway's conscious & clever campaign
+              Fabulous Finds Norway's conscious & clever campaign
             </h1>
             <p className={style.Compoent_map_1_p_2ndsession}>
               <span
@@ -217,7 +217,7 @@ const FrontPage = () => {
                 className={style.Compoent_map_2_hide_2ndsession}>
                 <ArrowForwardIcon />
               </span>
-              IKEA bathroom
+              Fabulous Finds bathroom
             </p>
           </div>
         </div>
@@ -268,8 +268,8 @@ const FrontPage = () => {
       <div className={style.third_green}>
         <div className={style.third_green_1} data-aos="fade-right">
           <ArrowForwardIcon color="white" fontSize="30px" />
-          <p>IKEA Museum</p>
-          <h1>This duo behind five decades of IKEA design</h1>
+          <p>Fabulous Finds Museum</p>
+          <h1>This duo behind five decades of Fabulous Finds design</h1>
         </div>
         <div className={style.third_green_2}>
           <img
@@ -292,7 +292,7 @@ const FrontPage = () => {
               <span data-aos="fade-right" className={style.third_pink_1_hide}>
                 <ArrowForwardIcon />
               </span>
-              Explore IKEA Festival
+              Explore Fabulous Finds Festival
             </p>
           </div>
         </div>
@@ -324,7 +324,7 @@ const FrontPage = () => {
           />
           <div>
             <h1 className={style.third_pink_1_h1_div}>
-              IKEA fastival at design week
+            Fabulous Finds fastival at design week
             </h1>
             <p className={style.third_pink_1_p_div}>
               <span
@@ -345,7 +345,7 @@ const FrontPage = () => {
           />
           <div>
             <h1 className={style.third_pink_2_h1_div}>
-              The IKEA Foundation youth
+              The Fabulous Finds Foundation youth
             </h1>
             <p className={style.third_pink_2_p_div}>
               <span
@@ -389,7 +389,7 @@ const FrontPage = () => {
           />
           <div>
             <h1 className={style.third_pink_2_h1_div1}>
-              Swedish tradition IKEA
+              Swedish tradition Fabulous Finds
             </h1>
             <Link to="/sweedan">
               {" "}
@@ -436,12 +436,12 @@ const FrontPage = () => {
           </div>
           <div>
             <h2>
-              About IKEA <span style={{ color: "grey" }}>|</span>
+              About Fabulous Finds <span style={{ color: "grey" }}>|</span>
             </h2>
           </div>
           <div>
             <h2>
-              IKEA Museum <span style={{ color: "grey" }}>|</span>
+            Fabulous Finds Museum <span style={{ color: "grey" }}>|</span>
             </h2>
           </div>
           <div>
@@ -459,7 +459,7 @@ const FrontPage = () => {
             <h1>Cookie information | Privacy statement</h1>
           </div>
           <div>
-            <p>© Inter IKEA Systems B.V. 1999 - 2023</p>
+            <p>© Inter Fabulous Finds Systems B.V. 1999 - 2023</p>
           </div>
           <div>
             <h2>Co-worker login</h2>

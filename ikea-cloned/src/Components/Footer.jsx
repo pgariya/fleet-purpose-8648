@@ -81,7 +81,7 @@ const Footer = () => {
 
           <Stack gap={10} textAlign="left">
           <Stack gap={5}>
-<Heading fontSize={"20px"}>Join IKEA Family</Heading>
+<Heading fontSize={"20px"} color="white">Join FaBoLoUs FiNd Family</Heading>
         <Text  textAlign={'left'}>
         Enjoy guaranteed discounts, special previews, food offers and much more. Sign up today - it’s free and only takes a minute to join.
         </Text>
