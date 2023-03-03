@@ -7,6 +7,7 @@ import {
   DrawerCloseButton,
   DrawerContent,
   DrawerOverlay,
+  Flex,
   Heading,
   HStack,
   Image,
@@ -22,7 +23,7 @@ import {
   useDisclosure,
   VStack,
 } from "@chakra-ui/react";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { RxHamburgerMenu } from "react-icons/rx";
 import {
   BsFillCameraFill,
@@ -36,9 +37,57 @@ import { useSelector } from "react-redux";
 
 import { Link, useNavigate } from "react-router-dom";
 import { ChevronDownIcon } from "@chakra-ui/icons";
+import SearchItem from "./SearchItem";
+import axios from "axios";
 
 const Navbar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const nav = useNavigate();
+  const [search, setSearch] = useState("");
+  const [searchData, setSearchData] = useState([]);
+  const [display,setDisplay] = useState(false)
+
+
+
+
+  // const handleKeyDown = (event) => {
+  //   if (event.keyCode === 13) {
+  //     setDisplay(false)
+  //     setSearchData([])
+  //     nav(`/search?q=${search}`);
+
+  //   }
+  // };
+
+
+  useEffect(() => {
+    if(search==""){
+      setDisplay(false)
+      setSearchData([])
+    }
+
+    let getRecomandation = async () => {
+      let res = await axios.get(`https://server-jrrq.onrender.com/chair?q=${search}`)
+      setSearchData(res.data)
+  
+    };
+
+
+    console.log(searchData);
+
+    const timeoutId = setTimeout(() => {
+      if(search!=""){
+        getRecomandation();
+      }
+    }, 200);
+
+    return () => {
+      
+      clearTimeout(timeoutId);
+    };
+    
+  }, [search]);
+
 
   const btnRef = React.useRef();
   let navigate = useNavigate();
@@ -175,15 +224,54 @@ const Navbar = () => {
 
       {/* search box  */}
       <Box w={"40%"} display={{ base: "none", md: "block" }}>
-        <InputGroup>
-          <InputLeftElement
+         
+          {/* <Input placeholder="Enter amount" /> */}
+
+  {/* functional input box  */}
+  <VStack position={"relative"} w={"100%"}>
+  <InputGroup>
+            <InputLeftElement
             pointerEvents="none"
             fontSize="1.2em"
-            children={<BsSearch />}
-          />
-          <Input placeholder="Enter amount" />
-          <InputRightElement children={<BsFillCameraFill />} />
+            children={<BsSearch/>} />
+
+            <Input
+              isInvalid
+              errorBorderColor="orange.400"
+              focusBorderColor="black"
+              // onKeyDown={handleKeyDown}
+              placeholder="Search for New Furnising Design !"
+              value={search}
+              onChange={(e) => {
+                setSearch(e.target.value);
+                setDisplay(true)
+              }}
+            />
+
+    <InputRightElement children={<BsFillCameraFill />} />
         </InputGroup>
+
+            <Flex
+            overflowY={"scroll"}
+              direction={"column"}
+              justifyContent={"center"}
+              bg={"white"}
+              zIndex={500}
+              display={display? "block" : "none"}
+              position={"absolute"}
+              top={10}
+              w={"100%"}
+              borderRadius={8}
+              maxH={500}
+            >
+              {searchData?.map((el) => (
+                <SearchItem  key={el.id}  setDisplay={setDisplay} {...el} />
+              ))}
+            </Flex>
+          </VStack>
+
+
+          
       </Box>
 
       {/* stack ---login or cart and delivery  */}
