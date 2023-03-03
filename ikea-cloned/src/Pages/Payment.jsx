@@ -26,23 +26,38 @@ import {
   CircularProgress,
   Heading,
   HStack,
+  Image,
   PinInput,
   PinInputField,
   Stack,
   Text,
   useDisclosure,
+  useToast,
+  VStack,
 } from "@chakra-ui/react";
 import Navbar from "../Components/Navbar/Navbar";
 import Footer from "../Components/Footer";
 import { payment_cart } from "../redux/cart/cart.action";
+import { Link } from "react-router-dom";
 
 export default function Payment() {
+  let [formInputObj, setformInputObj] = useState({
+    fullname: "",
+    cardnumber: "",
+    password: "",
+    cvv: "",
+  });
   let dispatch = useDispatch();
+  const toast = useToast();
   let store = useSelector((state) => state.cartManager);
   console.log(store.cartItems, "cart ");
 
   let [changeSkelton, setChangeSkelton] = useState(false);
   let [changeSkelton1, setChangeSkelton1] = useState(false);
+  let [handlePinValue, sethandlePinValue]= useState("")
+  // let [complete,setcomplete] = useState(false)
+
+  // console.log(handlePinValue)
 
   let totalvalue = 0;
 
@@ -56,17 +71,57 @@ export default function Payment() {
   const cancelRef = React.useRef();
 
   let handleChange = () => {
-    setChangeSkelton(true);
 
-    setTimeout(() => {
-      setChangeSkelton(false);
-      onClose();
-      setChangeSkelton1(true);
 
-      dispatch(payment_cart());
-      console.log(store.cartItems, "cart arrrrrrrrrr");
-    }, 3000);
+if(handlePinValue){
+
+
+  setTimeout(() => {
+    setChangeSkelton(false);
+    onClose();
+    setChangeSkelton1(true);
+  
+    dispatch(payment_cart());
+    console.log(store.cartItems, "cart arrrrrrrrrr");
+  }, 3000);
+
+  setChangeSkelton(true);
+
+
+}else{
+
+  toast({
+    title: ` Please enter your correct pin  `,
+    description: " Please fill the valid password ",
+    status: "error",
+    duration: 5000,
+    isClosable: true,
+    position: "top",
+  });
+
+
+
+}
+
+
+
+
+
+
+
+
+  }
+
+
+
+  let handlePin = (val) => {
+     sethandlePinValue(val)
+   
+     console.log(val);
   };
+
+
+  
 
   if (changeSkelton1) {
     return (
@@ -81,14 +136,40 @@ export default function Payment() {
             alignItems="center"
             justifyContent="center"
             textAlign="center"
-            height="200px"
+            // height="200px"
+            w="70%"
+            margin={"auto"}
+            boxShadow= "rgba(0, 0, 0, 0.35) 0px 5px 15px"
+            borderRadius={20}
+            
+            // bg={"none"}
           >
-            <AlertIcon boxSize="40px" mr={0} />
-            <AlertTitle mt={4} mb={1} fontSize="50px">
+            <AlertIcon boxSize="40px"  mt={10}/>
+            <AlertTitle mt={5} mb={5} fontSize="50px">
               Payment Successfull !
             </AlertTitle>
-            <AlertDescription maxWidth="sm" mt={5}>
-              Thanks for Shopping
+            <AlertDescription  mt={5}>
+              
+
+       <VStack   p={5} bg="none" gap={3}>
+
+<Text fontSize={"24px"} textAlign="left" lineHeight={"28px"}>We sent you confirmation email with your order details . Thank You! </Text>
+
+<HStack fontSize={"24px"} fontWeight="bold"><Heading color={"blue"}>Order Number :</Heading> <Box pt={2}><Text > {Date.now()} </Text></Box> </HStack>
+
+<Box >
+<Image src="https://www.cloudways.com/blog/wp-content/uploads/Thank-you-page.png" w={"90%"} h="400px"/>
+
+</Box>
+
+<Text fontSize={"20px"} >For more Shopping   <Link style={{ color: "blue" }} to={"/dashboard"}>
+      Go to Home Page
+    </Link></Text>
+
+
+       </VStack>
+
+
             </AlertDescription>
           </Alert>
         </Box>
@@ -97,6 +178,52 @@ export default function Payment() {
       </>
     );
   }
+
+  let handleChangeInput = (e) => {
+    console.log(e.target.value, e.target.name);
+    let { name, value } = e.target;
+
+    setformInputObj({ ...formInputObj, [name]: value });
+  };
+
+  console.log(formInputObj);
+
+
+
+
+  let handlePayment = () => {
+    // onClick={onOpen}
+
+    for (let key in formInputObj) {
+      if (formInputObj[key] === "") {
+        toast({
+          title: `${key}  field is Empty  `,
+          description: " Please fill all the information ",
+          status: "error",
+          duration: 5000,
+          isClosable: true,
+          position: "top",
+        });
+
+        return;
+      }
+    }
+
+    if (formInputObj.cvv.length !== 4) {
+      toast({
+        title: `please enter your 4 digit CVV Number`,
+        description: " Please fill the correct information ",
+        status: "error",
+        duration: 5000,
+        isClosable: true,
+        position: "top",
+      });
+
+      return;
+    }
+
+    onOpen();
+  };
 
   return (
     <>
@@ -233,11 +360,17 @@ export default function Payment() {
                       <a href="#!">Remove card</a>
                     </div>
                     <p className="fw-bold mb-4"> Pay with this Card :</p>
+
+                    {/* //input box form validation */}
+
                     <MDBInput
                       label="Cardholder's Name"
                       id="form3"
                       type="text"
                       size="lg"
+                      name="fullname"
+                      onChange={handleChangeInput}
+                      value={formInputObj.fullname}
                       // value="Prakash Gariya"
                     />
                     <MDBRow className="my-4">
@@ -247,6 +380,9 @@ export default function Payment() {
                           id="form4"
                           type="number"
                           size="lg"
+                          name="cardnumber"
+                          onChange={handleChangeInput}
+                          value={formInputObj.cardnumber}
                           // value="1234 5678 1234 5678"
                         />
                       </MDBCol>
@@ -255,8 +391,12 @@ export default function Payment() {
                           label="Expire"
                           id="form5"
                           type="password"
+                          minLength={8}
                           size="lg"
+                          name="password"
+                          value={formInputObj.password}
                           placeholder="MM/YYYY"
+                          onChange={handleChangeInput}
                         />
                       </MDBCol>
                       <MDBCol size="2">
@@ -264,13 +404,21 @@ export default function Payment() {
                           label="CVV"
                           id="form6"
                           type="password"
+                          name="cvv"
                           size="lg"
+                          value={formInputObj.cvv}
                           placeholder="CVV"
+                          onChange={handleChangeInput}
                         />
                       </MDBCol>
                     </MDBRow>
                     {/* proceed button  */}
-                    <MDBBtn onClick={onOpen} color="success" size="lg" block>
+                    <MDBBtn
+                      onClick={handlePayment}
+                      color="success"
+                      size="lg"
+                      block
+                    >
                       Proceed to payment
                     </MDBBtn>
 
@@ -294,7 +442,11 @@ export default function Payment() {
                             Please Enter 6 Digit Pin which is send in Your
                             Mobile Number ********55
                             <HStack mt={5}>
-                              <PinInput type="alphanumeric" mask>
+                              <PinInput
+                                type="alphanumeric"
+                                mask
+                                onComplete={handlePin}
+                              >
                                 <PinInputField />
                                 <PinInputField />
                                 <PinInputField />

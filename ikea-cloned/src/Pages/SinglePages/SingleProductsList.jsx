@@ -122,11 +122,12 @@ const SingleFeaturesPage = () => {
                 <Box w={"150px"} position="relative">
                   <Image src={el.image1} alt="image 1 starting" />
 
-                  <Box 
+                  <Box opacity={0} _hover={{opacity:1}}
                     position={"absolute"}
+                    transition= 'opacity 0.5s ease-in-out'
                     top="0px"
                     left={"0px"}
-                    _hover={{ display: "none" }}  >
+                      >
                     <Image src={el.image2} alt="image 2 starting" />
                   </Box>
                 </Box>
