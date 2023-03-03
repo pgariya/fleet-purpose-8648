@@ -6,8 +6,9 @@ import {
   Image,
   Stack,
   Text,
+  VStack,
 } from "@chakra-ui/react";
-import React, { useState } from "react";
+
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import Footer from "../Components/Footer";
@@ -46,6 +47,35 @@ const CartItemsPage = () => {
   let handleRemove = (id) => {
     dispatch(remove_from_cart(id));
   };
+
+
+if(store.cartItems.length<=0){
+
+  return (<VStack>
+  <Image
+    w={"500px"}
+    m="auto"
+    src={
+      "https://img.freepik.com/free-vector/shopping-cart-realistic_1284-6011.jpg?w=740&t=st=1677333680~exp=1677334280~hmac=e654070bc4ba550586903ee7739ffd1597315f1e89338b7d1730be4f788a5900"
+    }
+  />
+
+  <Heading>
+    Your cart is Empty!{" "}
+    <Link style={{ color: "orange" }} to={"/dashboard"}>
+      Shop now
+    </Link>
+  </Heading>
+</VStack>)
+
+
+
+}
+
+
+
+
+
 
   return (
     <Box>

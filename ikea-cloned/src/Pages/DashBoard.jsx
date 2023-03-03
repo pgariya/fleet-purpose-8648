@@ -51,8 +51,8 @@ const DashBoard = () => {
         </InputGroup>
       </Box>
 
-      <Box ml={"10%"} mt={15} display={{ base: "none", sm: "block" }}>
-        <HStack gap={10} fontWeight="bold">
+      <Box w={{base:"95%" ,md:"75%", lg:"50%"}} ml={{base: '0',sm: '2%' , md:'10%' }} mt={15} display={{ base: "none", sm: "flex" }} justifyContent="space-around" alignItems={"center"} >
+        {/* <HStack gap={{ base: 2 , sm: 5, lg:10 }} fontWeight="bold" > */}
           {/* <Text>Product</Text> */}
 
           <Box>
@@ -61,32 +61,30 @@ const DashBoard = () => {
                 px={4}
                 py={2}
                 transition="all 0.2s"
+                fontSize={"20px"}
                 fontWeight={"bold"}>
                 Product <ChevronDownIcon />
               </MenuButton>
-              <MenuList py={2} fontSize="18px" color={"white"} bg={"teal.400"}>
+              <MenuList py={2} fontSize="18px" >
                 <Link to="/chairproducts">
                   <MenuItem
-                    _hover={{ bg: "teal" }}
-                    bg={"teal.400"}
-                    color="white">
+                    
+                    >
                     Chairs
                   </MenuItem>
                 </Link>
 
                 <Link to={"/sofaproducts"}>
                   <MenuItem
-                    _hover={{ bg: "teal" }}
-                    bg={"teal.400"}
-                    color="white">
+                   >
                     Sofa
                   </MenuItem>
                 </Link>
 
-                <MenuItem _hover={{ bg: "teal" }} bg={"teal.400"} color="white">
+                <MenuItem >
                   Bed
                 </MenuItem>
-                <MenuItem _hover={{ bg: "teal" }} bg={"teal.400"} color="white">
+                <MenuItem >
                   Clothes
                 </MenuItem>
               </MenuList>
@@ -95,11 +93,11 @@ const DashBoard = () => {
 
           <Link to={"/productslist"}>
             {" "}
-            <Text> Rooms </Text>{" "}
+            <Text fontSize={"20px"} fontWeight={"bold"}> Rooms </Text>{" "}
           </Link>
-          <Text>New At IKEA</Text>
-          <Text>Offers</Text>
-        </HStack>
+          <Text fontSize={"20px"} fontWeight={"bold"} >New At IKEA</Text>
+          <Text fontSize={"20px"} fontWeight={"bold"} >Offers</Text>
+        {/* </HStack> */}
       </Box>
 
       {/* <Heading>DashBoard</Heading> */}

@@ -14,6 +14,10 @@ import {
   InputGroup,
   InputLeftElement,
   InputRightElement,
+  Menu,
+  MenuButton,
+  MenuItem,
+  MenuList,
   Text,
   useDisclosure,
   VStack,
@@ -27,11 +31,11 @@ import {
   BsHeartFill,
 } from "react-icons/bs";
 import { CgProfile } from "react-icons/cg";
-import { GrDeliver } from "react-icons/gr";
 
 import { useSelector } from "react-redux";
 
 import { Link, useNavigate } from "react-router-dom";
+import { ChevronDownIcon } from "@chakra-ui/icons";
 
 const Navbar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -49,7 +53,8 @@ const Navbar = () => {
       display={"flex"}
       justifyContent="space-around"
       alignItems={"center"}
-      my={5}>
+      my={5}
+    >
       <Box>
         <HStack gap={7}>
           {/* menu button and drawer  */}
@@ -58,7 +63,8 @@ const Navbar = () => {
               ref={btnRef}
               colorScheme="teal"
               onClick={onOpen}
-              color="white">
+              color="white"
+            >
               <RxHamburgerMenu />
             </Button>
             <Drawer
@@ -66,39 +72,91 @@ const Navbar = () => {
               placement="left"
               onClose={onClose}
               finalFocusRef={btnRef}
-              size="md">
+              size="sm"
+            >
               <DrawerOverlay />
               <DrawerContent>
-                <DrawerCloseButton />
+                <DrawerCloseButton fontWeight={"bold"} fontSize="22px" mt={5}/>
 
                 <DrawerBody>
                   <Box>
-                    <Heading fontSize={"20px"} display="flex" gap={"20px"}>
+                    {/* <Heading fontSize={"20px"} display="flex" gap={"20px"}>
                       {" "}
                       <CgProfile /> Hei! Log in or Sign up{" "}
-                    </Heading>
+                    </Heading> */}
 
                     <Link to={"/dashboard"}>
                       <Image
                         src="/ourlogo.png"
                         alt="logo"
-                        w={"50px"}
-                        h={"50px"}
+                        w={"80px"}
+                        h={"80px"}
+                        borderRadius="50%"
                         my={5}
                       />
                     </Link>
 
                     <Divider />
                   </Box>
-                  <VStack gap={5} textAlign="left">
-                    <Heading>Products</Heading>
+                  <VStack gap={2} textAlign="left" mt={10}>
+                    <Menu>
+                      <MenuButton
+                        w={"100%"}
+                        as={Button}
+                        rightIcon={<ChevronDownIcon />}
+                      >
+                        Products
+                      </MenuButton>
+                      <MenuList w={"180%"}>
+                        <Link to={"/sofaproducts"}>
+                          <MenuItem>Sofa</MenuItem>
+                        </Link>
+                        <Link to="/chairproducts">
+                          <MenuItem>Chairs</MenuItem>
+                        </Link>
+                        <MenuItem>Bed </MenuItem>
+                        <MenuItem> Clothes </MenuItem>
+                      </MenuList>
+                    </Menu>
 
-                    <Link to={"/productslist"}>
-                      <Heading>Rooms</Heading>
+                    {/* rooms  */}
+                    <Menu>
+                      <MenuButton
+                        w={"100%"}
+                        // border="1px solid grey"
+                        as={Button}
+                        rightIcon={<ChevronDownIcon />}
+                      >
+                        Rooms
+                      </MenuButton>
+                      <MenuList w={"180%"}>
+                        <Link to={"/productslist"}>
+                          <MenuItem>Kitchen</MenuItem>
+                        </Link>
+                        <Link to={"/productslist"}>
+                          <MenuItem>Bedroom </MenuItem>
+                        </Link>
+                        <Link to={"/productslist"}>
+                          <MenuItem>Outdoor</MenuItem>
+                        </Link>
+                        <Link to={"/productslist"}>
+                          <MenuItem>LivingRoom </MenuItem>
+                        </Link>
+                      </MenuList>
+                    </Menu>
+
+                    <Link to={"/productslist"}></Link>
+
+                    <Button w={"100%"}>New At IKEA</Button>
+                    <Button w={"100%"}>Offers</Button>
+
+<Box w={"100%"}> 
+
+                    <Link to={"/login"}>
+                    <Button bg={"teal"} w={"100%"} color="white"> Login </Button>
                     </Link>
+</Box>
 
-                    <Heading>New At IKEA</Heading>
-                    <Heading>Offers</Heading>
                   </VStack>
                 </DrawerBody>
               </DrawerContent>
@@ -136,7 +194,8 @@ const Navbar = () => {
             colorScheme="teal"
             variant="solid"
             display={{ base: "none", lg: "block" }}
-            onClick={() => Navigate("/signup")}>
+            onClick={() => Navigate("/signup")}
+          >
             Hei! Log in or Sign up
           </Button>
           <Button onClick={() => Navigate("/AdminLogin")}>Admin</Button>
@@ -157,7 +216,7 @@ const Navbar = () => {
           {/* <Link to="/wishlist"> */}
           <Link to="/wishlist">
             <Button>
-            <BsHeartFill fill="red" fontSize={"22px"} />
+              <BsHeartFill fill="red" fontSize={"22px"} />
             </Button>
           </Link>
           {/* </Link> */}

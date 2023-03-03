@@ -97,15 +97,15 @@ const ChairProducts = () => {
             <Card borderRadius="10px" bg={"white"} key={el.id}>
               <Link to={`/chairproducts/${el.id}`}>
                 <CardBody box-shadow="rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px ">
-                  <Box position="relative">
-                    <Image src={el.image1} alt="image 1 starting" />
+                  <Box position="relative" >
+                    <Image  src={el.image1} alt="image 1 starting" />
 
-                    <Box
-                      _hover={{ display: "none" }}
+                    <Box  opacity={0} _hover={{opacity:1}}
+                     transition= 'opacity 0.5s ease-in-out'
                       position={"absolute"}
                       top="0px"
                       left="0px">
-                      <Image src={el.image2} alt="image 2 starting" />
+                      <Image src={el.image2}  alt="image 2 starting" />
                     </Box>
                   </Box>
 
