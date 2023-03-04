@@ -19,6 +19,7 @@ const Signup = () => {
   const [login_value, setLogin_value] = useState([]);
 
   const Navigate = useNavigate();
+  
   const handleChange = (e) => {
     const { name, value } = e.target;
     console.log(name, value);

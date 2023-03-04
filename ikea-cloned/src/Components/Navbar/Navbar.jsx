@@ -43,51 +43,41 @@ import axios from "axios";
 const Navbar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const nav = useNavigate();
+  let [startdata, setstartdata] = useState([]);
   const [search, setSearch] = useState("");
   const [searchData, setSearchData] = useState([]);
-  const [display,setDisplay] = useState(false)
-
-
-
-
-  // const handleKeyDown = (event) => {
-  //   if (event.keyCode === 13) {
-  //     setDisplay(false)
-  //     setSearchData([])
-  //     nav(`/search?q=${search}`);
-
-  //   }
-  // };
-
+  const [display, setDisplay] = useState(false);
 
   useEffect(() => {
-    if(search==""){
-      setDisplay(false)
-      setSearchData([])
+    if (search == "") {
+      setDisplay(false);
+      setSearchData([]);
     }
 
     let getRecomandation = async () => {
-      let res = await axios.get(`https://server-jrrq.onrender.com/chair?q=${search}`)
-      setSearchData(res.data)
-  
+      // q=${search}
+      let res = await axios.get(`https://project-bv3o.onrender.com/cart_items`);
+      // setSearchData(res.data)
+      setstartdata(res.data);
     };
 
-
+    // getRecomandation()
     console.log(searchData);
 
     const timeoutId = setTimeout(() => {
-      if(search!=""){
+      if (search != "") {
         getRecomandation();
+        let arrayofObj = startdata.filter((el) =>
+          el.title.toLowerCase().includes(search)
+        );
+        setSearchData(arrayofObj);
       }
     }, 200);
 
     return () => {
-      
       clearTimeout(timeoutId);
     };
-    
   }, [search]);
-
 
   const btnRef = React.useRef();
   let navigate = useNavigate();
@@ -125,7 +115,7 @@ const Navbar = () => {
             >
               <DrawerOverlay />
               <DrawerContent>
-                <DrawerCloseButton fontWeight={"bold"} fontSize="22px" mt={5}/>
+                <DrawerCloseButton fontWeight={"bold"} fontSize="22px" mt={5} />
 
                 <DrawerBody>
                   <Box>
@@ -199,13 +189,14 @@ const Navbar = () => {
                     <Button w={"100%"}>New At IKEA</Button>
                     <Button w={"100%"}>Offers</Button>
 
-<Box w={"100%"}> 
-
-                    <Link to={"/login"}>
-                    <Button bg={"teal"} w={"100%"} color="white"> Login </Button>
-                    </Link>
-</Box>
-
+                    <Box w={"100%"}>
+                      <Link to={"/login"}>
+                        <Button bg={"teal"} w={"100%"} color="white">
+                          {" "}
+                          Login{" "}
+                        </Button>
+                      </Link>
+                    </Box>
                   </VStack>
                 </DrawerBody>
               </DrawerContent>
@@ -224,16 +215,16 @@ const Navbar = () => {
 
       {/* search box  */}
       <Box w={"40%"} display={{ base: "none", md: "block" }}>
-         
-          {/* <Input placeholder="Enter amount" /> */}
+        {/* <Input placeholder="Enter amount" /> */}
 
-  {/* functional input box  */}
-  <VStack position={"relative"} w={"100%"}>
-  <InputGroup>
+        {/* functional input box  */}
+        <VStack position={"relative"} w={"100%"}>
+          <InputGroup>
             <InputLeftElement
-            pointerEvents="none"
-            fontSize="1.2em"
-            children={<BsSearch/>} />
+              pointerEvents="none"
+              fontSize="1.2em"
+              children={<BsSearch />}
+            />
 
             <Input
               isInvalid
@@ -244,34 +235,31 @@ const Navbar = () => {
               value={search}
               onChange={(e) => {
                 setSearch(e.target.value);
-                setDisplay(true)
+                setDisplay(true);
               }}
             />
 
-    <InputRightElement children={<BsFillCameraFill />} />
-        </InputGroup>
+            <InputRightElement children={<BsFillCameraFill />} />
+          </InputGroup>
 
-            <Flex
+          <Flex
             overflowY={"scroll"}
-              direction={"column"}
-              justifyContent={"center"}
-              bg={"white"}
-              zIndex={500}
-              display={display? "block" : "none"}
-              position={"absolute"}
-              top={10}
-              w={"100%"}
-              borderRadius={8}
-              maxH={500}
-            >
-              {searchData?.map((el) => (
-                <SearchItem  key={el.id}  setDisplay={setDisplay} {...el} />
-              ))}
-            </Flex>
-          </VStack>
-
-
-          
+            direction={"column"}
+            justifyContent={"center"}
+            bg={"white"}
+            zIndex={500}
+            display={display ? "block" : "none"}
+            position={"absolute"}
+            top={10}
+            w={"100%"}
+            borderRadius={8}
+            maxH={500}
+          >
+            {searchData?.map((el) => (
+              <SearchItem key={el.id} setDisplay={setDisplay} {...el} />
+            ))}
+          </Flex>
+        </VStack>
       </Box>
 
       {/* stack ---login or cart and delivery  */}
