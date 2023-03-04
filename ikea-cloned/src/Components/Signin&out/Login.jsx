@@ -1,36 +1,63 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "../../styles/Login.module.css";
 import { useNavigate } from "react-router-dom";
+import {
+  Button,
+  Checkbox,
+  FormControl,
+  FormLabel,
+  Input,
+  Stack,
+} from "@chakra-ui/react";
+import { Link } from "react-router-dom";
 
-const initialValueisHERE = {
-  first_name: "",
-  email: "",
+const initialValue = {
+  emailEntered: "",
+  passwordEntered: "",
 };
 
 const Login = () => {
-  let login_value = JSON.parse(localStorage.getItem("login_data"));
-  // console.log("login_value", login_value);
+  let Navigate = useNavigate();
+  const [inputUser, setInputUser] = useState(initialValue);
+  const [user, setUser] = useState([]);
 
-  let Navigate=useNavigate()
-  const [arr, setLogin_value] = useState(initialValueisHERE);
-
-  const handleChnage = (e) => {
-    const { name, value } = e.target;
-    // console.log("value",value)
-    setLogin_value({ ...arr, [name]: value });
+  const getAdd = async () => {
+    let res = await fetch(`https://smart-shop-render.onrender.com/users`);
+    let data = await res.json();
+    console.log(data);
+    setUser(data);
   };
-  console.log("value_login", arr);
-  const handleClick = (e) => {
+
+  useEffect(() => {
+    getAdd();
+  }, []);
+
+  const handleChange = (e) => {
     e.preventDefault();
-    console.log(arr.first_name, login_value[login_value.length - 1].first_name);
-    console.log(arr.email, login_value[login_value.length - 1].email);
-    if (
-      login_value[login_value.length - 1].first_name === arr.first_name &&
-      login_value[login_value.length - 1].email === arr.email
-    ) {
+    console.log(e.target.value, e.target.name);
+
+    setInputUser({ ...inputUser, [e.target.name]: e.target.value });
+  };
+  const handleLogin = () => {
+    console.log(inputUser)
+    let x = user.filter((el) => {
+      if (
+        inputUser.emailEntered === el.email &&
+        inputUser.passwordEntered === el.password
+      ) {
+        localStorage.setItem("loginValue", JSON.stringify("login"));
+        // setLogin(true);
+
+        return true;
+      }
+
+    });
+    console.log(x)
+    if(x.length===0){
+      alert("Invalid username or password");
+    }else{
+      alert("Login succesfull");
       Navigate("/dashboard");
-    } else {
-      alert("check firstname and email");
     }
   };
 
@@ -68,58 +95,47 @@ const Login = () => {
           </div>
 
           <div className={styles.formpart}>
-            <form>
-              <h2>Login and Get Notes in Email</h2>
-
-              <label for="name">First Name</label>
-              <input
-                className={styles.inputbox}
-                onChange={handleChnage}
-                name="first_name"
-                type="text"
-                autocomplete="off"
-              />
-
-              <label for="email">Email</label>
-              <input
-                onChange={handleChnage}
-                className={styles.inputbox}
+            <FormControl id="email">
+              <FormLabel>Email address</FormLabel>
+              <Input
+              name="emailEntered"
                 type="email"
-                name="email"
-                autocomplete="off"
+                value={inputUser.emailEntered}
+                onChange={handleChange}
               />
-
-              <label for="course">Select the course</label>
-              <div className={styles.options}>
-                <div className={styles.eachoption}>
-                  <input type="checkbox" checked />
-                  <span>Affordable living R</span>
-                </div>
-                <div className={styles.eachoption}>
-                  <input type="checkbox" />
-                  <span>Furniture</span>
-                </div>
-              </div>
-
-              <input type="checkbox" className={styles.agree} checked />
-              <label for="agree" className={styles.agree}></label>
-
-              <label className={styles.privacy_policy}>
-                By clicking the submit button , you agree to our{" "}
-                <span>Terms & Conditions</span> and <span>Privacy Policy</span>.
-              </label>
-
-              {/* <button className={styles.submitbtn}>Submit</button> */}
-              <button onClick={handleClick} className={styles.btn_12}>
-                <span>Submit</span>
-                <span>Login</span>
-              </button>
-            </form>
+            </FormControl>
+            <FormControl id="password">
+              <FormLabel>Password</FormLabel>
+              <Input
+              name="passwordEntered"
+                type="password"
+                value={inputUser.passwordEntered}
+                onChange={handleChange}
+              />
+            </FormControl>
+            <Stack spacing={10}>
+              <Stack
+                direction={{ base: "column", sm: "row" }}
+                align={"start"}
+                justify={"space-between"}>
+                <Checkbox>Remember me</Checkbox>
+                <Link color={"blue.400"}>Forgot password?</Link>
+              </Stack>
+              <Button
+                bg={"yellow.400"}
+                color={"white"}
+                _hover={{
+                  bg: "yellow.500",
+                }}
+                onClick={handleLogin}>
+                Log In
+              </Button>
+              <Link to="/signup">New User? Signup</Link>
+            </Stack>
           </div>
         </div>
       </div>
     </div>
   );
 };
-// custom-btn btn-12
 export default Login;
