@@ -7,6 +7,7 @@ import {
   DrawerCloseButton,
   DrawerContent,
   DrawerOverlay,
+  Flex,
   Heading,
   HStack,
   Image,
@@ -22,7 +23,7 @@ import {
   useDisclosure,
   VStack,
 } from "@chakra-ui/react";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { RxHamburgerMenu } from "react-icons/rx";
 import {
   BsFillCameraFill,
@@ -36,9 +37,47 @@ import { useSelector } from "react-redux";
 
 import { Link, useNavigate } from "react-router-dom";
 import { ChevronDownIcon } from "@chakra-ui/icons";
+import SearchItem from "./SearchItem";
+import axios from "axios";
 
 const Navbar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const nav = useNavigate();
+  let [startdata, setstartdata] = useState([]);
+  const [search, setSearch] = useState("");
+  const [searchData, setSearchData] = useState([]);
+  const [display, setDisplay] = useState(false);
+
+  useEffect(() => {
+    if (search == "") {
+      setDisplay(false);
+      setSearchData([]);
+    }
+
+    let getRecomandation = async () => {
+      // q=${search}
+      let res = await axios.get(`https://project-bv3o.onrender.com/cart_items`);
+      // setSearchData(res.data)
+      setstartdata(res.data);
+    };
+
+    // getRecomandation()
+    console.log(searchData);
+
+    const timeoutId = setTimeout(() => {
+      if (search != "") {
+        getRecomandation();
+        let arrayofObj = startdata.filter((el) =>
+          el.title.toLowerCase().includes(search)
+        );
+        setSearchData(arrayofObj);
+      }
+    }, 200);
+
+    return () => {
+      clearTimeout(timeoutId);
+    };
+  }, [search]);
 
   const btnRef = React.useRef();
   let navigate = useNavigate();
@@ -76,7 +115,7 @@ const Navbar = () => {
             >
               <DrawerOverlay />
               <DrawerContent>
-                <DrawerCloseButton fontWeight={"bold"} fontSize="22px" mt={5}/>
+                <DrawerCloseButton fontWeight={"bold"} fontSize="22px" mt={5} />
 
                 <DrawerBody>
                   <Box>
@@ -150,13 +189,14 @@ const Navbar = () => {
                     <Button w={"100%"}>New At IKEA</Button>
                     <Button w={"100%"}>Offers</Button>
 
-<Box w={"100%"}> 
-
-                    <Link to={"/login"}>
-                    <Button bg={"teal"} w={"100%"} color="white"> Login </Button>
-                    </Link>
-</Box>
-
+                    <Box w={"100%"}>
+                      <Link to={"/login"}>
+                        <Button bg={"teal"} w={"100%"} color="white">
+                          {" "}
+                          Login{" "}
+                        </Button>
+                      </Link>
+                    </Box>
                   </VStack>
                 </DrawerBody>
               </DrawerContent>
@@ -175,15 +215,51 @@ const Navbar = () => {
 
       {/* search box  */}
       <Box w={"40%"} display={{ base: "none", md: "block" }}>
-        <InputGroup>
-          <InputLeftElement
-            pointerEvents="none"
-            fontSize="1.2em"
-            children={<BsSearch />}
-          />
-          <Input placeholder="Enter amount" />
-          <InputRightElement children={<BsFillCameraFill />} />
-        </InputGroup>
+        {/* <Input placeholder="Enter amount" /> */}
+
+        {/* functional input box  */}
+        <VStack position={"relative"} w={"100%"}>
+          <InputGroup>
+            <InputLeftElement
+              pointerEvents="none"
+              fontSize="1.2em"
+              children={<BsSearch />}
+            />
+
+            <Input
+              isInvalid
+              errorBorderColor="orange.400"
+              focusBorderColor="black"
+              // onKeyDown={handleKeyDown}
+              placeholder="Search for New Furnising Design !"
+              value={search}
+              onChange={(e) => {
+                setSearch(e.target.value);
+                setDisplay(true);
+              }}
+            />
+
+            <InputRightElement children={<BsFillCameraFill />} />
+          </InputGroup>
+
+          <Flex
+            overflowY={"scroll"}
+            direction={"column"}
+            justifyContent={"center"}
+            bg={"white"}
+            zIndex={500}
+            display={display ? "block" : "none"}
+            position={"absolute"}
+            top={10}
+            w={"100%"}
+            borderRadius={8}
+            maxH={500}
+          >
+            {searchData?.map((el) => (
+              <SearchItem key={el.id} setDisplay={setDisplay} {...el} />
+            ))}
+          </Flex>
+        </VStack>
       </Box>
 
       {/* stack ---login or cart and delivery  */}

@@ -45,6 +45,8 @@ const Signup = () => {
   };
   const handleChange = (e) => {
     console.log(e.target.value, e.target.name);
+  
+    // let { name, value } = e.target;
 
     setformInputObj({ ...formInputObj, [e.target.name]: e.target.value });
   };
