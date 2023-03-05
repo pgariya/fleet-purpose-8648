@@ -19,17 +19,17 @@ import React, { useState } from "react";
 import { ViewIcon, ViewOffIcon } from "@chakra-ui/icons";
 import { useNavigate } from "react-router-dom";
 
-const initial={
+const initial = {
   first_name: "",
   sur_name: "",
   mobile_number: "",
   email: "",
   password: "",
-}
+};
 const Signup = () => {
   let [formInputObj, setformInputObj] = useState(initial);
-  
-  let Navigate=useNavigate()
+
+  let Navigate = useNavigate();
   const toast = useToast();
   const [showPassword, setShowPassword] = useState(false);
 
@@ -46,12 +46,9 @@ const Signup = () => {
   };
   const handleChange = (e) => {
     console.log(e.target.value, e.target.name);
-  
-    // let { name, value } = e.target;
 
     setformInputObj({ ...formInputObj, [e.target.name]: e.target.value });
   };
-
 
   const handleSignup = (e) => {
     e.preventDefault();
@@ -66,15 +63,14 @@ const Signup = () => {
           isClosable: true,
           position: "top",
         });
-        return 
+        return;
       }
     }
 
-      getAdd(formInputObj);
-      setTimeout(() => {
-        
-        Navigate("/login")
-      }, 3000); 
+    getAdd(formInputObj);
+    setTimeout(() => {
+      Navigate("/login");
+    }, 3000);
   };
 
   return (
@@ -195,7 +191,12 @@ const Signup = () => {
             <Stack pt={6}>
               <Text align={"center"}>
                 Already a user?{" "}
-                <Button onClick={()=>{Navigate("/login")}}>Login</Button>
+                <Button
+                  onClick={() => {
+                    Navigate("/login");
+                  }}>
+                  Login
+                </Button>
               </Text>
             </Stack>
           </Stack>

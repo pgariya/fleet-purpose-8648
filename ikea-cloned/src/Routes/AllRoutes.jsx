@@ -35,22 +35,57 @@ const AllRoutes = () => {
         <Route path="/Adminadd" element={<AdminAdd />} />
 
         <Route path="/chairproducts" element={<ChairProducts />} />
-        <Route path="/chairproducts/:id" element={<PrivateUserRoute><SingleChairProducts /></PrivateUserRoute>} />
+        <Route
+          path="/chairproducts/:id"
+          element={
+            <PrivateUserRoute>
+              <SingleChairProducts />
+            </PrivateUserRoute>
+          }
+        />
 
         <Route path="/AdminManage" element={<AdminManage />} />
         <Route path="/" element={<FrontPage />} />
         <Route path="/productslist" element={<ProductsList />} />
-        <Route path="/productslist/:id" element={<PrivateUserRoute><SingleProductsList /></PrivateUserRoute>} />
+        <Route
+          path="/productslist/:id"
+          element={
+            <PrivateUserRoute>
+              <SingleProductsList />
+            </PrivateUserRoute>
+          }
+        />
         <Route path="/sofaproducts" element={<SofaProducts />} />
-        <Route path="/sofaproducts/:id" element={<PrivateUserRoute><SingleSofaProducts /></PrivateUserRoute>} />
-        <Route path="/cartitemspage" element={<PrivateUserRoute><CartItemsPage /></PrivateUserRoute>} />
+        <Route
+          path="/sofaproducts/:id"
+          element={
+            <PrivateUserRoute>
+              <SingleSofaProducts />
+            </PrivateUserRoute>
+          }
+        />
+        <Route
+          path="/cartitemspage"
+          element={
+            <PrivateUserRoute>
+              <CartItemsPage />
+            </PrivateUserRoute>
+          }
+        />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/" element={<FrontPage />} />
         <Route path="/sweedan" element={<CinumBun />} />
 
         <Route path="/payment" element={<Payment />} />
-        <Route path="/wishlist" element={<PrivateUserRoute><Wishlist /></PrivateUserRoute>} />
+        <Route
+          path="/wishlist"
+          element={
+            <PrivateUserRoute>
+              <Wishlist />
+            </PrivateUserRoute>
+          }
+        />
       </Routes>
     </div>
   );

@@ -201,11 +201,8 @@ console.log(token)
         </HStack>
       </Box>
 
-      {/* search box  */}
       <Box w={"40%"} display={{ base: "none", md: "block" }}>
-        {/* <Input placeholder="Enter amount" /> */}
 
-        {/* functional input box  */}
         <VStack position={"relative"} w={"100%"}>
           <InputGroup>
             <InputLeftElement
