@@ -8,7 +8,6 @@ import {
   DrawerContent,
   DrawerOverlay,
   Flex,
-  Heading,
   HStack,
   Image,
   Input,
@@ -31,7 +30,6 @@ import {
   BsFillCartCheckFill,
   BsHeartFill,
 } from "react-icons/bs";
-import { CgProfile } from "react-icons/cg";
 
 import { useSelector } from "react-redux";
 
@@ -40,37 +38,39 @@ import { ChevronDownIcon } from "@chakra-ui/icons";
 import SearchItem from "./SearchItem";
 import axios from "axios";
 
+import { useContext } from "react";
+import { AuthContext } from "../../Routes/AuthContext";
+
 const Navbar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const nav = useNavigate();
-  let [startdata, setstartdata] = useState([]);
   const [search, setSearch] = useState("");
   const [searchData, setSearchData] = useState([]);
   const [display, setDisplay] = useState(false);
+  const { token, logOutUser } = useContext(AuthContext);
+console.log(token)
+
+  const callLogin = () => {
+    navigate("/login");
+  };
 
   useEffect(() => {
-    if (search == "") {
+    if (search === "") {
       setDisplay(false);
       setSearchData([]);
     }
 
     let getRecomandation = async () => {
-      // q=${search}
-      let res = await axios.get(`https://project-bv3o.onrender.com/cart_items`);
-      // setSearchData(res.data)
-      setstartdata(res.data);
+      let res = await axios.get(
+        `https://server-jrrq.onrender.com/chair?q=${search}`
+      );
+      setSearchData(res.data);
     };
 
-    // getRecomandation()
     console.log(searchData);
 
     const timeoutId = setTimeout(() => {
-      if (search != "") {
+      if (search !== "") {
         getRecomandation();
-        let arrayofObj = startdata.filter((el) =>
-          el.title.toLowerCase().includes(search)
-        );
-        setSearchData(arrayofObj);
       }
     }, 200);
 
@@ -83,27 +83,24 @@ const Navbar = () => {
   let navigate = useNavigate();
 
   let store = useSelector((state) => state.cartManager);
-  // console.log(store.cartItems , "cart Itemsssssss");
 
   let Navigate = useNavigate();
 
   return (
     <Box
       display={"flex"}
-      justifyContent="space-around"
+      justifyContent="space-between"
       alignItems={"center"}
-      my={5}
-    >
+      padding="5px"
+      my={5}>
       <Box>
         <HStack gap={7}>
-          {/* menu button and drawer  */}
           <Box>
             <Button
               ref={btnRef}
               colorScheme="teal"
               onClick={onOpen}
-              color="white"
-            >
+              color="white">
               <RxHamburgerMenu />
             </Button>
             <Drawer
@@ -111,18 +108,13 @@ const Navbar = () => {
               placement="left"
               onClose={onClose}
               finalFocusRef={btnRef}
-              size="sm"
-            >
+              size="sm">
               <DrawerOverlay />
               <DrawerContent>
                 <DrawerCloseButton fontWeight={"bold"} fontSize="22px" mt={5} />
 
                 <DrawerBody>
                   <Box>
-                    {/* <Heading fontSize={"20px"} display="flex" gap={"20px"}>
-                      {" "}
-                      <CgProfile /> Hei! Log in or Sign up{" "}
-                    </Heading> */}
 
                     <Link to={"/dashboard"}>
                       <Image
@@ -142,8 +134,7 @@ const Navbar = () => {
                       <MenuButton
                         w={"100%"}
                         as={Button}
-                        rightIcon={<ChevronDownIcon />}
-                      >
+                        rightIcon={<ChevronDownIcon />}>
                         Products
                       </MenuButton>
                       <MenuList w={"180%"}>
@@ -158,14 +149,11 @@ const Navbar = () => {
                       </MenuList>
                     </Menu>
 
-                    {/* rooms  */}
                     <Menu>
                       <MenuButton
                         w={"100%"}
-                        // border="1px solid grey"
                         as={Button}
-                        rightIcon={<ChevronDownIcon />}
-                      >
+                        rightIcon={<ChevronDownIcon />}>
                         Rooms
                       </MenuButton>
                       <MenuList w={"180%"}>
@@ -230,7 +218,6 @@ const Navbar = () => {
               isInvalid
               errorBorderColor="orange.400"
               focusBorderColor="black"
-              // onKeyDown={handleKeyDown}
               placeholder="Search for New Furnising Design !"
               value={search}
               onChange={(e) => {
@@ -253,8 +240,7 @@ const Navbar = () => {
             top={10}
             w={"100%"}
             borderRadius={8}
-            maxH={500}
-          >
+            maxH={500}>
             {searchData?.map((el) => (
               <SearchItem key={el.id} setDisplay={setDisplay} {...el} />
             ))}
@@ -262,40 +248,35 @@ const Navbar = () => {
         </VStack>
       </Box>
 
-      {/* stack ---login or cart and delivery  */}
       <Box>
         <HStack gap={7}>
-          <Button
-            leftIcon={<CgProfile />}
-            colorScheme="teal"
-            variant="solid"
-            display={{ base: "none", lg: "block" }}
-            onClick={() => Navigate("/signup")}
-          >
-            Hei! Log in or Sign up
-          </Button>
+
+          {!token ? (
+            <Button colorScheme="teal" variant="solid" onClick={callLogin}>
+              Login
+            </Button>
+          ) : (
+           <Flex gap={2}>
+             <Button backgroundColor="white" color="black" variant="solid" disabled >
+              {token}
+            </Button>
+             <Button colorScheme="teal" variant="solid" onClick={logOutUser}>
+              Logout
+            </Button></Flex>
+          )}
+
+
           <Button onClick={() => Navigate("/AdminLogin")}>Admin</Button>
-
-          {/* Navigate("/login") */}
-
-          {/* add to cart button and drawer  */}
-
-          {/* <Navigate to="/cartitemspage"> */}
 
           <Button onClick={() => navigate("/cartitemspage")}>
             <BsFillCartCheckFill />
             <Text>{store.cartItems.length}</Text>
           </Button>
-
-          {/* </Navigate>   */}
-
-          {/* <Link to="/wishlist"> */}
           <Link to="/wishlist">
-            <Button>
+            <Button display={{base:"none",md:"block"}}>
               <BsHeartFill fill="red" fontSize={"22px"} />
             </Button>
           </Link>
-          {/* </Link> */}
         </HStack>
       </Box>
     </Box>

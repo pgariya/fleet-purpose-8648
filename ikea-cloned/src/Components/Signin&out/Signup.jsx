@@ -29,11 +29,12 @@ const initial={
 const Signup = () => {
   let [formInputObj, setformInputObj] = useState(initial);
   
+  let Navigate=useNavigate()
   const toast = useToast();
   const [showPassword, setShowPassword] = useState(false);
 
   const getAdd = async (formInputObj) => {
-    let res = await fetch(`https://smart-shop-render.onrender.com/users`, {
+    let res = await fetch(`https://server-jrrq.onrender.com/users`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -51,7 +52,6 @@ const Signup = () => {
     setformInputObj({ ...formInputObj, [e.target.name]: e.target.value });
   };
 
-  let Navigate=useNavigate()
 
   const handleSignup = (e) => {
     e.preventDefault();
@@ -70,8 +70,11 @@ const Signup = () => {
       }
     }
 
-      getAdd(formInputObj); 
-   Navigate("/login")
+      getAdd(formInputObj);
+      setTimeout(() => {
+        
+        Navigate("/login")
+      }, 3000); 
   };
 
   return (
