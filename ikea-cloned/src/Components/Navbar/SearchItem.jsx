@@ -23,7 +23,7 @@ export default function SearchItem({
       margin={"auto"}
       onClick={() => {
         setDisplay(false);
-        nav("/sofaproducts/" + id);
+        nav("/chairproducts/" + id);
       }}
     >
       <HStack gap={4}>

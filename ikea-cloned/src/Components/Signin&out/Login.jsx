@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import styles from "../../styles/Login.module.css";
 import { useNavigate } from "react-router-dom";
 import {
@@ -10,6 +10,7 @@ import {
   Stack,
 } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../Routes/AuthContext";
 
 const initialValue = {
   emailEntered: "",
@@ -17,12 +18,13 @@ const initialValue = {
 };
 
 const Login = () => {
+  const {loginUser}=useContext(AuthContext)
   let Navigate = useNavigate();
+  // const{login,setLogin} = useContext(SidebarContext);
   const [inputUser, setInputUser] = useState(initialValue);
   const [user, setUser] = useState([]);
-
   const getAdd = async () => {
-    let res = await fetch(`https://smart-shop-render.onrender.com/users`);
+    let res = await fetch(`https://server-jrrq.onrender.com/users`);
     let data = await res.json();
     console.log(data);
     setUser(data);
@@ -45,8 +47,9 @@ const Login = () => {
         inputUser.emailEntered === el.email &&
         inputUser.passwordEntered === el.password
       ) {
-        localStorage.setItem("loginValue", JSON.stringify("login"));
+        loginUser(el.first_name)
         // setLogin(true);
+        
 
         return true;
       }
@@ -55,7 +58,9 @@ const Login = () => {
     console.log(x)
     if(x.length===0){
       alert("Invalid username or password");
-    }else{
+    }
+    else{
+      
       alert("Login succesfull");
       Navigate("/dashboard");
     }
@@ -138,4 +143,5 @@ const Login = () => {
     </div>
   );
 };
+// custom-btn btn-12
 export default Login;
