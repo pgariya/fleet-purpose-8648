@@ -18,6 +18,7 @@ import { Image } from "@chakra-ui/react";
 import React, { useState } from "react";
 import { ViewIcon, ViewOffIcon } from "@chakra-ui/icons";
 import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 
 const initial = {
   first_name: "",
@@ -32,6 +33,7 @@ const Signup = () => {
   let Navigate = useNavigate();
   const toast = useToast();
   const [showPassword, setShowPassword] = useState(false);
+  const [user, setUser] = useState([]);
 
   const getAdd = async (formInputObj) => {
     let res = await fetch(`https://server-jrrq.onrender.com/users`, {
@@ -44,6 +46,18 @@ const Signup = () => {
     let data = await res.json();
     setformInputObj(data);
   };
+
+  const get = async () => {
+    let res = await fetch(`https://server-jrrq.onrender.com/users`);
+    let data = await res.json();
+    console.log(data);
+    setUser(data);
+  };
+
+  useEffect(() => {
+    get();
+  }, []);
+
   const handleChange = (e) => {
     console.log(e.target.value, e.target.name);
 
@@ -67,6 +81,21 @@ const Signup = () => {
       }
     }
 
+    let em = [];
+    let mo = [];
+    for (let i = 0; i < user.length; i++) {
+      em.push(user[i].email);
+      mo.push(user[i].mobile_number);
+    }
+
+    if (
+      em.includes(formInputObj.email) ||
+      mo.includes(formInputObj.mobile_number)
+    ) {
+      alert("user already exits");
+      return Navigate("/login");
+    }
+
     getAdd(formInputObj);
     setTimeout(() => {
       Navigate("/login");
@@ -86,11 +115,16 @@ const Signup = () => {
           boxShadow={"lg"}
           p={8}>
           <Stack spacing={4}>
-            <Heading fontSize={"4xl"} textAlign={"center"}>
-              Welcome to SignUp
+            <Heading fontSize={"4xl"} textAlign={"center"} color="black">
+              Welcome to Signup
             </Heading>
 
-            <Stack direction={["column", "row"]} spacing={6}>
+            <Stack
+              direction={["column", "row"]}
+              spacing={6}
+              display="flex"
+              justifyContent={"space-between"}
+              alignItems="center">
               <Stack direction="row" marginLeft={2} gap={10}>
                 <Image
                   boxSize="60px"

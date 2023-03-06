@@ -128,7 +128,9 @@ const Login = () => {
                 onClick={handleLogin}>
                 Log In
               </Button>
-              <Link to="/signup">New User? Signup</Link>
+              <Link to="/signup">
+                New User? <Button>Signup</Button>
+              </Link>
             </Stack>
           </div>
         </div>
