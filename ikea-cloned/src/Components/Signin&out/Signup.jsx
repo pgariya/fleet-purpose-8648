@@ -18,20 +18,22 @@ import { Image } from "@chakra-ui/react";
 import React, { useState } from "react";
 import { ViewIcon, ViewOffIcon } from "@chakra-ui/icons";
 import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 
-const initial={
+const initial = {
   first_name: "",
   sur_name: "",
   mobile_number: "",
   email: "",
   password: "",
-}
+};
 const Signup = () => {
   let [formInputObj, setformInputObj] = useState(initial);
-  
-  let Navigate=useNavigate()
+
+  let Navigate = useNavigate();
   const toast = useToast();
   const [showPassword, setShowPassword] = useState(false);
+  const [user, setUser] = useState([]);
 
   const getAdd = async (formInputObj) => {
     let res = await fetch(`https://server-jrrq.onrender.com/users`, {
@@ -44,14 +46,23 @@ const Signup = () => {
     let data = await res.json();
     setformInputObj(data);
   };
+
+  const get = async () => {
+    let res = await fetch(`https://server-jrrq.onrender.com/users`);
+    let data = await res.json();
+    console.log(data);
+    setUser(data);
+  };
+
+  useEffect(() => {
+    get();
+  }, []);
+
   const handleChange = (e) => {
     console.log(e.target.value, e.target.name);
-  
-    // let { name, value } = e.target;
 
     setformInputObj({ ...formInputObj, [e.target.name]: e.target.value });
   };
-
 
   const handleSignup = (e) => {
     e.preventDefault();
@@ -66,15 +77,29 @@ const Signup = () => {
           isClosable: true,
           position: "top",
         });
-        return 
+        return;
       }
     }
 
-      getAdd(formInputObj);
-      setTimeout(() => {
-        
-        Navigate("/login")
-      }, 3000); 
+    let em = [];
+    let mo = [];
+    for (let i = 0; i < user.length; i++) {
+      em.push(user[i].email);
+      mo.push(user[i].mobile_number);
+    }
+
+    if (
+      em.includes(formInputObj.email) ||
+      mo.includes(formInputObj.mobile_number)
+    ) {
+      alert("user already exits");
+      return Navigate("/login");
+    }
+
+    getAdd(formInputObj);
+    setTimeout(() => {
+      Navigate("/login");
+    }, 3000);
   };
 
   return (
@@ -94,8 +119,18 @@ const Signup = () => {
               Welcome to Signup
             </Heading>
 
+
+            <Stack
+              direction={["column", "row"]}
+              spacing={6}
+              display="flex"
+              justifyContent={"space-between"}
+              alignItems="center">
+              <Stack direction="row" marginLeft={2} gap={10}>
+
             <Stack direction={["column", "row"]} spacing={6} display="flex" justifyContent={"space-between"} alignItems="center">
               <Stack direction="row" marginLeft={2} gap={10} >
+
                 <Image
                   boxSize="60px"
                   w={"40"}
@@ -195,7 +230,12 @@ const Signup = () => {
             <Stack pt={6}>
               <Text align={"center"}>
                 Already a user?{" "}
-                <Button onClick={()=>{Navigate("/login")}}>Login</Button>
+                <Button
+                  onClick={() => {
+                    Navigate("/login");
+                  }}>
+                  Login
+                </Button>
               </Text>
             </Stack>
           </Stack>
