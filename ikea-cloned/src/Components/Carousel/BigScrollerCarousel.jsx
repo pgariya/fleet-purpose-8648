@@ -13,7 +13,7 @@ function NextArrow(props) {
       className={className}
       onClick={onClick}
     >
-      <IoIosArrowDroprightCircle style={{ ...style,fontSize:"50px", display: "block", color:"black",borderRadius:"50%" , }} />
+      <IoIosArrowDroprightCircle style={{ ...style,fontSize:"50px", display: "block",position:"relative", right:"15px",color:"black",borderRadius:"50%"  }} />
     </div>
   );
 }
@@ -25,7 +25,7 @@ function PrevArrow(props) {
       className={className}
       onClick={onClick}
     >
-      <IoIosArrowDropleftCircle style={{ ...style,fontSize:"50px", display: "block",color:"black",borderRadius:"50%" , position:"relative", right:"15px" , zIndex:"5" }}/>
+      <IoIosArrowDropleftCircle style={{ ...style,fontSize:"50px", display: "block",color:"black",borderRadius:"50%" , position:"relative", right:"12px" , zIndex:"5" }}/>
     </div>
   );
 }

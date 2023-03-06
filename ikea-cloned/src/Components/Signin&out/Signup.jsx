@@ -90,12 +90,12 @@ const Signup = () => {
           boxShadow={"lg"}
           p={8}>
           <Stack spacing={4}>
-            <Heading fontSize={"4xl"} textAlign={"center"}>
-              Welcome to SignUp
+            <Heading fontSize={"4xl"} textAlign={"center"} color="black">
+              Welcome to Signup
             </Heading>
 
-            <Stack direction={["column", "row"]} spacing={6}>
-              <Stack direction="row" marginLeft={2} gap={10}>
+            <Stack direction={["column", "row"]} spacing={6} display="flex" justifyContent={"space-between"} alignItems="center">
+              <Stack direction="row" marginLeft={2} gap={10} >
                 <Image
                   boxSize="60px"
                   w={"40"}
