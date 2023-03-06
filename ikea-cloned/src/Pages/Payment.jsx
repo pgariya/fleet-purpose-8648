@@ -55,6 +55,7 @@ export default function Payment() {
   let [changeSkelton, setChangeSkelton] = useState(false);
   let [changeSkelton1, setChangeSkelton1] = useState(false);
   let [handlePinValue, sethandlePinValue]= useState("")
+  
   // let [complete,setcomplete] = useState(false)
 
   // console.log(handlePinValue)
@@ -115,11 +116,16 @@ if(handlePinValue){
 
 
   let handlePin = (val) => {
+    console.log(val, "alert box my pin input ke value");
      sethandlePinValue(val)
+
+
+
+     
    
-     console.log(val);
   };
 
+ 
 
   
 
@@ -446,6 +452,7 @@ if(handlePinValue){
                                 type="alphanumeric"
                                 mask
                                 onComplete={handlePin}
+                                
                               >
                                 <PinInputField />
                                 <PinInputField />
