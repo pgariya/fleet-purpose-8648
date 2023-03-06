@@ -268,9 +268,6 @@ const Navbar = () => {
         </HStack>
       </Box>
 
-
-      <Box w={"40%"} display={{ base: "none", md: "block" }}>
-
       {/* search box  */}
       <Box
         w={"40%"}
@@ -279,7 +276,7 @@ const Navbar = () => {
       >
         {/* <Input placeholder="Enter amount" /> */}
 
-
+        {/* functional input box  */}
         <VStack position={"relative"} w={"100%"}>
           <InputGroup>
             <InputLeftElement
