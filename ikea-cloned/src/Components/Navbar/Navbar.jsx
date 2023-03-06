@@ -18,6 +18,7 @@ import {
   MenuButton,
   MenuItem,
   MenuList,
+  Stack,
   Text,
   useDisclosure,
   VStack,
@@ -47,7 +48,7 @@ const Navbar = () => {
   const [searchData, setSearchData] = useState([]);
   const [display, setDisplay] = useState(false);
   const { token, logOutUser } = useContext(AuthContext);
-console.log(token)
+  console.log(token);
 
   const callLogin = () => {
     navigate("/login");
@@ -91,16 +92,20 @@ console.log(token)
       display={"flex"}
       justifyContent="space-between"
       alignItems={"center"}
-      padding="5px"
-      my={5}>
-      <Box>
-        <HStack gap={7}>
+      padding="2px"
+      w="97%"
+      margin={"auto"}
+      my={5}
+    >
+      <Box >
+        <HStack gap={2}>
           <Box>
             <Button
               ref={btnRef}
               colorScheme="teal"
               onClick={onOpen}
-              color="white">
+              color="white"
+            >
               <RxHamburgerMenu />
             </Button>
             <Drawer
@@ -108,14 +113,14 @@ console.log(token)
               placement="left"
               onClose={onClose}
               finalFocusRef={btnRef}
-              size="sm">
+              size="sm"
+            >
               <DrawerOverlay />
               <DrawerContent>
                 <DrawerCloseButton fontWeight={"bold"} fontSize="22px" mt={5} />
 
                 <DrawerBody>
                   <Box>
-
                     <Link to={"/dashboard"}>
                       <Image
                         src="/ourlogo.png"
@@ -134,7 +139,8 @@ console.log(token)
                       <MenuButton
                         w={"100%"}
                         as={Button}
-                        rightIcon={<ChevronDownIcon />}>
+                        rightIcon={<ChevronDownIcon />}
+                      >
                         Products
                       </MenuButton>
                       <MenuList w={"180%"}>
@@ -153,7 +159,8 @@ console.log(token)
                       <MenuButton
                         w={"100%"}
                         as={Button}
-                        rightIcon={<ChevronDownIcon />}>
+                        rightIcon={<ChevronDownIcon />}
+                      >
                         Rooms
                       </MenuButton>
                       <MenuList w={"180%"}>
@@ -177,14 +184,74 @@ console.log(token)
                     <Button w={"100%"}>New At IKEA</Button>
                     <Button w={"100%"}>Offers</Button>
 
+<Flex gap={10}>
+<Button
+            onClick={() => navigate("/cartitemspage")}
+           
+          >
+            <BsFillCartCheckFill />
+            <Text>{store.cartItems.length}</Text>
+          </Button>
+
+          <Link to="/wishlist">
+            <Button >
+              <BsHeartFill fill="red" fontSize={"22px"} />
+            </Button>
+          </Link>
+
+</Flex>
+                    
+
+
+
+
+
+
+
                     <Box w={"100%"}>
-                      <Link to={"/login"}>
-                        <Button bg={"teal"} w={"100%"} color="white">
-                          {" "}
-                          Login{" "}
+
+
+                      {!token ? (
+                        <Button
+                          w={"100%"}
+                          colorScheme="teal"
+                          variant="solid"
+                          onClick={callLogin}
+                          // display={{ base: "none", sm: "flex" }}
+                        >
+                          Login
                         </Button>
-                      </Link>
+                      ) : (
+                        <HStack
+                        margin={"auto"}
+                          gap={2}
+                          w={"100%"}
+                        >
+                          <Button
+                            backgroundColor="white"
+                            color="black"
+                            variant="solid"
+                            disabled
+                            w={"45%"}
+                          >
+                            {token}
+                          </Button>
+                          <Button
+                            colorScheme="teal"
+                            variant="solid"
+                            onClick={logOutUser}
+                            w={"45%"}
+                          >
+                            Logout
+                          </Button>
+                        </HStack>
+                      )}
                     </Box>
+
+                
+
+
+
                   </VStack>
                 </DrawerBody>
               </DrawerContent>
@@ -201,7 +268,17 @@ console.log(token)
         </HStack>
       </Box>
 
+
       <Box w={"40%"} display={{ base: "none", md: "block" }}>
+
+      {/* search box  */}
+      <Box
+        w={"40%"}
+        display={{ base: "none", md: "block" }}
+        
+      >
+        {/* <Input placeholder="Enter amount" /> */}
+
 
         <VStack position={"relative"} w={"100%"}>
           <InputGroup>
@@ -237,7 +314,8 @@ console.log(token)
             top={10}
             w={"100%"}
             borderRadius={8}
-            maxH={500}>
+            maxH={500}
+          >
             {searchData?.map((el) => (
               <SearchItem key={el.id} setDisplay={setDisplay} {...el} />
             ))}
@@ -245,32 +323,44 @@ console.log(token)
         </VStack>
       </Box>
 
-      <Box>
-        <HStack gap={7}>
-
+      <Box >
+        <HStack gap={1}>
           {!token ? (
-            <Button colorScheme="teal" variant="solid" onClick={callLogin}>
+            <Button
+              colorScheme="teal"
+              variant="solid"
+              onClick={callLogin}
+              display={{ base: "none", sm: "flex" }}
+            >
               Login
             </Button>
           ) : (
-           <Flex gap={2}>
-             <Button backgroundColor="white" color="black" variant="solid" disabled >
-              {token}
-            </Button>
-             <Button colorScheme="teal" variant="solid" onClick={logOutUser}>
-              Logout
-            </Button></Flex>
+            <Flex gap={2} display={{ base: "none", sm: "flex" }}>
+              <Button
+                backgroundColor="grey.400"
+                color="black"
+                variant="solid"
+                disabled
+              >
+                Hei ! {token}
+              </Button>
+              <Button colorScheme="teal" variant="solid" onClick={logOutUser}>
+                Logout
+              </Button>
+            </Flex>
           )}
-
 
           <Button onClick={() => Navigate("/AdminLogin")}>Admin</Button>
 
-          <Button onClick={() => navigate("/cartitemspage")}>
+          <Button
+            onClick={() => navigate("/cartitemspage")}
+            display={{ base: "none", lg: "flex" }}
+          >
             <BsFillCartCheckFill />
             <Text>{store.cartItems.length}</Text>
           </Button>
           <Link to="/wishlist">
-            <Button display={{base:"none",md:"block"}}>
+            <Button display={{ base: "none", lg: "block" }}>
               <BsHeartFill fill="red" fontSize={"22px"} />
             </Button>
           </Link>

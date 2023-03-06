@@ -29,22 +29,27 @@ and other is bottom form part*/
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cg fill='%23e4d3ff' fill-opacity='0.4'%3E%3Cpolygon fill-rule='evenodd' points='8 4 12 6 8 8 6 12 4 8 0 6 4 4 6 0 8 4'/%3E%3C/g%3E%3C/svg%3E");
 }
 .herotext {
-  background: #3a2f2f73;
+  background: rgba(211, 211, 211, 0.911);
+  /* backdrop-filter: blur(2px); */
   border-radius: 1rem;
   padding: 2rem;
   margin-top: 1rem;
 }
 .toppart .logo {
-  width: 4rem;
-  border-radius: 100%;
-  vertical-align: middle;
+  /* width: 4rem; */
+  width: 100px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  /* padding:10px; */
+  /* vertical-align: middle; */
   margin-right: 1rem;
 }
 .toppart h1 {
-  color: white;
+  /* color: white; */
   font-size: 2.5rem;
   font-weight: 600;
   margin: 0 auto 2rem;
+  color:black;
 }
 .toppart p {
   margin: 0;
@@ -52,6 +57,7 @@ and other is bottom form part*/
   color: #eaeaea;
   font-weight: 400;
   line-height: 1.5;
+  color:black;
 }
 
 /*Top part styling completed*/

@@ -119,6 +119,7 @@ const Signup = () => {
               Welcome to Signup
             </Heading>
 
+
             <Stack
               direction={["column", "row"]}
               spacing={6}
@@ -126,6 +127,10 @@ const Signup = () => {
               justifyContent={"space-between"}
               alignItems="center">
               <Stack direction="row" marginLeft={2} gap={10}>
+
+            <Stack direction={["column", "row"]} spacing={6} display="flex" justifyContent={"space-between"} alignItems="center">
+              <Stack direction="row" marginLeft={2} gap={10} >
+
                 <Image
                   boxSize="60px"
                   w={"40"}
