@@ -18,7 +18,13 @@ const initialValue = {
 };
 
 const Login = () => {
+<<<<<<< HEAD
+
+  const {loginUser}=useContext(AuthContext)
+
+=======
   const { loginUser } = useContext(AuthContext);
+>>>>>>> ef8c933cdd5f98f3fc5d39701d8017de9b167cbe
   let Navigate = useNavigate();
   const [inputUser, setInputUser] = useState(initialValue);
   const [user, setUser] = useState([]);
@@ -46,7 +52,14 @@ const Login = () => {
         inputUser.emailEntered === el.email &&
         inputUser.passwordEntered === el.password
       ) {
+<<<<<<< HEAD
+        loginUser(el.first_name,el.email)
+        // setLogin(true);
+        
+
+=======
         loginUser(el.first_name);
+>>>>>>> ef8c933cdd5f98f3fc5d39701d8017de9b167cbe
         return true;
       }
     });

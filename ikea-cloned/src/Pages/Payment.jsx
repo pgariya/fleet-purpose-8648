@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import {
   MDBCol,
   MDBRow,
@@ -35,10 +35,18 @@ import {
   useToast,
   VStack,
 } from "@chakra-ui/react";
+
 import Navbar from "../Components/Navbar/Navbar";
 import Footer from "../Components/Footer";
 import { payment_cart } from "../redux/cart/cart.action";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../Routes/AuthContext";
+
+
+import emailjs from "@emailjs/browser";
+
+
+
 
 export default function Payment() {
   let [formInputObj, setformInputObj] = useState({
@@ -54,11 +62,17 @@ export default function Payment() {
 
   let [changeSkelton, setChangeSkelton] = useState(false);
   let [changeSkelton1, setChangeSkelton1] = useState(false);
-  let [handlePinValue, sethandlePinValue]= useState("")
-  
-  // let [complete,setcomplete] = useState(false)
+  let [handlePinValue, sethandlePinValue] = useState("");
+  const [otp, setOTP] = useState("");
 
-  // console.log(handlePinValue)
+  const { login_email } = useContext(AuthContext);
+  console.log(login_email, "emailll ha kya yaa");
+
+
+  // let serve = process.env.REACT_APP_ServeID;
+  // let template = process.env.REACT_APP_TemplateId;
+  // let publickey = process.env.REACT_APP_PublicKey;
+
 
   let totalvalue = 0;
 
@@ -72,62 +86,37 @@ export default function Payment() {
   const cancelRef = React.useRef();
 
   let handleChange = () => {
+    if (handlePinValue && otp == localStorage.getItem("paymentotp")) {
+      setTimeout(() => {
+        setChangeSkelton(false);
+        onClose();
+        setChangeSkelton1(true);
 
+        dispatch(payment_cart());
+        console.log(store.cartItems, "cart arrrrrrrrrr");
+      }, 3000);
 
-if(handlePinValue){
+      setChangeSkelton(true);
+    } else {
+      toast({
+        title: ` Please enter your correct pin  `,
+        description: " Please fill the valid password ",
+        status: "error",
+        duration: 5000,
+        isClosable: true,
+        position: "top",
+      });
+    }
+  };
 
-
-  setTimeout(() => {
-    setChangeSkelton(false);
-    onClose();
-    setChangeSkelton1(true);
-  
-    dispatch(payment_cart());
-    console.log(store.cartItems, "cart arrrrrrrrrr");
-  }, 3000);
-
-  setChangeSkelton(true);
-
-
-}else{
-
-  toast({
-    title: ` Please enter your correct pin  `,
-    description: " Please fill the valid password ",
-    status: "error",
-    duration: 5000,
-    isClosable: true,
-    position: "top",
-  });
-
-
-
-}
-
-
-
-
-
-
-
-
-  }
-
-
+  const handleInputChange = (value) => {
+    setOTP(value);
+  };
 
   let handlePin = (val) => {
     console.log(val, "alert box my pin input ke value");
-     sethandlePinValue(val)
-
-
-
-     
-   
+    sethandlePinValue(val);
   };
-
- 
-
-  
 
   if (changeSkelton1) {
     return (
@@ -145,37 +134,44 @@ if(handlePinValue){
             // height="200px"
             w="70%"
             margin={"auto"}
-            boxShadow= "rgba(0, 0, 0, 0.35) 0px 5px 15px"
+            boxShadow="rgba(0, 0, 0, 0.35) 0px 5px 15px"
             borderRadius={20}
-            
+
             // bg={"none"}
           >
-            <AlertIcon boxSize="40px"  mt={10}/>
+            <AlertIcon boxSize="40px" mt={10} />
             <AlertTitle mt={5} mb={5} fontSize="50px">
               Payment Successfull !
             </AlertTitle>
-            <AlertDescription  mt={5}>
-              
+            <AlertDescription mt={5}>
+              <VStack p={5} bg="none" gap={3}>
+                <Text fontSize={"24px"} textAlign="left" lineHeight={"28px"}>
+                  We sent you confirmation email with your order details . Thank
+                  You!{" "}
+                </Text>
 
-       <VStack   p={5} bg="none" gap={3}>
+                <HStack fontSize={"24px"} fontWeight="bold">
+                  <Heading color={"blue"}>Order Number :</Heading>{" "}
+                  <Box pt={2}>
+                    <Text> {Date.now()} </Text>
+                  </Box>{" "}
+                </HStack>
 
-<Text fontSize={"24px"} textAlign="left" lineHeight={"28px"}>We sent you confirmation email with your order details . Thank You! </Text>
+                <Box>
+                  <Image
+                    src="https://www.cloudways.com/blog/wp-content/uploads/Thank-you-page.png"
+                    w={"90%"}
+                    h="400px"
+                  />
+                </Box>
 
-<HStack fontSize={"24px"} fontWeight="bold"><Heading color={"blue"}>Order Number :</Heading> <Box pt={2}><Text > {Date.now()} </Text></Box> </HStack>
-
-<Box >
-<Image src="https://www.cloudways.com/blog/wp-content/uploads/Thank-you-page.png" w={"90%"} h="400px"/>
-
-</Box>
-
-<Text fontSize={"20px"} >For more Shopping   <Link style={{ color: "blue" }} to={"/dashboard"}>
-      Go to Home Page
-    </Link></Text>
-
-
-       </VStack>
-
-
+                <Text fontSize={"20px"}>
+                  For more Shopping{" "}
+                  <Link style={{ color: "blue" }} to={"/dashboard"}>
+                    Go to Home Page
+                  </Link>
+                </Text>
+              </VStack>
             </AlertDescription>
           </Alert>
         </Box>
@@ -193,9 +189,6 @@ if(handlePinValue){
   };
 
   console.log(formInputObj);
-
-
-
 
   let handlePayment = () => {
     // onClick={onOpen}
@@ -228,7 +221,48 @@ if(handlePinValue){
       return;
     }
 
-    onOpen();
+    const otp = Math.floor(Math.random() * 900000) + 100000;
+
+    // console.log(serve, template, publickey);
+
+    emailjs
+      .send(
+        "service_qgoxj3p",
+        "template_uuykh6x",
+        {
+          user_email_id: login_email,
+          otp: otp,
+        },
+        "d37Tq2_YNubBoYD1z"
+      )
+      .then(
+        function (res) {
+          toast({
+            title: `Please Check Your Email .`,
+            description: " OTP is Sent In Your Email Id",
+            status: "success",
+            duration: 2000,
+            isClosable: true,
+            position: "top",
+          });
+
+          onOpen();
+          localStorage.setItem("paymentotp", otp);
+          console.log(otp);
+        },
+        function (err) {
+          toast({
+            title: `Something Went Wrong .`,
+            description: " Please Give Your Correct Email Id ",
+            status: "error",
+            duration: 2000,
+            isClosable: true,
+            position: "top",
+          });
+        }
+      );
+
+    
   };
 
   return (
@@ -236,13 +270,6 @@ if(handlePinValue){
       <Navbar />
 
       <Stack py={5} gap={5} mb={10}>
-        {/* <Box className="d-flex justify-content-between align-items-center mb-5">
-        <Box className="d-flex flex-row align-items-center">
-          <Heading className="text-uppercase mt-1">Eligible</Heading>
-          <span className="ms-2 me-3">Pay</span>
-        </Box>
-        <a href="#!">Cancel and return to the website</a>
-      </Box> */}
         <Box w={{ base: "90%", lg: "40%" }} margin="auto">
           <Box md="5" lg="4" xl="4">
             <Box
@@ -445,14 +472,14 @@ if(handlePinValue){
                           </AlertDialogHeader>
                           <AlertDialogCloseButton />
                           <AlertDialogBody p={5}>
-                            Please Enter 6 Digit Pin which is send in Your
-                            Mobile Number ********55
+                            Please Enter 6 Digit Pin which is send in Your Email
+                            ID ********
                             <HStack mt={5}>
                               <PinInput
                                 type="alphanumeric"
                                 mask
                                 onComplete={handlePin}
-                                
+                                onChange={handleInputChange}
                               >
                                 <PinInputField />
                                 <PinInputField />
