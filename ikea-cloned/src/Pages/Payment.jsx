@@ -58,7 +58,7 @@ export default function Payment() {
   let dispatch = useDispatch();
   const toast = useToast();
   let store = useSelector((state) => state.cartManager);
-  console.log(store.cartItems, "cart ");
+  // console.log(store.cartItems, "cart ");
 
   let [changeSkelton, setChangeSkelton] = useState(false);
   let [changeSkelton1, setChangeSkelton1] = useState(false);
@@ -66,7 +66,7 @@ export default function Payment() {
   const [otp, setOTP] = useState("");
 
   const { login_email } = useContext(AuthContext);
-  console.log(login_email, "emailll ha kya yaa");
+  // console.log(login_email, "emailll ha kya yaa");
 
 
   // let serve = process.env.REACT_APP_ServeID;
@@ -188,7 +188,7 @@ export default function Payment() {
     setformInputObj({ ...formInputObj, [name]: value });
   };
 
-  console.log(formInputObj);
+  // console.log(formInputObj);
 
   let handlePayment = () => {
     // onClick={onOpen}
