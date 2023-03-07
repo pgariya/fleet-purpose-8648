@@ -18,7 +18,9 @@ const initialValue = {
 };
 
 const Login = () => {
+
   const {loginUser}=useContext(AuthContext)
+
   let Navigate = useNavigate();
   // const{login,setLogin} = useContext(SidebarContext);
   const [inputUser, setInputUser] = useState(initialValue);
@@ -47,7 +49,7 @@ const Login = () => {
         inputUser.emailEntered === el.email &&
         inputUser.passwordEntered === el.password
       ) {
-        loginUser(el.first_name)
+        loginUser(el.first_name,el.email)
         // setLogin(true);
         
 
