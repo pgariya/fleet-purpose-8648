@@ -18,11 +18,14 @@ const initialValue = {
 };
 
 const Login = () => {
+<<<<<<< HEAD
 
   const {loginUser}=useContext(AuthContext)
 
+=======
+  const { loginUser } = useContext(AuthContext);
+>>>>>>> ef8c933cdd5f98f3fc5d39701d8017de9b167cbe
   let Navigate = useNavigate();
-  // const{login,setLogin} = useContext(SidebarContext);
   const [inputUser, setInputUser] = useState(initialValue);
   const [user, setUser] = useState([]);
   const getAdd = async () => {
@@ -43,26 +46,27 @@ const Login = () => {
     setInputUser({ ...inputUser, [e.target.name]: e.target.value });
   };
   const handleLogin = () => {
-    console.log(inputUser)
+    console.log(inputUser);
     let x = user.filter((el) => {
       if (
         inputUser.emailEntered === el.email &&
         inputUser.passwordEntered === el.password
       ) {
+<<<<<<< HEAD
         loginUser(el.first_name,el.email)
         // setLogin(true);
         
 
+=======
+        loginUser(el.first_name);
+>>>>>>> ef8c933cdd5f98f3fc5d39701d8017de9b167cbe
         return true;
       }
-
     });
-    console.log(x)
-    if(x.length===0){
+    console.log(x);
+    if (x.length === 0) {
       alert("Invalid username or password");
-    }
-    else{
-      
+    } else {
       alert("Login succesfull");
       Navigate("/dashboard");
     }
@@ -105,7 +109,7 @@ const Login = () => {
             <FormControl id="email">
               <FormLabel>Email address</FormLabel>
               <Input
-              name="emailEntered"
+                name="emailEntered"
                 type="email"
                 value={inputUser.emailEntered}
                 onChange={handleChange}
@@ -114,7 +118,7 @@ const Login = () => {
             <FormControl id="password">
               <FormLabel>Password</FormLabel>
               <Input
-              name="passwordEntered"
+                name="passwordEntered"
                 type="password"
                 value={inputUser.passwordEntered}
                 onChange={handleChange}
@@ -137,7 +141,9 @@ const Login = () => {
                 onClick={handleLogin}>
                 Log In
               </Button>
-              <Link to="/signup">New User? Signup</Link>
+              <Link to="/signup">
+                New User? <Button>Signup</Button>
+              </Link>
             </Stack>
           </div>
         </div>
@@ -145,5 +151,4 @@ const Login = () => {
     </div>
   );
 };
-// custom-btn btn-12
 export default Login;
